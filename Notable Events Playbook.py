@@ -17,7 +17,7 @@ def run_query_1(action=None, success=None, container=None, results=None, handle=
     phantom.debug('run_query_1() called')
 
     # collect data for 'run_query_1' call
-    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.deviceHostname', 'artifact:*.id'])
+    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.destinationAddress', 'artifact:*.id'])
 
     parameters = []
     

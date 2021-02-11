@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
-            "hash": "eb0ba661ec3e7f9774ff37179d9a93ec0609b3bf",
+            "hash": "ceca9cdbddb9ffc80f9bb0ebb5198bfada13fbe0",
             "joint": {
                 "cells": [
                     {
@@ -335,6 +335,45 @@
                         "z": 3
                     },
                     {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "3ef5ad2e-c396-418c-a709-a224cdc19a2f",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "ba9aaec3-93c3-4f1e-a094-ca2548bd2d53",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "c074c969-bc79-4746-9f86-4e0ac5be3f44",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 6
+                    },
+                    {
                         "action": "run query",
                         "action_type": "investigate",
                         "active": false,
@@ -343,7 +382,7 @@
                             "command": "savedsearch",
                             "display": "",
                             "parse_only": "",
-                            "query": "artifact:*.cef.deviceHostname"
+                            "query": "artifact:*.cef.destinationAddress"
                         },
                         "angle": 0,
                         "app": "Splunk",
@@ -371,7 +410,7 @@
                                     "command": "savedsearch",
                                     "display": "",
                                     "parse_only": "",
-                                    "query": "artifact:*.cef.deviceHostname"
+                                    "query": "artifact:*.cef.destinationAddress"
                                 },
                                 "has_app": true,
                                 "id": 8,
@@ -621,7 +660,7 @@
                                 "display": "block"
                             }
                         },
-                        "block_code": "def run_query_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('run_query_1() called')\n\n    # collect data for 'run_query_1' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.deviceHostname', 'artifact:*.id'])\n\n    parameters = []\n    \n    # build parameters list for 'run_query_1' call\n    for container_item in container_data:\n        if container_item[0]:\n            parameters.append({\n                'command': \"savedsearch\",\n                'query': container_item[0],\n                'display': \"\",\n                'parse_only': \"\",\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': container_item[1]},\n            })\n\n    phantom.act(action=\"run query\", parameters=parameters, assets=['mysplunkinstance'], name=\"run_query_1\")\n\n    return",
+                        "block_code": "def run_query_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('run_query_1() called')\n\n    # collect data for 'run_query_1' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.destinationAddress', 'artifact:*.id'])\n\n    parameters = []\n    \n    # build parameters list for 'run_query_1' call\n    for container_item in container_data:\n        if container_item[0]:\n            parameters.append({\n                'command': \"savedsearch\",\n                'query': container_item[0],\n                'display': \"\",\n                'parse_only': \"\",\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': container_item[1]},\n            })\n\n    phantom.act(action=\"run query\", parameters=parameters, assets=['mysplunkinstance'], name=\"run_query_1\")\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
@@ -728,46 +767,7 @@
                         "title": "Investigate",
                         "type": "coa.Action",
                         "warn": "",
-                        "z": 5
-                    },
-                    {
-                        "attrs": {
-                            ".connection": {
-                                "stroke": "#818D99",
-                                "stroke-width": 2
-                            },
-                            ".marker-target": {
-                                "d": "M 10 0 L 0 5 L 10 10 z",
-                                "fill": "#818D99",
-                                "stroke": "#818D99"
-                            }
-                        },
-                        "connector": {
-                            "args": {
-                                "radius": 5
-                            },
-                            "name": "rounded"
-                        },
-                        "endDirections": [
-                            "left"
-                        ],
-                        "id": "3ef5ad2e-c396-418c-a709-a224cdc19a2f",
-                        "router": {
-                            "name": "metro"
-                        },
-                        "source": {
-                            "id": "ba9aaec3-93c3-4f1e-a094-ca2548bd2d53",
-                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "startDirections": [
-                            "right"
-                        ],
-                        "target": {
-                            "id": "c074c969-bc79-4746-9f86-4e0ac5be3f44",
-                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "type": "link",
-                        "z": 6
+                        "z": 7
                     }
                 ]
             },
@@ -777,7 +777,7 @@
         "schema": 4,
         "version": "4.10.0.40961"
     },
-    "create_time": "2021-02-11T14:22:53.110488+00:00",
+    "create_time": "2021-02-11T14:25:11.515581+00:00",
     "draft_mode": false,
     "labels": [
         "notable"
