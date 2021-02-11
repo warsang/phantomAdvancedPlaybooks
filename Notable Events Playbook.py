@@ -8,6 +8,9 @@ from datetime import datetime, timedelta
 def on_start(container):
     phantom.debug('on_start() called')
     
+    # call 'Event_Comment' block
+    Event_Comment(container=container)
+
     # call 'myquerystring' block
     myquerystring(container=container)
 
@@ -71,6 +74,51 @@ def Output_formatted(action=None, success=None, container=None, results=None, ha
     phantom.format(container=container, template=template, parameters=parameters, name="Output_formatted")
 
     add_comment_1(container=container)
+
+    return
+
+def update_event_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('update_event_1() called')
+
+    # collect data for 'update_event_1' call
+    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.event_id', 'artifact:*.id'])
+    formatted_data_1 = phantom.get_format_data(name='Event_Comment__as_list')
+
+    parameters = []
+    
+    # build parameters list for 'update_event_1' call
+    for container_item in container_data:
+        for formatted_part_1 in formatted_data_1:
+            if container_item[0]:
+                parameters.append({
+                    'event_ids': container_item[0],
+                    'owner': "",
+                    'status': "in progress",
+                    'integer_status': "",
+                    'urgency': "",
+                    'comment': formatted_part_1,
+                    'wait_for_confirmation': "",
+                    # context (artifact id) is added to associate results with the artifact
+                    'context': {'artifact_id': container_item[1]},
+                })
+
+    phantom.act(action="update event", parameters=parameters, assets=['mysplunkinstance'], name="update_event_1")
+
+    return
+
+def Event_Comment(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('Event_Comment() called')
+    
+    template = """We're working on this event. Check status here: {0}"""
+
+    # parameter list for template variable replacement
+    parameters = [
+        "container:url",
+    ]
+
+    phantom.format(container=container, template=template, parameters=parameters, name="Event_Comment")
+
+    update_event_1(container=container)
 
     return
 
