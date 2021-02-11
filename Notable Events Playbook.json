@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
-            "hash": "2fbf28097d9bc0a24cabd7a5e97ba2955ad3e921",
+            "hash": "2a5b3f0b78fdd35ef946630f1d3e00d4082764f2",
             "joint": {
                 "cells": [
                     {
@@ -809,7 +809,7 @@
                         "title": "Investigate",
                         "type": "coa.Action",
                         "warn": "",
-                        "z": 14
+                        "z": 16
                     },
                     {
                         "active": false,
@@ -865,7 +865,7 @@
                                 "display": "block"
                             }
                         },
-                        "block_code": "def myquerystring(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('myquerystring() called')\n    \n    template = \"\"\"|savedsearch myphantomlab4search server={0}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"artifact:*.cef.hostname\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"myquerystring\")\n\n    run_query_1(container=container)\n\n    return",
+                        "block_code": "def myquerystring(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('myquerystring() called')\n    \n    template = \"\"\"myphantomlab4search server={0}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"artifact:*.cef.hostname\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"myquerystring\")\n\n    run_query_1(container=container)\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": false,
@@ -971,11 +971,11 @@
                         },
                         "state": "format",
                         "status": "",
-                        "template": "|savedsearch myphantomlab4search server={0}",
+                        "template": "myphantomlab4search server={0}",
                         "title": "format",
                         "type": "coa.Format",
                         "warn": false,
-                        "z": 15
+                        "z": 17
                     }
                 ]
             },
@@ -985,7 +985,7 @@
         "schema": 4,
         "version": "4.10.0.40961"
     },
-    "create_time": "2021-02-11T15:17:26.278530+00:00",
+    "create_time": "2021-02-11T15:18:21.159308+00:00",
     "draft_mode": false,
     "labels": [
         "notable"

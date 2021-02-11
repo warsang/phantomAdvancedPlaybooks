@@ -36,7 +36,7 @@ def run_query_1(action=None, success=None, container=None, results=None, handle=
 def myquerystring(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
     phantom.debug('myquerystring() called')
     
-    template = """|savedsearch myphantomlab4search server={0}"""
+    template = """myphantomlab4search server={0}"""
 
     # parameter list for template variable replacement
     parameters = [
