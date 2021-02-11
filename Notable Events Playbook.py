@@ -26,8 +26,8 @@ def run_savedsearch(action=None, success=None, container=None, results=None, han
     
     # build parameters list for 'run_savedsearch' call
     parameters.append({
-        'command': "savedsearch",
         'query': formatted_data_1,
+        'command': "savedsearch",
         'display': "",
         'parse_only': "",
     })
@@ -92,12 +92,12 @@ def update_event_1(action=None, success=None, container=None, results=None, hand
         for formatted_part_1 in formatted_data_1:
             if container_item[0]:
                 parameters.append({
-                    'event_ids': container_item[0],
                     'owner': "",
                     'status': "in progress",
-                    'integer_status': "",
-                    'urgency': "",
                     'comment': formatted_part_1,
+                    'urgency': "",
+                    'event_ids': container_item[0],
+                    'integer_status': "",
                     'wait_for_confirmation': "",
                     # context (artifact id) is added to associate results with the artifact
                     'context': {'artifact_id': container_item[1]},
@@ -142,8 +142,8 @@ def MyPhantomcustomfunction(action=None, success=None, container=None, results=N
 
     for item0 in container_property_0:
         parameters.append({
-            'current_container': item0[0],
             'results': action_results_data_0_0,
+            'current_container': item0[0],
         })
     ################################################################################
     ## Custom Code Start
