@@ -8,8 +8,8 @@ from datetime import datetime, timedelta
 def on_start(container):
     phantom.debug('on_start() called')
     
-    # call 'run_query_1' block
-    run_query_1(container=container)
+    # call 'myquerystring' block
+    myquerystring(container=container)
 
     return
 
@@ -17,18 +17,35 @@ def run_query_1(action=None, success=None, container=None, results=None, handle=
     phantom.debug('run_query_1() called')
 
     # collect data for 'run_query_1' call
+    formatted_data_1 = phantom.get_format_data(name='myquerystring')
 
     parameters = []
     
     # build parameters list for 'run_query_1' call
     parameters.append({
         'command': "savedsearch",
-        'query': "|savedsearch myphantomlab4search server=HOST-004",
+        'query': formatted_data_1,
         'display': "",
         'parse_only': "",
     })
 
     phantom.act(action="run query", parameters=parameters, assets=['mysplunkinstance'], name="run_query_1")
+
+    return
+
+def myquerystring(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('myquerystring() called')
+    
+    template = """|savedsearch myphantomlab4search server={0}"""
+
+    # parameter list for template variable replacement
+    parameters = [
+        "artifact:*.cef.destinationAddress",
+    ]
+
+    phantom.format(container=container, template=template, parameters=parameters, name="myquerystring")
+
+    run_query_1(container=container)
 
     return
 

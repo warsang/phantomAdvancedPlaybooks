@@ -7,9 +7,188 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
-            "hash": "9c2f72c66296534b5c5d4e4c902ab1bedefe8c66",
+            "hash": "5787116791ea9b8ab54d67069231077cad4a7ef2",
             "joint": {
                 "cells": [
+                    {
+                        "0": "E",
+                        "1": "N",
+                        "2": "D",
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".title": {
+                                "text": "END"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_end.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def on_finish(container, summary):\n    phantom.debug('on_finish() called')\n    # This function is called after all actions are completed.\n    # summary of all the action and/or all details of actions\n    # can be collected here.\n\n    # summary_json = phantom.get_summary()\n    # if 'result' in summary_json:\n        # for action_result in summary_json['result']:\n            # if 'action_run_id' in action_result:\n                # action_results = phantom.get_action_results(action_run_id=action_result['action_run_id'], result_data=False, flatten=False)\n                # phantom.debug(action_results)\n\n    return",
+                        "callback_code": "# read-only block view not available",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "run query",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "c074c969-bc79-4746-9f86-4e0ac5be3f44",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "# read-only block view not available",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 65,
+                        "line_start": 52,
+                        "name": "",
+                        "notes": "",
+                        "number": 0,
+                        "order": 4,
+                        "outPorts": [],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 800,
+                            "y": 100
+                        },
+                        "previous_function": "",
+                        "previous_name": "",
+                        "show_number": true,
+                        "size": {
+                            "height": 54,
+                            "width": 80
+                        },
+                        "state": "end",
+                        "status": "",
+                        "title": "END",
+                        "type": "coa.StartEnd",
+                        "warn": false,
+                        "z": 2
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "3ef5ad2e-c396-418c-a709-a224cdc19a2f",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "ba9aaec3-93c3-4f1e-a094-ca2548bd2d53",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "c074c969-bc79-4746-9f86-4e0ac5be3f44",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 6
+                    },
                     {
                         "0": "S",
                         "1": "T",
@@ -55,11 +234,11 @@
                                 "display": "block"
                             }
                         },
-                        "block_code": "def on_start(container):\n    phantom.debug('on_start() called')\n    \n    # call 'run_query_1' block\n    run_query_1(container=container)\n\n    return",
+                        "block_code": "def on_start(container):\n    phantom.debug('on_start() called')\n    \n    # call 'myquerystring' block\n    myquerystring(container=container)\n\n    return",
                         "callback_code": "# read-only block view not available",
                         "callback_start": 1,
                         "callsback": false,
-                        "connected_to_start": true,
+                        "connected_to_start": false,
                         "connection_name": "",
                         "connection_type": "",
                         "custom_callback": "",
@@ -153,12 +332,87 @@
                         "title": "START",
                         "type": "coa.StartEnd",
                         "warn": false,
-                        "z": 1
+                        "z": 8
                     },
                     {
-                        "0": "E",
-                        "1": "N",
-                        "2": "D",
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "83225304-8a07-4e6e-8606-9b32a81cb304",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "112ee4d5-d40e-48a4-a0cf-ec44d595b69b",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "6fc9f4e0-fb5d-43c3-9004-b205b0318366",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 9
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "31c89148-7b8d-4f54-a370-abf2e1818d51",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "6fc9f4e0-fb5d-43c3-9004-b205b0318366",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "ba9aaec3-93c3-4f1e-a094-ca2548bd2d53",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 11
+                    },
+                    {
                         "active": false,
                         "angle": 0,
                         "attrs": {
@@ -168,6 +422,9 @@
                             },
                             ".color-band": {
                                 "fill": "#3C444D"
+                            },
+                            ".format": {
+                                "text": "myquerystring"
                             },
                             ".inPorts>.port-in": {
                                 "ref": ".background",
@@ -179,8 +436,22 @@
                                     "type": "in"
                                 }
                             },
+                            ".message": {
+                                "opacity": 0,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out-1": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out-1>.port-body": {
+                                "port": {
+                                    "id": "out-1",
+                                    "type": "out"
+                                }
+                            },
                             ".title": {
-                                "text": "END"
+                                "text": "format"
                             },
                             "g.delete": {
                                 "display": "none"
@@ -188,43 +459,54 @@
                             "g.error": {
                                 "opacity": 0
                             },
-                            "g.icon image": {
-                                "xlink:href": "/inc/coa/img/block_icon_end.svg"
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
                             },
                             "g.notes": {
                                 "display": "block"
                             }
                         },
-                        "block_code": "def on_finish(container, summary):\n    phantom.debug('on_finish() called')\n    # This function is called after all actions are completed.\n    # summary of all the action and/or all details of actions\n    # can be collected here.\n\n    # summary_json = phantom.get_summary()\n    # if 'result' in summary_json:\n        # for action_result in summary_json['result']:\n            # if 'action_run_id' in action_result:\n                # action_results = phantom.get_action_results(action_run_id=action_result['action_run_id'], result_data=False, flatten=False)\n                # phantom.debug(action_results)\n\n    return",
-                        "callback_code": "# read-only block view not available",
+                        "block_code": "def myquerystring(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('myquerystring() called')\n    \n    template = \"\"\"|savedsearch myphantomlab4search server={0}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"artifact:*.cef.destinationAddress\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"myquerystring\")\n\n    run_query_1(container=container)\n\n    return",
+                        "callback_code": "",
                         "callback_start": 1,
                         "callsback": false,
                         "connected_to_start": true,
-                        "connection_name": "run query",
-                        "connection_type": "action",
+                        "connection_name": "",
+                        "connection_type": "",
                         "custom_callback": "",
                         "custom_code": "",
                         "custom_join": "",
-                        "custom_name": "",
+                        "custom_name": "myquerystring",
                         "description": "",
+                        "format": "format",
                         "has_custom": false,
                         "has_custom_block": false,
                         "has_custom_callback": false,
                         "has_custom_join": false,
-                        "id": "c074c969-bc79-4746-9f86-4e0ac5be3f44",
+                        "id": "6fc9f4e0-fb5d-43c3-9004-b205b0318366",
                         "inPorts": [
                             "in"
                         ],
-                        "join_code": "# read-only block view not available",
+                        "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 48,
-                        "line_start": 35,
-                        "name": "",
+                        "line_end": 52,
+                        "line_start": 36,
+                        "message": "Configuring now",
+                        "name": "format",
                         "notes": "",
-                        "number": 0,
+                        "number": 1,
                         "order": 3,
-                        "outPorts": [],
+                        "outPorts": [
+                            "out-1"
+                        ],
+                        "parameters": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": "artifact:*.cef.destinationAddress"
+                            }
+                        ],
                         "ports": {
                             "groups": {
                                 "in": {
@@ -278,100 +560,23 @@
                             }
                         },
                         "position": {
-                            "x": 800,
-                            "y": 100
+                            "x": 220,
+                            "y": 80
                         },
                         "previous_function": "",
-                        "previous_name": "",
+                        "previous_name": "myquerystring",
                         "show_number": true,
                         "size": {
-                            "height": 54,
-                            "width": 80
+                            "height": 100,
+                            "width": 180
                         },
-                        "state": "end",
+                        "state": "format",
                         "status": "",
-                        "title": "END",
-                        "type": "coa.StartEnd",
+                        "template": "|savedsearch myphantomlab4search server={0}",
+                        "title": "format",
+                        "type": "coa.Format",
                         "warn": false,
-                        "z": 2
-                    },
-                    {
-                        "attrs": {
-                            ".connection": {
-                                "stroke": "#818D99",
-                                "stroke-width": 2
-                            },
-                            ".marker-target": {
-                                "d": "M 10 0 L 0 5 L 10 10 z",
-                                "fill": "#818D99",
-                                "stroke": "#818D99"
-                            }
-                        },
-                        "connector": {
-                            "args": {
-                                "radius": 5
-                            },
-                            "name": "rounded"
-                        },
-                        "endDirections": [
-                            "left"
-                        ],
-                        "id": "7f6d4520-cf7c-4754-951b-bb6b92d89fc7",
-                        "router": {
-                            "name": "metro"
-                        },
-                        "source": {
-                            "id": "112ee4d5-d40e-48a4-a0cf-ec44d595b69b",
-                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "startDirections": [
-                            "right"
-                        ],
-                        "target": {
-                            "id": "ba9aaec3-93c3-4f1e-a094-ca2548bd2d53",
-                            "selector": ".port-body[type=\"input\"]"
-                        },
-                        "type": "link",
-                        "z": 3
-                    },
-                    {
-                        "attrs": {
-                            ".connection": {
-                                "stroke": "#818D99",
-                                "stroke-width": 2
-                            },
-                            ".marker-target": {
-                                "d": "M 10 0 L 0 5 L 10 10 z",
-                                "fill": "#818D99",
-                                "stroke": "#818D99"
-                            }
-                        },
-                        "connector": {
-                            "args": {
-                                "radius": 5
-                            },
-                            "name": "rounded"
-                        },
-                        "endDirections": [
-                            "left"
-                        ],
-                        "id": "3ef5ad2e-c396-418c-a709-a224cdc19a2f",
-                        "router": {
-                            "name": "metro"
-                        },
-                        "source": {
-                            "id": "ba9aaec3-93c3-4f1e-a094-ca2548bd2d53",
-                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "startDirections": [
-                            "right"
-                        ],
-                        "target": {
-                            "id": "c074c969-bc79-4746-9f86-4e0ac5be3f44",
-                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "type": "link",
-                        "z": 6
+                        "z": 13
                     },
                     {
                         "action": "run query",
@@ -382,7 +587,7 @@
                             "command": "savedsearch",
                             "display": "",
                             "parse_only": "",
-                            "query": "|savedsearch myphantomlab4search server=HOST-004"
+                            "query": "myquerystring:formatted_data"
                         },
                         "angle": 0,
                         "app": "Splunk",
@@ -410,7 +615,7 @@
                                     "command": "savedsearch",
                                     "display": "",
                                     "parse_only": "",
-                                    "query": "|savedsearch myphantomlab4search server=HOST-004"
+                                    "query": "myquerystring:formatted_data"
                                 },
                                 "has_app": true,
                                 "id": 8,
@@ -653,6 +858,9 @@
                             "g.error": {
                                 "opacity": 0
                             },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
                             "g.icon image": {
                                 "xlink:href": "/inc/coa/img/block_icon_investigate.svg"
                             },
@@ -660,7 +868,7 @@
                                 "display": "block"
                             }
                         },
-                        "block_code": "def run_query_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('run_query_1() called')\n\n    # collect data for 'run_query_1' call\n\n    parameters = []\n    \n    # build parameters list for 'run_query_1' call\n    parameters.append({\n        'command': \"savedsearch\",\n        'query': \"|savedsearch myphantomlab4search server=HOST-004\",\n        'display': \"\",\n        'parse_only': \"\",\n    })\n\n    phantom.act(action=\"run query\", parameters=parameters, assets=['mysplunkinstance'], name=\"run_query_1\")\n\n    return",
+                        "block_code": "def run_query_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('run_query_1() called')\n\n    # collect data for 'run_query_1' call\n    formatted_data_1 = phantom.get_format_data(name='myquerystring')\n\n    parameters = []\n    \n    # build parameters list for 'run_query_1' call\n    parameters.append({\n        'command': \"savedsearch\",\n        'query': formatted_data_1,\n        'display': \"\",\n        'parse_only': \"\",\n    })\n\n    phantom.act(action=\"run query\", parameters=parameters, assets=['mysplunkinstance'], name=\"run_query_1\")\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
@@ -685,7 +893,7 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 35,
+                        "line_end": 36,
                         "line_start": 16,
                         "message": "Configuring now",
                         "name": "run query",
@@ -748,7 +956,7 @@
                             }
                         },
                         "position": {
-                            "x": 360,
+                            "x": 520,
                             "y": 80
                         },
                         "previous_function": "",
@@ -767,7 +975,7 @@
                         "title": "Investigate",
                         "type": "coa.Action",
                         "warn": "",
-                        "z": 7
+                        "z": 14
                     }
                 ]
             },
@@ -777,7 +985,7 @@
         "schema": 4,
         "version": "4.10.0.40961"
     },
-    "create_time": "2021-02-11T14:56:42.998980+00:00",
+    "create_time": "2021-02-11T15:12:16.330449+00:00",
     "draft_mode": false,
     "labels": [
         "notable"
