@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
-            "hash": "1c2c8e2ad4d6356ac5253c1c340d3488abf79243",
+            "hash": "5d3dceeaab91ed558453e377b85d62cc9c0b1b44",
             "joint": {
                 "cells": [
                     {
@@ -382,7 +382,7 @@
                             "command": "savedsearch",
                             "display": "",
                             "parse_only": "",
-                            "query": "|savedsearch myphantomlab4search server=artifact:*.cef.destinationAddress"
+                            "query": "|savedsearch myphantomlab4search server=\"artifact:*.cef.destinationAddress\""
                         },
                         "angle": 0,
                         "app": "Splunk",
@@ -410,7 +410,7 @@
                                     "command": "savedsearch",
                                     "display": "",
                                     "parse_only": "",
-                                    "query": "|savedsearch myphantomlab4search server=artifact:*.cef.destinationAddress"
+                                    "query": "|savedsearch myphantomlab4search server=\"artifact:*.cef.destinationAddress\""
                                 },
                                 "has_app": true,
                                 "id": 8,
@@ -660,7 +660,7 @@
                                 "display": "block"
                             }
                         },
-                        "block_code": "def run_query_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('run_query_1() called')\n\n    # collect data for 'run_query_1' call\n\n    parameters = []\n    \n    # build parameters list for 'run_query_1' call\n    parameters.append({\n        'command': \"savedsearch\",\n        'query': \"|savedsearch myphantomlab4search server=artifact:*.cef.destinationAddress\",\n        'display': \"\",\n        'parse_only': \"\",\n    })\n\n    phantom.act(action=\"run query\", parameters=parameters, assets=['mysplunkinstance'], name=\"run_query_1\")\n\n    return",
+                        "block_code": "def run_query_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('run_query_1() called')\n\n    # collect data for 'run_query_1' call\n\n    parameters = []\n    \n    # build parameters list for 'run_query_1' call\n    parameters.append({\n        'command': \"savedsearch\",\n        'query': \"|savedsearch myphantomlab4search server=\\\"artifact:*.cef.destinationAddress\\\"\",\n        'display': \"\",\n        'parse_only': \"\",\n    })\n\n    phantom.act(action=\"run query\", parameters=parameters, assets=['mysplunkinstance'], name=\"run_query_1\")\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
@@ -777,7 +777,7 @@
         "schema": 4,
         "version": "4.10.0.40961"
     },
-    "create_time": "2021-02-11T14:51:20.585663+00:00",
+    "create_time": "2021-02-11T14:53:17.013282+00:00",
     "draft_mode": false,
     "labels": [
         "notable"
