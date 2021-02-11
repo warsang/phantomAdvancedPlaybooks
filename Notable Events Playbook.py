@@ -40,7 +40,7 @@ def myquerystring(action=None, success=None, container=None, results=None, handl
 
     # parameter list for template variable replacement
     parameters = [
-        "artifact:*.cef. hostname",
+        "artifact:*.cef.hostname",
     ]
 
     phantom.format(container=container, template=template, parameters=parameters, name="myquerystring")

@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
-            "hash": "84858c428bf432f30e29562ee99f34f87dd8e8f0",
+            "hash": "2fbf28097d9bc0a24cabd7a5e97ba2955ad3e921",
             "joint": {
                 "cells": [
                     {
@@ -865,7 +865,7 @@
                                 "display": "block"
                             }
                         },
-                        "block_code": "def myquerystring(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('myquerystring() called')\n    \n    template = \"\"\"|savedsearch myphantomlab4search server={0}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"artifact:*.cef. hostname\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"myquerystring\")\n\n    run_query_1(container=container)\n\n    return",
+                        "block_code": "def myquerystring(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('myquerystring() called')\n    \n    template = \"\"\"|savedsearch myphantomlab4search server={0}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"artifact:*.cef.hostname\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"myquerystring\")\n\n    run_query_1(container=container)\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": false,
@@ -903,7 +903,7 @@
                             {
                                 "position": 0,
                                 "type": "",
-                                "value": "artifact:*.cef. hostname"
+                                "value": "artifact:*.cef.hostname"
                             }
                         ],
                         "ports": {
@@ -985,7 +985,7 @@
         "schema": 4,
         "version": "4.10.0.40961"
     },
-    "create_time": "2021-02-11T15:13:26.128035+00:00",
+    "create_time": "2021-02-11T15:17:26.278530+00:00",
     "draft_mode": false,
     "labels": [
         "notable"
