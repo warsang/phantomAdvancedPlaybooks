@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
-            "hash": "9ab63713a0f4b3760416d10ac8c2c6f2646fec8b",
+            "hash": "d59fa5540057250ede0b0b01ea102e6a29f886aa",
             "joint": {
                 "cells": [
                     {
@@ -73,8 +73,8 @@
                         "join_code": "# read-only block view not available",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 176,
-                        "line_start": 163,
+                        "line_end": 180,
+                        "line_start": 167,
                         "name": "",
                         "notes": "",
                         "number": 0,
@@ -133,8 +133,8 @@
                             }
                         },
                         "position": {
-                            "x": 1140,
-                            "y": 220
+                            "x": 1260,
+                            "y": 300
                         },
                         "previous_function": "",
                         "previous_name": "",
@@ -2193,22 +2193,34 @@
                                 "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
                             }
                         },
-                        "block_code": "def MyPhantomcustomfunction(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('MyPhantomcustomfunction() called')\n    \n    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*._raw', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n\n    parameters = []\n\n    action_results_data_0_0 = [item[0] for item in action_results_data_0]\n\n    for item0 in container_property_0:\n        parameters.append({\n            'results': action_results_data_0_0,\n            'current_container': item0[0],\n        })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/task4customFunc\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/task4customFunc', parameters=parameters, name='MyPhantomcustomfunction')\n\n    return",
+                        "block_code": "def MyPhantomcustomfunction(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('MyPhantomcustomfunction() called')\n    \n    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*.peer', 'run_savedsearch:action_result.data.*.priority', 'run_savedsearch:action_result.data.*.count', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n\n    parameters = []\n\n    action_results_data_0_0 = [item[0] for item in action_results_data_0]\n    action_results_data_0_1 = [item[1] for item in action_results_data_0]\n    action_results_data_0_2 = [item[2] for item in action_results_data_0]\n\n    for item0 in container_property_0:\n        parameters.append({\n            'current_container': item0[0],\n            'peer': action_results_data_0_0,\n            'priority': action_results_data_0_1,\n            'count': action_results_data_0_2,\n        })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/task4customFunc\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/task4customFunc', parameters=parameters, name='MyPhantomcustomfunction')\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
                         "cfDisplayPath": "mainPhantomPlaybooksAdvanced/task4customFunc",
                         "cfInputs": {
+                            "count": {
+                                "collectionType": "action_results_data",
+                                "dataPath": "run_savedsearch:action_result.data.*.count",
+                                "paramName": "action_results_data_0_2",
+                                "type": "list"
+                            },
                             "current_container": {
                                 "collectionType": "container_property",
                                 "dataPath": "container:id",
                                 "paramName": "item0[0]",
                                 "type": "item"
                             },
-                            "results": {
+                            "peer": {
                                 "collectionType": "action_results_data",
-                                "dataPath": "run_savedsearch:action_result.data.*._raw",
+                                "dataPath": "run_savedsearch:action_result.data.*.peer",
                                 "paramName": "action_results_data_0_0",
+                                "type": "list"
+                            },
+                            "priority": {
+                                "collectionType": "action_results_data",
+                                "dataPath": "run_savedsearch:action_result.data.*.priority",
+                                "paramName": "action_results_data_0_1",
                                 "type": "list"
                             }
                         },
@@ -2216,10 +2228,11 @@
                         "connected_to_start": true,
                         "connection_name": "run_savedsearch",
                         "connection_type": "action",
+                        "count-3": "run_savedsearch:action_result.data.*.count",
                         "currentVersion": true,
                         "current_container-0": "container:id",
                         "customCodeEndLineOffset": 7,
-                        "customCodeStartLine": 22,
+                        "customCodeStartLine": 26,
                         "customFunction": "mainPhantomPlaybooksAdvanced/task4customFunc",
                         "customFunctionId": null,
                         "custom_callback": "",
@@ -2242,7 +2255,7 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 163,
+                        "line_end": 167,
                         "line_start": 129,
                         "message": "Configuring now",
                         "name": "task4customFunc",
@@ -2252,6 +2265,7 @@
                         "outPorts": [
                             "out"
                         ],
+                        "peer-1": "run_savedsearch:action_result.data.*.peer",
                         "ports": {
                             "groups": {
                                 "in": {
@@ -2310,18 +2324,20 @@
                         },
                         "previous_function": "",
                         "previous_name": "MyPhantomcustomfunction",
-                        "results-1": "run_savedsearch:action_result.data.*._raw",
+                        "priority-2": "run_savedsearch:action_result.data.*.priority",
                         "selectedCustomFunction": {
                             "description": "mytask4customfunc",
                             "draftMode": false,
-                            "id": 11,
+                            "id": 25,
                             "inputs": [
                                 {
                                     "_pretty_custom_function": "task4customFunc",
-                                    "contains_type": [],
-                                    "custom_function": 11,
+                                    "contains_type": [
+                                        "phantom container id"
+                                    ],
+                                    "custom_function": 25,
                                     "description": "",
-                                    "id": 43,
+                                    "id": 80,
                                     "input_type": "item",
                                     "name": "current_container",
                                     "placeholder": ""
@@ -2329,11 +2345,31 @@
                                 {
                                     "_pretty_custom_function": "task4customFunc",
                                     "contains_type": [],
-                                    "custom_function": 11,
+                                    "custom_function": 25,
                                     "description": "",
-                                    "id": 44,
+                                    "id": 81,
                                     "input_type": "list",
-                                    "name": "results",
+                                    "name": "peer",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "task4customFunc",
+                                    "contains_type": [],
+                                    "custom_function": 25,
+                                    "description": "",
+                                    "id": 82,
+                                    "input_type": "list",
+                                    "name": "priority",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "task4customFunc",
+                                    "contains_type": [],
+                                    "custom_function": 25,
+                                    "description": "",
+                                    "id": 83,
+                                    "input_type": "list",
+                                    "name": "count",
                                     "placeholder": ""
                                 }
                             ],
@@ -2342,16 +2378,25 @@
                                 {
                                     "_pretty_custom_function": "task4customFunc",
                                     "contains_type": [],
-                                    "custom_function": 11,
-                                    "data_path": "my_out_custom_list",
+                                    "custom_function": 25,
+                                    "data_path": "my_output_custom_list",
                                     "description": "",
-                                    "id": 15
+                                    "id": 34
                                 }
                             ],
                             "playbooks": {
                                 "draft_playbooks": [],
                                 "draft_version_id": null,
-                                "playbooks": []
+                                "playbooks": [
+                                    {
+                                        "active": false,
+                                        "display_path": "mainPhantomPlaybooksAdvanced/Notable Events Playbook",
+                                        "draft_mode": false,
+                                        "id": 81,
+                                        "name": "Notable Events Playbook",
+                                        "viewable": true
+                                    }
+                                ]
                             },
                             "scmId": 7,
                             "scmName": "mainPhantomPlaybooksAdvanced"
@@ -2377,7 +2422,7 @@
         "schema": 4,
         "version": "4.10.0.40961"
     },
-    "create_time": "2021-02-11T16:49:54.318338+00:00",
+    "create_time": "2021-02-11T17:15:13.771981+00:00",
     "draft_mode": false,
     "labels": [
         "notable"

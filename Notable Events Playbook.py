@@ -129,7 +129,7 @@ MyPhantomcustomfunction
 def MyPhantomcustomfunction(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
     phantom.debug('MyPhantomcustomfunction() called')
     
-    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*._raw', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )
+    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*.peer', 'run_savedsearch:action_result.data.*.priority', 'run_savedsearch:action_result.data.*.count', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )
     container_property_0 = [
         [
             container.get("id"),
@@ -139,11 +139,15 @@ def MyPhantomcustomfunction(action=None, success=None, container=None, results=N
     parameters = []
 
     action_results_data_0_0 = [item[0] for item in action_results_data_0]
+    action_results_data_0_1 = [item[1] for item in action_results_data_0]
+    action_results_data_0_2 = [item[2] for item in action_results_data_0]
 
     for item0 in container_property_0:
         parameters.append({
-            'results': action_results_data_0_0,
             'current_container': item0[0],
+            'peer': action_results_data_0_0,
+            'priority': action_results_data_0_1,
+            'count': action_results_data_0_2,
         })
     ################################################################################
     ## Custom Code Start
