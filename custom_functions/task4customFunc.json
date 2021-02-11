@@ -1,11 +1,13 @@
 {
-    "create_time": "2021-02-11T16:33:33.085682+00:00",
+    "create_time": "2021-02-11T17:13:50.488846+00:00",
     "custom_function_id": "a46ee83f116d0ee9887914ca6ae963eb2b52c14b",
     "description": "mytask4customfunc",
     "draft_mode": false,
     "inputs": [
         {
-            "contains_type": [],
+            "contains_type": [
+                "phantom container id"
+            ],
             "description": "",
             "input_type": "item",
             "name": "current_container",
@@ -15,14 +17,28 @@
             "contains_type": [],
             "description": "",
             "input_type": "list",
-            "name": "results",
+            "name": "peer",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "list",
+            "name": "priority",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "list",
+            "name": "count",
             "placeholder": ""
         }
     ],
     "outputs": [
         {
             "contains_type": [],
-            "data_path": "my_out_custom_list",
+            "data_path": "my_output_custom_list",
             "description": ""
         }
     ],
