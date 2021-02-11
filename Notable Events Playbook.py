@@ -17,21 +17,16 @@ def run_query_1(action=None, success=None, container=None, results=None, handle=
     phantom.debug('run_query_1() called')
 
     # collect data for 'run_query_1' call
-    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.destinationAddress', 'artifact:*.id'])
 
     parameters = []
     
     # build parameters list for 'run_query_1' call
-    for container_item in container_data:
-        if container_item[0]:
-            parameters.append({
-                'command': "savedsearch",
-                'query': container_item[0],
-                'display': "",
-                'parse_only': "",
-                # context (artifact id) is added to associate results with the artifact
-                'context': {'artifact_id': container_item[1]},
-            })
+    parameters.append({
+        'command': "savedsearch",
+        'query': "|savedsearch myphantomlab4search server=artifact:*.cef.destinationAddress",
+        'display': "",
+        'parse_only': "",
+    })
 
     phantom.act(action="run query", parameters=parameters, assets=['mysplunkinstance'], name="run_query_1")
 
