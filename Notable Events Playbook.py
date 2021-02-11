@@ -23,7 +23,7 @@ def run_query_1(action=None, success=None, container=None, results=None, handle=
     # build parameters list for 'run_query_1' call
     parameters.append({
         'command': "savedsearch",
-        'query': "|savedsearch myphantomlab4search server=\"artifact:*.cef.destinationAddress\"",
+        'query': "|savedsearch myphantomlab4search server=artifact:*.cef.destinationAddress",
         'display': "",
         'parse_only': "",
     })
