@@ -58,7 +58,7 @@ def Add_Comment_2_case(action=None, success=None, container=None, results=None, 
     formatted_data_1 = phantom.get_format_data(name='Output_formatted__as_list')
 
     phantom.comment(container=container, comment=formatted_data_1)
-    MyPhantomcustomfunction(container=container)
+    Buildcontainerlist(container=container)
 
     return
 
@@ -126,8 +126,8 @@ def Event_Comment(action=None, success=None, container=None, results=None, handl
 """
 MyPhantomcustomfunction
 """
-def MyPhantomcustomfunction(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
-    phantom.debug('MyPhantomcustomfunction() called')
+def Buildcontainerlist(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('Buildcontainerlist() called')
     
     action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*.peer', 'run_savedsearch:action_result.data.*.priority', 'run_savedsearch:action_result.data.*.count', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )
     container_property_0 = [
@@ -160,7 +160,41 @@ def MyPhantomcustomfunction(action=None, success=None, container=None, results=N
     ################################################################################    
 
     # call custom function "mainPhantomPlaybooksAdvanced/task4customFunc", returns the custom_function_run_id
-    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/task4customFunc', parameters=parameters, name='MyPhantomcustomfunction')
+    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/task4customFunc', parameters=parameters, name='Buildcontainerlist', callback=cf_mainPhantomPlaybooksAdvanced_list_2_containers_1)
+
+    return
+
+def cf_mainPhantomPlaybooksAdvanced_list_2_containers_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('cf_mainPhantomPlaybooksAdvanced_list_2_containers_1() called')
+    
+    custom_function_result_0 = phantom.collect2(container=container, datapath=['Buildcontainerlist:custom_function_result.data.my_output_custom_list'], action_results=results )
+    container_property_0 = [
+        [
+            container.get("label"),
+        ],
+    ]
+
+    parameters = []
+
+    custom_function_result_0_0 = [item[0] for item in custom_function_result_0]
+    container_property_0_0 = [item[0] for item in container_property_0]
+
+    parameters.append({
+        'to_be_containerized': custom_function_result_0_0,
+        'container_label': container_property_0_0,
+    })
+    ################################################################################
+    ## Custom Code Start
+    ################################################################################
+
+    # Write your custom code here...
+
+    ################################################################################
+    ## Custom Code End
+    ################################################################################    
+
+    # call custom function "mainPhantomPlaybooksAdvanced/list_2_containers", returns the custom_function_run_id
+    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/list_2_containers', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_list_2_containers_1')
 
     return
 
