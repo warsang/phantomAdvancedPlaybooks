@@ -29,7 +29,7 @@ def run_query_1(action=None, success=None, container=None, results=None, handle=
         'parse_only': "",
     })
 
-    phantom.act(action="run query", parameters=parameters, assets=['mysplunkinstance'], name="run_query_1")
+    phantom.act(action="run query", parameters=parameters, assets=['mysplunkinstance'], callback=Output_formatted, name="run_query_1")
 
     return
 
@@ -46,6 +46,31 @@ def myquerystring(action=None, success=None, container=None, results=None, handl
     phantom.format(container=container, template=template, parameters=parameters, name="myquerystring")
 
     run_query_1(container=container)
+
+    return
+
+def add_comment_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('add_comment_1() called')
+
+    formatted_data_1 = phantom.get_format_data(name='Output_formatted__as_list')
+
+    phantom.comment(container=container, comment=formatted_data_1)
+
+    return
+
+def Output_formatted(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('Output_formatted() called')
+    
+    template = """This is the total number of peer servers returned by the search {0}"""
+
+    # parameter list for template variable replacement
+    parameters = [
+        "myquerystring:formatted_data.*",
+    ]
+
+    phantom.format(container=container, template=template, parameters=parameters, name="Output_formatted")
+
+    add_comment_1(container=container)
 
     return
 
