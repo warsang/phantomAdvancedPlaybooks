@@ -1,0 +1,31 @@
+{
+    "create_time": "2021-02-11T17:54:41.125919+00:00",
+    "custom_function_id": "eadb60bd5892471d12ff0a1da3d37e4ee6386723",
+    "description": "Creates containers from a list",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "list",
+            "name": "to_be_containerized",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "list",
+            "name": "container_label",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "new_container_ids",
+            "description": ""
+        }
+    ],
+    "platform_version": "4.10.0.40961",
+    "python_version": "3"
+}
