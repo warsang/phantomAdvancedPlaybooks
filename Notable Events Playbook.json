@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
-            "hash": "b6abd3f351c2ad4a8a8b2afc131d1c3627210b30",
+            "hash": "9ab63713a0f4b3760416d10ac8c2c6f2646fec8b",
             "joint": {
                 "cells": [
                     {
@@ -2130,7 +2130,7 @@
                         "attrs": {
                             ".background": {
                                 "fill": "#000000",
-                                "stroke": "#0083FF"
+                                "stroke": "#5C6773"
                             },
                             ".color-band": {
                                 "fill": "#3C444D"
@@ -2193,7 +2193,7 @@
                                 "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
                             }
                         },
-                        "block_code": "def MyPhantomcustomfunction(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('MyPhantomcustomfunction() called')\n    \n    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.message', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n\n    parameters = []\n\n    action_results_data_0_0 = [item[0] for item in action_results_data_0]\n\n    for item0 in container_property_0:\n        parameters.append({\n            'results': action_results_data_0_0,\n            'current_container': item0[0],\n        })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/task4customFunc\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/task4customFunc', parameters=parameters, name='MyPhantomcustomfunction')\n\n    return",
+                        "block_code": "def MyPhantomcustomfunction(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('MyPhantomcustomfunction() called')\n    \n    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*._raw', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n\n    parameters = []\n\n    action_results_data_0_0 = [item[0] for item in action_results_data_0]\n\n    for item0 in container_property_0:\n        parameters.append({\n            'results': action_results_data_0_0,\n            'current_container': item0[0],\n        })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/task4customFunc\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/task4customFunc', parameters=parameters, name='MyPhantomcustomfunction')\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
@@ -2207,7 +2207,7 @@
                             },
                             "results": {
                                 "collectionType": "action_results_data",
-                                "dataPath": "run_savedsearch:action_result.message",
+                                "dataPath": "run_savedsearch:action_result.data.*._raw",
                                 "paramName": "action_results_data_0_0",
                                 "type": "list"
                             }
@@ -2310,7 +2310,7 @@
                         },
                         "previous_function": "",
                         "previous_name": "MyPhantomcustomfunction",
-                        "results-1": "run_savedsearch:action_result.message",
+                        "results-1": "run_savedsearch:action_result.data.*._raw",
                         "selectedCustomFunction": {
                             "description": "mytask4customfunc",
                             "draftMode": false,
@@ -2362,7 +2362,7 @@
                             "width": 180
                         },
                         "state": "repo",
-                        "status": "active",
+                        "status": "",
                         "title": "custom function",
                         "type": "coa.CustomFunctionBlock",
                         "userGeneratedCode": "    # Write your custom code here...",
@@ -2377,7 +2377,7 @@
         "schema": 4,
         "version": "4.10.0.40961"
     },
-    "create_time": "2021-02-11T16:48:06.633016+00:00",
+    "create_time": "2021-02-11T16:49:54.318338+00:00",
     "draft_mode": false,
     "labels": [
         "notable"

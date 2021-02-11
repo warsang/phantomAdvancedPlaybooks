@@ -129,7 +129,7 @@ MyPhantomcustomfunction
 def MyPhantomcustomfunction(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
     phantom.debug('MyPhantomcustomfunction() called')
     
-    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.message', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )
+    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*._raw', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )
     container_property_0 = [
         [
             container.get("id"),
