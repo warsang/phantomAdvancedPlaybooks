@@ -134,7 +134,7 @@ def Buildcontainerlist(action=None, success=None, container=None, results=None, 
     action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*.peer', 'run_savedsearch:action_result.data.*.count', 'run_savedsearch:action_result.data.*.priority', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )
     container_property_0 = [
         [
-            container.get("id.*"),
+            container.get("id"),
         ],
     ]
 

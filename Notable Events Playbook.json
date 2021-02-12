@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
-            "hash": "0bed5ebcaec5fb21e9a14723b6ba18df3e8b748e",
+            "hash": "4b280a8099f2348093be0ea5bb9c8204d6f56a51",
             "joint": {
                 "cells": [
                     {
@@ -3217,7 +3217,7 @@
                                 "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
                             }
                         },
-                        "block_code": "def Buildcontainerlist(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Buildcontainerlist() called')\n    \n    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*.peer', 'run_savedsearch:action_result.data.*.count', 'run_savedsearch:action_result.data.*.priority', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"id.*\"),\n        ],\n    ]\n\n    parameters = []\n\n    action_results_data_0_0 = [item[0] for item in action_results_data_0]\n    action_results_data_0_1 = [item[1] for item in action_results_data_0]\n    action_results_data_0_2 = [item[2] for item in action_results_data_0]\n    container_property_0_0 = [item[0] for item in container_property_0]\n\n    parameters.append({\n        'peer': action_results_data_0_0,\n        'count': action_results_data_0_1,\n        'priority': action_results_data_0_2,\n        'current_container': container_property_0_0,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/task4customFunc\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/task4customFunc', parameters=parameters, name='Buildcontainerlist', callback=cf_mainPhantomPlaybooksAdvanced_list_2_containers_1)\n\n    return",
+                        "block_code": "def Buildcontainerlist(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Buildcontainerlist() called')\n    \n    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*.peer', 'run_savedsearch:action_result.data.*.count', 'run_savedsearch:action_result.data.*.priority', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n\n    parameters = []\n\n    action_results_data_0_0 = [item[0] for item in action_results_data_0]\n    action_results_data_0_1 = [item[1] for item in action_results_data_0]\n    action_results_data_0_2 = [item[2] for item in action_results_data_0]\n    container_property_0_0 = [item[0] for item in container_property_0]\n\n    parameters.append({\n        'peer': action_results_data_0_0,\n        'count': action_results_data_0_1,\n        'priority': action_results_data_0_2,\n        'current_container': container_property_0_0,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/task4customFunc\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/task4customFunc', parameters=parameters, name='Buildcontainerlist', callback=cf_mainPhantomPlaybooksAdvanced_list_2_containers_1)\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
@@ -3231,7 +3231,7 @@
                             },
                             "current_container": {
                                 "collectionType": "container_property",
-                                "dataPath": "container:id.*",
+                                "dataPath": "container:id",
                                 "paramName": "container_property_0_0",
                                 "type": "list"
                             },
@@ -3253,7 +3253,7 @@
                         "connection_name": "run_savedsearch",
                         "connection_type": "action",
                         "currentVersion": true,
-                        "current_container-0": "container:id.*",
+                        "current_container-0": "container:id",
                         "customCodeEndLineOffset": 7,
                         "customCodeStartLine": 26,
                         "customFunction": "mainPhantomPlaybooksAdvanced/task4customFunc",
@@ -3445,7 +3445,7 @@
         "schema": 4,
         "version": "4.10.0.40961"
     },
-    "create_time": "2021-02-12T19:11:51.535214+00:00",
+    "create_time": "2021-02-12T19:13:21.354608+00:00",
     "draft_mode": false,
     "labels": [
         "notable"
