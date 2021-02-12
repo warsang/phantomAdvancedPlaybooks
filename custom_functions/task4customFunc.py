@@ -9,7 +9,7 @@ def task4customFunc(current_container=None, peer=None, priority=None, count=None
         count
     
     Returns a JSON-serializable object that implements the configured data paths:
-        *.my_output_custom_list
+        *.results_list
     """
     ############################ Custom Code Goes Below This Line #################################
     import json
@@ -38,7 +38,7 @@ def task4customFunc(current_container=None, peer=None, priority=None, count=None
     # The actual list is in slot 3 of the tuple returned by phantom.get_list()
     results_list = phantom.get_list(list_name)[2]
     phantom.debug(results_list)
-    outputs = {'my_output_custom_list': results_list}
+    outputs = {'results_list': results_list}
     phantom.debug(outputs)
     # Return a JSON-serializable object
     assert json.dumps(outputs)  # Will raise an exception if the :outputs: object is not JSON-serializable
