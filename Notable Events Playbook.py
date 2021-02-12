@@ -178,13 +178,12 @@ def cf_mainPhantomPlaybooksAdvanced_list_2_containers_1(action=None, success=Non
 
     parameters = []
 
-    custom_function_result_0_0 = [item[0] for item in custom_function_result_0]
-
-    for item0 in container_property_0:
-        parameters.append({
-            'to_be_containerized': custom_function_result_0_0,
-            'container_label': item0[0],
-        })
+    for item0 in custom_function_result_0:
+        for item1 in container_property_0:
+            parameters.append({
+                'to_be_containerized': item0[0],
+                'container_label': item1[0],
+            })
     ################################################################################
     ## Custom Code Start
     ################################################################################
