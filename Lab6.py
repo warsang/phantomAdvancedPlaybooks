@@ -35,7 +35,7 @@ def httpsphabb09classsplunkcomrestpl(action=None, success=None, container=None, 
     parameters.append({
         'headers': "",
         'location': "rest/container",
-        'verify_certificate': False,
+        'verify_certificate': True,
     })
 
     phantom.act(action="get data", parameters=parameters, assets=['something'], callback=format_1, reviewer="admin", name="httpsphabb09classsplunkcomrestpl")
