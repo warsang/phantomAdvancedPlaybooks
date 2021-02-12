@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
-            "hash": "002871e6ca542280d8c7314ee003665cb3303765",
+            "hash": "59d4ee4168777c0610504969f8a0348429c221c6",
             "joint": {
                 "cells": [
                     {
@@ -73,8 +73,8 @@
                         "join_code": "# read-only block view not available",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 339,
-                        "line_start": 326,
+                        "line_end": 341,
+                        "line_start": 328,
                         "name": "",
                         "notes": "",
                         "number": 0,
@@ -350,8 +350,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 129,
-                        "line_start": 113,
+                        "line_end": 131,
+                        "line_start": 115,
                         "message": "Configuring now",
                         "name": "format",
                         "notes": "",
@@ -687,8 +687,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 68,
-                        "line_start": 58,
+                        "line_end": 70,
+                        "line_start": 60,
                         "message": "Configuring now",
                         "name": "add comment",
                         "notes": "",
@@ -1102,8 +1102,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 113,
-                        "line_start": 84,
+                        "line_end": 115,
+                        "line_start": 86,
                         "message": "Configuring now",
                         "name": "update event",
                         "notes": "",
@@ -1270,8 +1270,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 84,
-                        "line_start": 68,
+                        "line_end": 86,
+                        "line_start": 70,
                         "message": "Configuring now",
                         "name": "format",
                         "notes": "",
@@ -1699,14 +1699,14 @@
                                 "opacity": 1
                             }
                         },
-                        "block_code": "def run_savedsearch(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('run_savedsearch() called')\n\n    # collect data for 'run_savedsearch' call\n    formatted_data_1 = phantom.get_format_data(name='myquerystring')\n\n    parameters = []\n    \n    # build parameters list for 'run_savedsearch' call\n    parameters.append({\n        'query': formatted_data_1,\n        'command': \"savedsearch\",\n        'display': \"\",\n        'parse_only': \"\",\n    })\n\n    phantom.act(action=\"run query\", parameters=parameters, assets=['mysplunkinstance'], callback=Output_formatted, name=\"run_savedsearch\")\n\n    return",
+                        "block_code": "def run_savedsearch(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('run_savedsearch() called')\n        \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    # collect data for 'run_savedsearch' call\n    formatted_data_1 = phantom.get_format_data(name='myquerystring')\n\n    parameters = []\n    \n    # build parameters list for 'run_savedsearch' call\n    parameters.append({\n        'query': formatted_data_1,\n        'command': \"savedsearch\",\n        'display': \"\",\n        'parse_only': \"\",\n    })\n\n    phantom.act(action=\"run query\", parameters=parameters, assets=['mysplunkinstance'], callback=Output_formatted, name=\"run_savedsearch\")\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
                         "color": "",
                         "connected_to_start": true,
-                        "connection_name": "",
-                        "connection_type": "",
+                        "connection_name": "Dropnones",
+                        "connection_type": "action",
                         "custom_callback": "",
                         "custom_code": "",
                         "custom_join": "",
@@ -1724,7 +1724,7 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 42,
+                        "line_end": 44,
                         "line_start": 22,
                         "message": "Configuring now",
                         "name": "run query",
@@ -1809,260 +1809,6 @@
                         "z": 90
                     },
                     {
-                        ".scmName/text": "mainPhantomPlaybooksAdvanced",
-                        "active": false,
-                        "active_keys": {},
-                        "active_values": {},
-                        "angle": 0,
-                        "attrs": {
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#5C6773"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".customFunction": {
-                                "text": "Merge_fields"
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "ref-x": 5,
-                                "ref-y": 105,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out>.port-body": {
-                                "port": {
-                                    "id": "out",
-                                    "type": "out"
-                                }
-                            },
-                            ".scmName": {
-                                "text": "mainPhantomPlayb..."
-                            },
-                            ".title": {
-                                "text": "custom function"
-                            },
-                            ".title-info": {
-                                "text": ""
-                            },
-                            "g.branch image": {
-                                "opacity": 1
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 0
-                            },
-                            "g.error image": {
-                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            }
-                        },
-                        "block_code": "def cf_mainPhantomPlaybooksAdvanced_Merge_fields_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_mainPhantomPlaybooksAdvanced_Merge_fields_1() called')\n    \n    container_data_0 = phantom.collect2(container=container, datapath=['artifact:*.cef.hostname', 'artifact:*.cef.destinationAddress', 'artifact:*.id'])\n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n\n    parameters = []\n\n    container_data_0_0 = [item[0] for item in container_data_0]\n    container_property_0_0 = [item[0] for item in container_property_0]\n    container_data_0_1 = [item[1] for item in container_data_0]\n\n    parameters.append({\n        'hostname': container_data_0_0,\n        'current_container': container_property_0_0,\n        'my_dest_src_param': container_data_0_1,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/Merge_fields\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/Merge_fields', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_Merge_fields_1')\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 238,
-                        "callsback": true,
-                        "cfDisplayPath": "mainPhantomPlaybooksAdvanced/Merge_fields",
-                        "cfInputs": {
-                            "current_container": {
-                                "collectionType": "container_property",
-                                "dataPath": "container:id",
-                                "paramName": "container_property_0_0",
-                                "type": "list"
-                            },
-                            "hostname": {
-                                "collectionType": "container_data",
-                                "dataPath": "artifact:*.cef.hostname",
-                                "paramName": "container_data_0_0",
-                                "type": "list"
-                            },
-                            "my_dest_src_param": {
-                                "collectionType": "container_data",
-                                "dataPath": "artifact:*.cef.destinationAddress",
-                                "paramName": "container_data_0_1",
-                                "type": "list"
-                            }
-                        },
-                        "color": "",
-                        "connected_to_start": true,
-                        "connection_name": "",
-                        "connection_type": "",
-                        "currentVersion": true,
-                        "current_container-2": "container:id",
-                        "customCodeEndLineOffset": 7,
-                        "customCodeStartLine": 24,
-                        "customFunction": "mainPhantomPlaybooksAdvanced/Merge_fields",
-                        "customFunctionId": null,
-                        "custom_callback": "",
-                        "custom_code": "",
-                        "custom_join": "",
-                        "custom_name": "",
-                        "delay": 0,
-                        "description": "",
-                        "draftMode": false,
-                        "existingCF": true,
-                        "functionBlock": "custom function",
-                        "has_custom": false,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "hostname-0": "artifact:*.cef.hostname",
-                        "id": "6107775e-dd2d-4418-a4fc-71c65b4ecc48",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "join_code": "",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "line_end": 240,
-                        "line_start": 204,
-                        "message": "Configuring now",
-                        "my_dest_src_param-1": "artifact:*.cef.destinationAddress",
-                        "name": "Merge_fields",
-                        "notes": "",
-                        "number": 1,
-                        "order": 10,
-                        "outPorts": [
-                            "out"
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": -240,
-                            "y": 180
-                        },
-                        "previous_function": "",
-                        "previous_name": "cf_mainPhantomPlaybooksAdvanced_Merge_fields_1",
-                        "selectedCustomFunction": {
-                            "description": "I used this to normalize cef fields from different formated entries into one",
-                            "draftMode": false,
-                            "id": 29,
-                            "inputs": [
-                                {
-                                    "_pretty_custom_function": "Merge_fields",
-                                    "contains_type": [],
-                                    "custom_function": 29,
-                                    "description": "my_hostname",
-                                    "id": 93,
-                                    "input_type": "list",
-                                    "name": "hostname",
-                                    "placeholder": "my_hostname"
-                                },
-                                {
-                                    "_pretty_custom_function": "Merge_fields",
-                                    "contains_type": [],
-                                    "custom_function": 29,
-                                    "description": "my_dest_src_param",
-                                    "id": 94,
-                                    "input_type": "list",
-                                    "name": "my_dest_src_param",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "_pretty_custom_function": "Merge_fields",
-                                    "contains_type": [
-                                        "phantom container id"
-                                    ],
-                                    "custom_function": 29,
-                                    "description": "current_container=None",
-                                    "id": 95,
-                                    "input_type": "list",
-                                    "name": "current_container",
-                                    "placeholder": "current_container"
-                                }
-                            ],
-                            "name": "Merge_fields",
-                            "outputs": [],
-                            "playbooks": {
-                                "draft_playbooks": [],
-                                "draft_version_id": null,
-                                "playbooks": []
-                            },
-                            "scmId": 7,
-                            "scmName": "mainPhantomPlaybooksAdvanced"
-                        },
-                        "show_number": false,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "repo",
-                        "status": "",
-                        "title": "custom function",
-                        "type": "coa.CustomFunctionBlock",
-                        "userGeneratedCode": "    # Write your custom code here...",
-                        "warn": false,
-                        "z": 91
-                    },
-                    {
                         "attrs": {
                             ".connection": {
                                 "stroke": "#818D99",
@@ -2100,543 +1846,6 @@
                         },
                         "type": "link",
                         "z": 93
-                    },
-                    {
-                        ".scmName/text": "mainPhantomPlaybooksAdvanced",
-                        "active": false,
-                        "active_keys": {},
-                        "active_values": {},
-                        "angle": 0,
-                        "attrs": {
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#E6984E"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".customFunction": {
-                                "text": "Buildcontainerlist"
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "ref-x": 5,
-                                "ref-y": 105,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out>.port-body": {
-                                "port": {
-                                    "id": "out",
-                                    "type": "out"
-                                }
-                            },
-                            ".scmName": {
-                                "text": "mainPhantomPlayb..."
-                            },
-                            ".title": {
-                                "text": "custom function"
-                            },
-                            ".title-info": {
-                                "text": ""
-                            },
-                            "g.branch image": {
-                                "opacity": 1
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 1
-                            },
-                            "g.error image": {
-                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            },
-                            "g.notes image": {
-                                "opacity": 1,
-                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
-                            }
-                        },
-                        "block_code": "def Buildcontainerlist(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Buildcontainerlist() called')\n    \n    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*.peer', 'run_savedsearch:action_result.data.*.count', 'run_savedsearch:action_result.data.*.priority', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n\n    parameters = []\n\n    action_results_data_0_0 = [item[0] for item in action_results_data_0]\n    action_results_data_0_1 = [item[1] for item in action_results_data_0]\n    action_results_data_0_2 = [item[2] for item in action_results_data_0]\n\n    for item0 in container_property_0:\n        parameters.append({\n            'peer': action_results_data_0_0,\n            'count': action_results_data_0_1,\n            'priority': action_results_data_0_2,\n            'current_container': item0[0],\n        })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/task4customFunc\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/task4customFunc', parameters=parameters, name='Buildcontainerlist', callback=cf_mainPhantomPlaybooksAdvanced_list_2_containers_1)\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 1,
-                        "callsback": true,
-                        "cfDisplayPath": "mainPhantomPlaybooksAdvanced/task4customFunc",
-                        "cfInputs": {
-                            "count": {
-                                "collectionType": "action_results_data",
-                                "dataPath": "run_savedsearch:action_result.data.*.count",
-                                "paramName": "action_results_data_0_1",
-                                "type": "list"
-                            },
-                            "current_container": {
-                                "collectionType": "container_property",
-                                "dataPath": "container:id",
-                                "paramName": "item0[0]",
-                                "type": "item"
-                            },
-                            "peer": {
-                                "collectionType": "action_results_data",
-                                "dataPath": "run_savedsearch:action_result.data.*.peer",
-                                "paramName": "action_results_data_0_0",
-                                "type": "list"
-                            },
-                            "priority": {
-                                "collectionType": "action_results_data",
-                                "dataPath": "run_savedsearch:action_result.data.*.priority",
-                                "paramName": "action_results_data_0_2",
-                                "type": "list"
-                            }
-                        },
-                        "color": "",
-                        "connected_to_start": false,
-                        "connection_name": "run_savedsearch",
-                        "connection_type": "action",
-                        "count-3": "run_savedsearch:action_result.data.*.count",
-                        "currentVersion": true,
-                        "current_container-0": "container:id",
-                        "customCodeEndLineOffset": 7,
-                        "customCodeStartLine": 26,
-                        "customFunction": "mainPhantomPlaybooksAdvanced/task4customFunc",
-                        "customFunctionId": null,
-                        "custom_callback": "",
-                        "custom_code": "",
-                        "custom_join": "",
-                        "custom_name": "Buildcontainerlist",
-                        "delay": 0,
-                        "description": "MyPhantomcustomfunction",
-                        "draftMode": false,
-                        "existingCF": true,
-                        "functionBlock": "custom function",
-                        "has_custom": false,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "7f2a979f-dd5b-4f66-ae33-35d1b6fa70b3",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "join_code": "",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "line_end": 170,
-                        "line_start": 132,
-                        "message": "Configuring now",
-                        "name": "task4customFunc",
-                        "notes": "MyPhantomcustomfunction",
-                        "number": 1,
-                        "order": 8,
-                        "outPorts": [
-                            "out"
-                        ],
-                        "peer-1": "run_savedsearch:action_result.data.*.peer",
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": 900,
-                            "y": -20
-                        },
-                        "previous_function": "",
-                        "previous_name": "Buildcontainerlist",
-                        "priority-2": "run_savedsearch:action_result.data.*.priority",
-                        "selectedCustomFunction": {
-                            "description": "mytask4customfunc",
-                            "draftMode": false,
-                            "id": 25,
-                            "inputs": [
-                                {
-                                    "_pretty_custom_function": "task4customFunc",
-                                    "contains_type": [
-                                        "phantom container id"
-                                    ],
-                                    "custom_function": 25,
-                                    "description": "",
-                                    "id": 80,
-                                    "input_type": "item",
-                                    "name": "current_container",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "_pretty_custom_function": "task4customFunc",
-                                    "contains_type": [],
-                                    "custom_function": 25,
-                                    "description": "",
-                                    "id": 81,
-                                    "input_type": "list",
-                                    "name": "peer",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "_pretty_custom_function": "task4customFunc",
-                                    "contains_type": [],
-                                    "custom_function": 25,
-                                    "description": "",
-                                    "id": 82,
-                                    "input_type": "list",
-                                    "name": "priority",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "_pretty_custom_function": "task4customFunc",
-                                    "contains_type": [],
-                                    "custom_function": 25,
-                                    "description": "",
-                                    "id": 83,
-                                    "input_type": "list",
-                                    "name": "count",
-                                    "placeholder": ""
-                                }
-                            ],
-                            "name": "task4customFunc",
-                            "outputs": [
-                                {
-                                    "_pretty_custom_function": "task4customFunc",
-                                    "contains_type": [],
-                                    "custom_function": 25,
-                                    "data_path": "my_output_custom_list",
-                                    "description": "",
-                                    "id": 34
-                                }
-                            ],
-                            "playbooks": {
-                                "draft_playbooks": [],
-                                "draft_version_id": null,
-                                "playbooks": [
-                                    {
-                                        "active": false,
-                                        "display_path": "mainPhantomPlaybooksAdvanced/Notable Events Playbook",
-                                        "draft_mode": false,
-                                        "id": 81,
-                                        "name": "Notable Events Playbook",
-                                        "viewable": true
-                                    }
-                                ]
-                            },
-                            "scmId": 7,
-                            "scmName": "mainPhantomPlaybooksAdvanced"
-                        },
-                        "show_number": false,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "repo",
-                        "status": "warn",
-                        "title": "custom function",
-                        "type": "coa.CustomFunctionBlock",
-                        "userGeneratedCode": "    # Write your custom code here...",
-                        "warn": false,
-                        "z": 94
-                    },
-                    {
-                        ".scmName/text": "mainPhantomPlaybooksAdvanced",
-                        "active": false,
-                        "active_keys": {},
-                        "active_values": {},
-                        "angle": 0,
-                        "attrs": {
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#E6984E"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".customFunction": {
-                                "text": "list_2_containers"
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "ref-x": 5,
-                                "ref-y": 105,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out>.port-body": {
-                                "port": {
-                                    "id": "out",
-                                    "type": "out"
-                                }
-                            },
-                            ".scmName": {
-                                "text": "mainPhantomPlayb..."
-                            },
-                            ".title": {
-                                "text": "custom function"
-                            },
-                            ".title-info": {
-                                "text": ""
-                            },
-                            "g.branch image": {
-                                "opacity": 1
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 1
-                            },
-                            "g.error image": {
-                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            }
-                        },
-                        "block_code": "def cf_mainPhantomPlaybooksAdvanced_list_2_containers_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_mainPhantomPlaybooksAdvanced_list_2_containers_1() called')\n    \n    custom_function_result_0 = phantom.collect2(container=container, datapath=['Buildcontainerlist:custom_function_result.data.my_output_custom_list'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"label\"),\n        ],\n    ]\n\n    parameters = []\n\n    container_property_0_0 = [item[0] for item in container_property_0]\n    custom_function_result_0_0 = [item[0] for item in custom_function_result_0]\n\n    parameters.append({\n        'container_label': container_property_0_0,\n        'to_be_containerized': custom_function_result_0_0,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/list_2_containers\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/list_2_containers', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_list_2_containers_1')\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 1,
-                        "callsback": true,
-                        "cfDisplayPath": "mainPhantomPlaybooksAdvanced/list_2_containers",
-                        "cfInputs": {
-                            "container_label": {
-                                "collectionType": "container_property",
-                                "dataPath": "container:label",
-                                "paramName": "container_property_0_0",
-                                "type": "list"
-                            },
-                            "to_be_containerized": {
-                                "collectionType": "custom_function_result",
-                                "dataPath": "Buildcontainerlist:custom_function_result.data.my_output_custom_list",
-                                "paramName": "custom_function_result_0_0",
-                                "type": "list"
-                            }
-                        },
-                        "color": "",
-                        "connected_to_start": false,
-                        "connection_name": "Buildcontainerlist",
-                        "connection_type": "action",
-                        "container_label-1": "container:label",
-                        "currentVersion": true,
-                        "customCodeEndLineOffset": 7,
-                        "customCodeStartLine": 22,
-                        "customFunction": "mainPhantomPlaybooksAdvanced/list_2_containers",
-                        "customFunctionId": null,
-                        "custom_callback": "",
-                        "custom_code": "",
-                        "custom_join": "",
-                        "custom_name": "",
-                        "delay": 0,
-                        "description": "",
-                        "draftMode": false,
-                        "existingCF": true,
-                        "functionBlock": "custom function",
-                        "has_custom": false,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "6142e494-12b2-4003-b073-3467caeb5a18",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "join_code": "",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "line_end": 204,
-                        "line_start": 170,
-                        "message": "Configuring now",
-                        "name": "list_2_containers",
-                        "notes": "",
-                        "number": 1,
-                        "order": 9,
-                        "outPorts": [
-                            "out"
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": 1200,
-                            "y": 20
-                        },
-                        "previous_function": "",
-                        "previous_name": "cf_mainPhantomPlaybooksAdvanced_list_2_containers_1",
-                        "selectedCustomFunction": {
-                            "description": "Creates containers from a list",
-                            "draftMode": false,
-                            "id": 26,
-                            "inputs": [
-                                {
-                                    "_pretty_custom_function": "list_2_containers",
-                                    "contains_type": [],
-                                    "custom_function": 26,
-                                    "description": "",
-                                    "id": 84,
-                                    "input_type": "list",
-                                    "name": "to_be_containerized",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "_pretty_custom_function": "list_2_containers",
-                                    "contains_type": [],
-                                    "custom_function": 26,
-                                    "description": "",
-                                    "id": 85,
-                                    "input_type": "list",
-                                    "name": "container_label",
-                                    "placeholder": ""
-                                }
-                            ],
-                            "name": "list_2_containers",
-                            "outputs": [
-                                {
-                                    "_pretty_custom_function": "list_2_containers",
-                                    "contains_type": [],
-                                    "custom_function": 26,
-                                    "data_path": "new_container_ids",
-                                    "description": "",
-                                    "id": 35
-                                }
-                            ],
-                            "playbooks": {
-                                "draft_playbooks": [],
-                                "draft_version_id": null,
-                                "playbooks": []
-                            },
-                            "scmId": 7,
-                            "scmName": "mainPhantomPlaybooksAdvanced"
-                        },
-                        "show_number": false,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "repo",
-                        "status": "warn",
-                        "title": "custom function",
-                        "to_be_containerized-0": "Buildcontainerlist:custom_function_result.data.my_output_custom_list",
-                        "type": "coa.CustomFunctionBlock",
-                        "userGeneratedCode": "    # Write your custom code here...",
-                        "warn": false,
-                        "z": 95
                     },
                     {
                         "active": false,
@@ -2703,8 +1912,8 @@
                         "callback_start": 1,
                         "callsback": false,
                         "connected_to_start": true,
-                        "connection_name": "",
-                        "connection_type": "",
+                        "connection_name": "Dropnones",
+                        "connection_type": "action",
                         "custom_callback": "",
                         "custom_code": "",
                         "custom_join": "",
@@ -2722,8 +1931,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 58,
-                        "line_start": 42,
+                        "line_end": 60,
+                        "line_start": 44,
                         "message": "Configuring now",
                         "name": "format",
                         "notes": "",
@@ -2809,150 +2018,6 @@
                         "type": "coa.Format",
                         "warn": false,
                         "z": 96
-                    },
-                    {
-                        "0": "S",
-                        "1": "T",
-                        "2": "A",
-                        "3": "R",
-                        "4": "T",
-                        "active": false,
-                        "angle": 0,
-                        "attrs": {
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#5C6773"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".outPorts>.port-out": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out>.port-body": {
-                                "port": {
-                                    "id": "out",
-                                    "type": "out"
-                                }
-                            },
-                            ".title": {
-                                "ref-x": 33,
-                                "ref-y": 8,
-                                "text": "START"
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 0
-                            },
-                            "g.icon image": {
-                                "ref-x": 13,
-                                "xlink:href": "/inc/coa/img/block_icon_start.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            }
-                        },
-                        "block_code": "def on_start(container):\n    phantom.debug('on_start() called')\n    \n    # call 'cf_mainPhantomPlaybooksAdvanced_Merge_fields_1' block\n    cf_mainPhantomPlaybooksAdvanced_Merge_fields_1(container=container)\n\n    # call 'Event_Comment' block\n    Event_Comment(container=container)\n\n    # call 'List_merge_input' block\n    List_merge_input(container=container)\n\n    return",
-                        "callback_code": "# read-only block view not available",
-                        "callback_start": 1,
-                        "callsback": false,
-                        "connected_to_start": false,
-                        "connection_name": "",
-                        "connection_type": "",
-                        "custom_callback": "",
-                        "custom_code": "",
-                        "custom_join": "",
-                        "custom_name": "",
-                        "description": "",
-                        "has_custom": false,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "112ee4d5-d40e-48a4-a0cf-ec44d595b69b",
-                        "inPorts": [],
-                        "join_code": "# read-only block view not available",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "line_end": 22,
-                        "line_start": 8,
-                        "name": "",
-                        "notes": "",
-                        "number": 0,
-                        "order": 1,
-                        "outPorts": [
-                            "out"
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": -1200,
-                            "y": 200
-                        },
-                        "previous_function": "",
-                        "previous_name": "",
-                        "show_number": true,
-                        "size": {
-                            "height": 54,
-                            "width": 80
-                        },
-                        "status": "",
-                        "title": "START",
-                        "type": "coa.StartEnd",
-                        "warn": false,
-                        "z": 97
                     },
                     {
                         "attrs": {
@@ -3122,8 +2187,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 300,
-                        "line_start": 280,
+                        "line_end": 302,
+                        "line_start": 282,
                         "message": "Configuring now",
                         "name": "custom function",
                         "notes": "",
@@ -3204,6 +2269,45 @@
                         "z": 109
                     },
                     {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "de75b5b4-9d79-4a1f-b7ab-391745d024b6",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "df00fb06-15c5-402f-bb6a-8ed8f6e15203",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "6fc9f4e0-fb5d-43c3-9004-b205b0318366",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 113
+                    },
+                    {
                         ".scmName/text": "community",
                         "active": false,
                         "active_keys": {},
@@ -3275,7 +2379,7 @@
                                 "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
                             }
                         },
-                        "block_code": "def Dropnones(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Dropnones() called')\n    \n    parameters = []\n\n    parameters.append({\n        'input_list': None,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"community/list_drop_none\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='community/list_drop_none', parameters=parameters, name='Dropnones')\n\n    return",
+                        "block_code": "def Dropnones(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Dropnones() called')\n    \n    parameters = []\n\n    parameters.append({\n        'input_list': None,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"community/list_drop_none\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='community/list_drop_none', parameters=parameters, name='Dropnones', callback=myquerystring)\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
@@ -3315,8 +2419,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 326,
-                        "line_start": 303,
+                        "line_end": 328,
+                        "line_start": 305,
                         "message": "Configuring now",
                         "name": "list_drop_none",
                         "notes": "Dropping nones from our list",
@@ -3433,7 +2537,942 @@
                         "type": "coa.CustomFunctionBlock",
                         "userGeneratedCode": "    # Write your custom code here...",
                         "warn": false,
-                        "z": 110
+                        "z": 114
+                    },
+                    {
+                        "0": "S",
+                        "1": "T",
+                        "2": "A",
+                        "3": "R",
+                        "4": "T",
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "ref-x": 33,
+                                "ref-y": 8,
+                                "text": "START"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.icon image": {
+                                "ref-x": 13,
+                                "xlink:href": "/inc/coa/img/block_icon_start.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def on_start(container):\n    phantom.debug('on_start() called')\n    \n    # call 'cf_mainPhantomPlaybooksAdvanced_Merge_fields_1' block\n    cf_mainPhantomPlaybooksAdvanced_Merge_fields_1(container=container)\n\n    # call 'Event_Comment' block\n    Event_Comment(container=container)\n\n    # call 'List_merge_input' block\n    List_merge_input(container=container)\n\n    return",
+                        "callback_code": "# read-only block view not available",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": false,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "112ee4d5-d40e-48a4-a0cf-ec44d595b69b",
+                        "inPorts": [],
+                        "join_code": "# read-only block view not available",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 22,
+                        "line_start": 8,
+                        "name": "",
+                        "notes": "",
+                        "number": 0,
+                        "order": 1,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": -1460,
+                            "y": 200
+                        },
+                        "previous_function": "",
+                        "previous_name": "",
+                        "show_number": true,
+                        "size": {
+                            "height": 54,
+                            "width": 80
+                        },
+                        "status": "",
+                        "title": "START",
+                        "type": "coa.StartEnd",
+                        "warn": false,
+                        "z": 116
+                    },
+                    {
+                        ".scmName/text": "mainPhantomPlaybooksAdvanced",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {},
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".customFunction": {
+                                "text": "Merge_fields"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".scmName": {
+                                "text": "mainPhantomPlayb..."
+                            },
+                            ".title": {
+                                "text": "custom function"
+                            },
+                            ".title-info": {
+                                "text": ""
+                            },
+                            "g.branch image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def cf_mainPhantomPlaybooksAdvanced_Merge_fields_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_mainPhantomPlaybooksAdvanced_Merge_fields_1() called')\n    \n    container_data_0 = phantom.collect2(container=container, datapath=['artifact:*.cef.hostname', 'artifact:*.cef.destinationAddress', 'artifact:*.id'])\n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n\n    parameters = []\n\n    container_data_0_0 = [item[0] for item in container_data_0]\n    container_property_0_0 = [item[0] for item in container_property_0]\n    container_data_0_1 = [item[1] for item in container_data_0]\n\n    parameters.append({\n        'hostname': container_data_0_0,\n        'current_container': container_property_0_0,\n        'my_dest_src_param': container_data_0_1,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/Merge_fields\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/Merge_fields', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_Merge_fields_1')\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 238,
+                        "callsback": true,
+                        "cfDisplayPath": "mainPhantomPlaybooksAdvanced/Merge_fields",
+                        "cfInputs": {
+                            "current_container": {
+                                "collectionType": "container_property",
+                                "dataPath": "container:id",
+                                "paramName": "container_property_0_0",
+                                "type": "list"
+                            },
+                            "hostname": {
+                                "collectionType": "container_data",
+                                "dataPath": "artifact:*.cef.hostname",
+                                "paramName": "container_data_0_0",
+                                "type": "list"
+                            },
+                            "my_dest_src_param": {
+                                "collectionType": "container_data",
+                                "dataPath": "artifact:*.cef.destinationAddress",
+                                "paramName": "container_data_0_1",
+                                "type": "list"
+                            }
+                        },
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "currentVersion": true,
+                        "current_container-2": "container:id",
+                        "customCodeEndLineOffset": 7,
+                        "customCodeStartLine": 24,
+                        "customFunction": "mainPhantomPlaybooksAdvanced/Merge_fields",
+                        "customFunctionId": null,
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "delay": 0,
+                        "description": "",
+                        "draftMode": false,
+                        "existingCF": true,
+                        "functionBlock": "custom function",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "hostname-0": "artifact:*.cef.hostname",
+                        "id": "6107775e-dd2d-4418-a4fc-71c65b4ecc48",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 242,
+                        "line_start": 206,
+                        "message": "Configuring now",
+                        "my_dest_src_param-1": "artifact:*.cef.destinationAddress",
+                        "name": "Merge_fields",
+                        "notes": "",
+                        "number": 1,
+                        "order": 10,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": -240,
+                            "y": 180
+                        },
+                        "previous_function": "",
+                        "previous_name": "cf_mainPhantomPlaybooksAdvanced_Merge_fields_1",
+                        "selectedCustomFunction": {
+                            "description": "I used this to normalize cef fields from different formated entries into one",
+                            "draftMode": false,
+                            "id": 29,
+                            "inputs": [
+                                {
+                                    "_pretty_custom_function": "Merge_fields",
+                                    "contains_type": [],
+                                    "custom_function": 29,
+                                    "description": "my_hostname",
+                                    "id": 93,
+                                    "input_type": "list",
+                                    "name": "hostname",
+                                    "placeholder": "my_hostname"
+                                },
+                                {
+                                    "_pretty_custom_function": "Merge_fields",
+                                    "contains_type": [],
+                                    "custom_function": 29,
+                                    "description": "my_dest_src_param",
+                                    "id": 94,
+                                    "input_type": "list",
+                                    "name": "my_dest_src_param",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "Merge_fields",
+                                    "contains_type": [
+                                        "phantom container id"
+                                    ],
+                                    "custom_function": 29,
+                                    "description": "current_container=None",
+                                    "id": 95,
+                                    "input_type": "list",
+                                    "name": "current_container",
+                                    "placeholder": "current_container"
+                                }
+                            ],
+                            "name": "Merge_fields",
+                            "outputs": [],
+                            "playbooks": {
+                                "draft_playbooks": [],
+                                "draft_version_id": null,
+                                "playbooks": []
+                            },
+                            "scmId": 7,
+                            "scmName": "mainPhantomPlaybooksAdvanced"
+                        },
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "repo",
+                        "status": "",
+                        "title": "custom function",
+                        "type": "coa.CustomFunctionBlock",
+                        "userGeneratedCode": "    # Write your custom code here...",
+                        "warn": false,
+                        "z": 118
+                    },
+                    {
+                        ".scmName/text": "mainPhantomPlaybooksAdvanced",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {},
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#E6984E"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".customFunction": {
+                                "text": "list_2_containers"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".scmName": {
+                                "text": "mainPhantomPlayb..."
+                            },
+                            ".title": {
+                                "text": "custom function"
+                            },
+                            ".title-info": {
+                                "text": ""
+                            },
+                            "g.branch image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 1
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def cf_mainPhantomPlaybooksAdvanced_list_2_containers_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_mainPhantomPlaybooksAdvanced_list_2_containers_1() called')\n    \n    custom_function_result_0 = phantom.collect2(container=container, datapath=['Buildcontainerlist:custom_function_result.data.my_output_custom_list'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"label\"),\n        ],\n    ]\n\n    parameters = []\n\n    container_property_0_0 = [item[0] for item in container_property_0]\n    custom_function_result_0_0 = [item[0] for item in custom_function_result_0]\n\n    parameters.append({\n        'container_label': container_property_0_0,\n        'to_be_containerized': custom_function_result_0_0,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/list_2_containers\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/list_2_containers', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_list_2_containers_1')\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "cfDisplayPath": "mainPhantomPlaybooksAdvanced/list_2_containers",
+                        "cfInputs": {
+                            "container_label": {
+                                "collectionType": "container_property",
+                                "dataPath": "container:label",
+                                "paramName": "container_property_0_0",
+                                "type": "list"
+                            },
+                            "to_be_containerized": {
+                                "collectionType": "custom_function_result",
+                                "dataPath": "Buildcontainerlist:custom_function_result.data.my_output_custom_list",
+                                "paramName": "custom_function_result_0_0",
+                                "type": "list"
+                            }
+                        },
+                        "color": "",
+                        "connected_to_start": false,
+                        "connection_name": "Buildcontainerlist",
+                        "connection_type": "action",
+                        "container_label-1": "container:label",
+                        "currentVersion": true,
+                        "customCodeEndLineOffset": 7,
+                        "customCodeStartLine": 22,
+                        "customFunction": "mainPhantomPlaybooksAdvanced/list_2_containers",
+                        "customFunctionId": null,
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "delay": 0,
+                        "description": "",
+                        "draftMode": false,
+                        "existingCF": true,
+                        "functionBlock": "custom function",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "6142e494-12b2-4003-b073-3467caeb5a18",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 206,
+                        "line_start": 172,
+                        "message": "Configuring now",
+                        "name": "list_2_containers",
+                        "notes": "",
+                        "number": 1,
+                        "order": 9,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 1200,
+                            "y": 20
+                        },
+                        "previous_function": "",
+                        "previous_name": "cf_mainPhantomPlaybooksAdvanced_list_2_containers_1",
+                        "selectedCustomFunction": {
+                            "description": "Creates containers from a list",
+                            "draftMode": false,
+                            "id": 26,
+                            "inputs": [
+                                {
+                                    "_pretty_custom_function": "list_2_containers",
+                                    "contains_type": [],
+                                    "custom_function": 26,
+                                    "description": "",
+                                    "id": 84,
+                                    "input_type": "list",
+                                    "name": "to_be_containerized",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "list_2_containers",
+                                    "contains_type": [],
+                                    "custom_function": 26,
+                                    "description": "",
+                                    "id": 85,
+                                    "input_type": "list",
+                                    "name": "container_label",
+                                    "placeholder": ""
+                                }
+                            ],
+                            "name": "list_2_containers",
+                            "outputs": [
+                                {
+                                    "_pretty_custom_function": "list_2_containers",
+                                    "contains_type": [],
+                                    "custom_function": 26,
+                                    "data_path": "new_container_ids",
+                                    "description": "",
+                                    "id": 35
+                                }
+                            ],
+                            "playbooks": {
+                                "draft_playbooks": [],
+                                "draft_version_id": null,
+                                "playbooks": []
+                            },
+                            "scmId": 7,
+                            "scmName": "mainPhantomPlaybooksAdvanced"
+                        },
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "repo",
+                        "status": "warn",
+                        "title": "custom function",
+                        "to_be_containerized-0": "Buildcontainerlist:custom_function_result.data.my_output_custom_list",
+                        "type": "coa.CustomFunctionBlock",
+                        "userGeneratedCode": "    # Write your custom code here...",
+                        "warn": false,
+                        "z": 119
+                    },
+                    {
+                        ".scmName/text": "mainPhantomPlaybooksAdvanced",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {},
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#E6984E"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".customFunction": {
+                                "text": "Buildcontainerlist"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".scmName": {
+                                "text": "mainPhantomPlayb..."
+                            },
+                            ".title": {
+                                "text": "custom function"
+                            },
+                            ".title-info": {
+                                "text": ""
+                            },
+                            "g.branch image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 1
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            }
+                        },
+                        "block_code": "def Buildcontainerlist(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Buildcontainerlist() called')\n    \n    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*.peer', 'run_savedsearch:action_result.data.*.count', 'run_savedsearch:action_result.data.*.priority', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n\n    parameters = []\n\n    action_results_data_0_0 = [item[0] for item in action_results_data_0]\n    action_results_data_0_1 = [item[1] for item in action_results_data_0]\n    action_results_data_0_2 = [item[2] for item in action_results_data_0]\n\n    for item0 in container_property_0:\n        parameters.append({\n            'peer': action_results_data_0_0,\n            'count': action_results_data_0_1,\n            'priority': action_results_data_0_2,\n            'current_container': item0[0],\n        })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/task4customFunc\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/task4customFunc', parameters=parameters, name='Buildcontainerlist', callback=cf_mainPhantomPlaybooksAdvanced_list_2_containers_1)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "cfDisplayPath": "mainPhantomPlaybooksAdvanced/task4customFunc",
+                        "cfInputs": {
+                            "count": {
+                                "collectionType": "action_results_data",
+                                "dataPath": "run_savedsearch:action_result.data.*.count",
+                                "paramName": "action_results_data_0_1",
+                                "type": "list"
+                            },
+                            "current_container": {
+                                "collectionType": "container_property",
+                                "dataPath": "container:id",
+                                "paramName": "item0[0]",
+                                "type": "item"
+                            },
+                            "peer": {
+                                "collectionType": "action_results_data",
+                                "dataPath": "run_savedsearch:action_result.data.*.peer",
+                                "paramName": "action_results_data_0_0",
+                                "type": "list"
+                            },
+                            "priority": {
+                                "collectionType": "action_results_data",
+                                "dataPath": "run_savedsearch:action_result.data.*.priority",
+                                "paramName": "action_results_data_0_2",
+                                "type": "list"
+                            }
+                        },
+                        "color": "",
+                        "connected_to_start": false,
+                        "connection_name": "run_savedsearch",
+                        "connection_type": "action",
+                        "count-3": "run_savedsearch:action_result.data.*.count",
+                        "currentVersion": true,
+                        "current_container-0": "container:id",
+                        "customCodeEndLineOffset": 7,
+                        "customCodeStartLine": 26,
+                        "customFunction": "mainPhantomPlaybooksAdvanced/task4customFunc",
+                        "customFunctionId": null,
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "Buildcontainerlist",
+                        "delay": 0,
+                        "description": "MyPhantomcustomfunction",
+                        "draftMode": false,
+                        "existingCF": true,
+                        "functionBlock": "custom function",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "7f2a979f-dd5b-4f66-ae33-35d1b6fa70b3",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 172,
+                        "line_start": 134,
+                        "message": "Configuring now",
+                        "name": "task4customFunc",
+                        "notes": "MyPhantomcustomfunction",
+                        "number": 1,
+                        "order": 8,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "peer-1": "run_savedsearch:action_result.data.*.peer",
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 900,
+                            "y": -20
+                        },
+                        "previous_function": "",
+                        "previous_name": "Buildcontainerlist",
+                        "priority-2": "run_savedsearch:action_result.data.*.priority",
+                        "selectedCustomFunction": {
+                            "description": "mytask4customfunc",
+                            "draftMode": false,
+                            "id": 25,
+                            "inputs": [
+                                {
+                                    "_pretty_custom_function": "task4customFunc",
+                                    "contains_type": [
+                                        "phantom container id"
+                                    ],
+                                    "custom_function": 25,
+                                    "description": "",
+                                    "id": 80,
+                                    "input_type": "item",
+                                    "name": "current_container",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "task4customFunc",
+                                    "contains_type": [],
+                                    "custom_function": 25,
+                                    "description": "",
+                                    "id": 81,
+                                    "input_type": "list",
+                                    "name": "peer",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "task4customFunc",
+                                    "contains_type": [],
+                                    "custom_function": 25,
+                                    "description": "",
+                                    "id": 82,
+                                    "input_type": "list",
+                                    "name": "priority",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "task4customFunc",
+                                    "contains_type": [],
+                                    "custom_function": 25,
+                                    "description": "",
+                                    "id": 83,
+                                    "input_type": "list",
+                                    "name": "count",
+                                    "placeholder": ""
+                                }
+                            ],
+                            "name": "task4customFunc",
+                            "outputs": [
+                                {
+                                    "_pretty_custom_function": "task4customFunc",
+                                    "contains_type": [],
+                                    "custom_function": 25,
+                                    "data_path": "my_output_custom_list",
+                                    "description": "",
+                                    "id": 34
+                                }
+                            ],
+                            "playbooks": {
+                                "draft_playbooks": [],
+                                "draft_version_id": null,
+                                "playbooks": [
+                                    {
+                                        "active": false,
+                                        "display_path": "mainPhantomPlaybooksAdvanced/Notable Events Playbook",
+                                        "draft_mode": false,
+                                        "id": 81,
+                                        "name": "Notable Events Playbook",
+                                        "viewable": true
+                                    }
+                                ]
+                            },
+                            "scmId": 7,
+                            "scmName": "mainPhantomPlaybooksAdvanced"
+                        },
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "repo",
+                        "status": "warn",
+                        "title": "custom function",
+                        "type": "coa.CustomFunctionBlock",
+                        "userGeneratedCode": "    # Write your custom code here...",
+                        "warn": false,
+                        "z": 120
                     },
                     {
                         ".scmName/text": "community",
@@ -3444,7 +3483,7 @@
                         "attrs": {
                             ".background": {
                                 "fill": "#000000",
-                                "stroke": "#5C6773"
+                                "stroke": "#0083FF"
                             },
                             ".color-band": {
                                 "fill": "#3C444D"
@@ -3586,8 +3625,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 280,
-                        "line_start": 243,
+                        "line_end": 282,
+                        "line_start": 245,
                         "message": "Configuring now",
                         "name": "list_merge",
                         "notes": "List to merge the inputs",
@@ -3807,12 +3846,12 @@
                             "width": 180
                         },
                         "state": "repo",
-                        "status": "",
+                        "status": "active",
                         "title": "custom function",
                         "type": "coa.CustomFunctionBlock",
                         "userGeneratedCode": "    # Write your custom code here...",
                         "warn": false,
-                        "z": 111
+                        "z": 121
                     }
                 ]
             },
@@ -3822,7 +3861,7 @@
         "schema": 4,
         "version": "4.10.0.40961"
     },
-    "create_time": "2021-02-12T17:11:11.095273+00:00",
+    "create_time": "2021-02-12T17:17:15.954050+00:00",
     "draft_mode": false,
     "labels": [
         "notable"

@@ -21,7 +21,9 @@ def on_start(container):
 
 def run_savedsearch(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
     phantom.debug('run_savedsearch() called')
-
+        
+    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))
+    
     # collect data for 'run_savedsearch' call
     formatted_data_1 = phantom.get_format_data(name='myquerystring')
 
@@ -319,7 +321,7 @@ def Dropnones(action=None, success=None, container=None, results=None, handle=No
     ################################################################################    
 
     # call custom function "community/list_drop_none", returns the custom_function_run_id
-    phantom.custom_function(custom_function='community/list_drop_none', parameters=parameters, name='Dropnones')
+    phantom.custom_function(custom_function='community/list_drop_none', parameters=parameters, name='Dropnones', callback=myquerystring)
 
     return
 
