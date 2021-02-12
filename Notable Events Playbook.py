@@ -11,11 +11,11 @@ def on_start(container):
     # call 'cf_mainPhantomPlaybooksAdvanced_Merge_fields_1' block
     cf_mainPhantomPlaybooksAdvanced_Merge_fields_1(container=container)
 
-    # call 'myquerystring' block
-    myquerystring(container=container)
-
     # call 'Event_Comment' block
     Event_Comment(container=container)
+
+    # call 'List_merge_input' block
+    List_merge_input(container=container)
 
     return
 
@@ -234,6 +234,92 @@ def cf_mainPhantomPlaybooksAdvanced_Merge_fields_1(action=None, success=None, co
 
     # call custom function "mainPhantomPlaybooksAdvanced/Merge_fields", returns the custom_function_run_id
     phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/Merge_fields', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_Merge_fields_1')
+
+    return
+
+"""
+List to merge the inputs
+"""
+def List_merge_input(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('List_merge_input() called')
+    
+    container_data_0 = phantom.collect2(container=container, datapath=['artifact:*.cef.destinationHostName', 'artifact:*.cef.hostname', 'artifact:*.id'])
+
+    parameters = []
+
+    container_data_0_0 = [item[0] for item in container_data_0]
+    container_data_0_1 = [item[1] for item in container_data_0]
+
+    parameters.append({
+        'input_1': container_data_0_0,
+        'input_2': container_data_0_1,
+        'input_3': None,
+        'input_4': None,
+        'input_5': None,
+        'input_6': None,
+        'input_7': None,
+        'input_8': None,
+        'input_9': None,
+        'input_10': None,
+    })
+    ################################################################################
+    ## Custom Code Start
+    ################################################################################
+
+    # Write your custom code here...
+
+    ################################################################################
+    ## Custom Code End
+    ################################################################################    
+
+    # call custom function "community/list_merge", returns the custom_function_run_id
+    phantom.custom_function(custom_function='community/list_merge', parameters=parameters, name='List_merge_input', callback=custom_function_0)
+
+    return
+
+def custom_function_0(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('custom_function_0() called')
+    
+    parameters = [{}]
+
+    ################################################################################
+    ## Custom Code Start
+    ################################################################################
+
+    # Write your custom code here...
+
+    ################################################################################
+    ## Custom Code End
+    ################################################################################    
+
+    # call custom function "", returns the custom_function_run_id
+    phantom.custom_function(custom_function='', parameters=parameters, name='custom_function_0')
+
+    return
+
+"""
+Dropping nones from our list
+"""
+def Dropnones(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('Dropnones() called')
+    
+    parameters = []
+
+    parameters.append({
+        'input_list': None,
+    })
+    ################################################################################
+    ## Custom Code Start
+    ################################################################################
+
+    # Write your custom code here...
+
+    ################################################################################
+    ## Custom Code End
+    ################################################################################    
+
+    # call custom function "community/list_drop_none", returns the custom_function_run_id
+    phantom.custom_function(custom_function='community/list_drop_none', parameters=parameters, name='Dropnones')
 
     return
 
