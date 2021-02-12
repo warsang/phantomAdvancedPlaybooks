@@ -33,7 +33,7 @@ def httpsphabb09classsplunkcomrestpl(action=None, success=None, container=None, 
     
     # build parameters list for 'httpsphabb09classsplunkcomrestpl' call
     parameters.append({
-        'location': "/rest/container",
+        'location': "rest/container",
         'verify_certificate': False,
         'headers': "",
     })

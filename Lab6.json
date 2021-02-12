@@ -7,6 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "",
+            "hash": "90c183d14e16a26491adef7d6ed24815d206bbc0",
             "joint": {
                 "cells": [
                     {
@@ -360,8 +361,8 @@
                         "callback_start": 1,
                         "callsback": false,
                         "connected_to_start": false,
-                        "connection_name": "httpsphabb09classsplunkcomrestpl",
-                        "connection_type": "action",
+                        "connection_name": "",
+                        "connection_type": "",
                         "custom_callback": "",
                         "custom_code": "",
                         "custom_join": "",
@@ -476,46 +477,7 @@
                         "endDirections": [
                             "left"
                         ],
-                        "id": "f6c883b7-273f-4352-b166-1fe3d1a864b2",
-                        "router": {
-                            "name": "metro"
-                        },
-                        "source": {
-                            "id": "d8c9e4ac-975f-4205-a01f-e9f3bc0f238b",
-                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "startDirections": [
-                            "right"
-                        ],
-                        "target": {
-                            "id": "c6208af4-447f-418d-b257-135c1a74ed18",
-                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "type": "link",
-                        "z": 9
-                    },
-                    {
-                        "attrs": {
-                            ".connection": {
-                                "stroke": "#818D99",
-                                "stroke-width": 2
-                            },
-                            ".marker-target": {
-                                "d": "M 10 0 L 0 5 L 10 10 z",
-                                "fill": "#818D99",
-                                "stroke": "#818D99"
-                            }
-                        },
-                        "connector": {
-                            "args": {
-                                "radius": 5
-                            },
-                            "name": "rounded"
-                        },
-                        "endDirections": [
-                            "left"
-                        ],
-                        "id": "e1ff67ab-7c36-4362-96bf-a552a68cfc23",
+                        "id": "24bcaaba-bcea-4add-864b-d6c0f5e19ecd",
                         "router": {
                             "name": "metro"
                         },
@@ -531,7 +493,7 @@
                             "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
                         },
                         "type": "link",
-                        "z": 10
+                        "z": 12
                     },
                     {
                         "action": "get data",
@@ -540,7 +502,7 @@
                         "active_keys": {},
                         "active_values": {
                             "headers": "",
-                            "location": "/rest/container",
+                            "location": "rest/container",
                             "verify_certificate": "False"
                         },
                         "angle": 0,
@@ -569,7 +531,7 @@
                                 "count": 0,
                                 "fields": {
                                     "headers": "",
-                                    "location": "/rest/container",
+                                    "location": "rest/container",
                                     "verify_certificate": "False"
                                 },
                                 "has_app": true,
@@ -769,7 +731,7 @@
                                 "opacity": 1
                             }
                         },
-                        "block_code": "def httpsphabb09classsplunkcomrestpl(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('httpsphabb09classsplunkcomrestpl() called')\n\n    # collect data for 'httpsphabb09classsplunkcomrestpl' call\n\n    parameters = []\n    \n    # build parameters list for 'httpsphabb09classsplunkcomrestpl' call\n    parameters.append({\n        'location': \"/rest/container\",\n        'verify_certificate': False,\n        'headers': \"\",\n    })\n\n    phantom.act(action=\"get data\", parameters=parameters, assets=['something'], name=\"httpsphabb09classsplunkcomrestpl\")\n\n    return",
+                        "block_code": "def httpsphabb09classsplunkcomrestpl(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('httpsphabb09classsplunkcomrestpl() called')\n\n    # collect data for 'httpsphabb09classsplunkcomrestpl' call\n\n    parameters = []\n    \n    # build parameters list for 'httpsphabb09classsplunkcomrestpl' call\n    parameters.append({\n        'location': \"rest/container\",\n        'verify_certificate': False,\n        'headers': \"\",\n    })\n\n    phantom.act(action=\"get data\", parameters=parameters, assets=['something'], name=\"httpsphabb09classsplunkcomrestpl\")\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
@@ -877,7 +839,7 @@
                         "title": "Generic",
                         "type": "coa.Action",
                         "warn": "",
-                        "z": 11
+                        "z": 13
                     }
                 ]
             },
@@ -887,7 +849,7 @@
         "schema": 4,
         "version": "4.10.0.40961"
     },
-    "create_time": "2021-02-12T19:58:51.688709+00:00",
+    "create_time": "2021-02-12T20:04:01.744913+00:00",
     "draft_mode": false,
     "labels": [
         "system",
