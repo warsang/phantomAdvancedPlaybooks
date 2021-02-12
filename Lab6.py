@@ -35,7 +35,7 @@ myurl
 def myurl(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
     phantom.debug('myurl() called')
     
-    template = """/rest/container/{0}"""
+    template = """/rest/container/{0}/actions"""
 
     # parameter list for template variable replacement
     parameters = [
