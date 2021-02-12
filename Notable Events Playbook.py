@@ -45,7 +45,7 @@ def myquerystring(action=None, success=None, container=None, results=None, handl
 
     # parameter list for template variable replacement
     parameters = [
-        "List_merge_input:custom_function_result.data.*.item",
+        "list_filtered_final:custom_function_result.data.*.item",
     ]
 
     phantom.format(container=container, template=template, parameters=parameters, name="myquerystring")
