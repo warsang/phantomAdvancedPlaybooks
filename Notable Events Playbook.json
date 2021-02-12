@@ -455,425 +455,6 @@
                         "z": 65
                     },
                     {
-                        "action": "update event",
-                        "action_type": "generic",
-                        "active": false,
-                        "active_keys": {},
-                        "active_values": {
-                            "comment": "Event_Comment:formatted_data.*",
-                            "event_ids": "artifact:*.cef.event_id",
-                            "integer_status": "",
-                            "owner": "",
-                            "status": "in progress",
-                            "urgency": "",
-                            "wait_for_confirmation": ""
-                        },
-                        "angle": 0,
-                        "app": "Splunk",
-                        "appid": "91883aa8-9c81-470b-97a1-5d8f7995f560",
-                        "approver": "",
-                        "assets": [
-                            {
-                                "action": "update event",
-                                "actions": [
-                                    "post data",
-                                    "update event",
-                                    "run query",
-                                    "on poll",
-                                    "get host events",
-                                    "test connectivity"
-                                ],
-                                "active": true,
-                                "app_name": "Splunk",
-                                "app_version": "2.0.22",
-                                "appid": "91883aa8-9c81-470b-97a1-5d8f7995f560",
-                                "asset_name": "mysplunkinstance",
-                                "config_type": "asset",
-                                "count": 0,
-                                "fields": {
-                                    "comment": "Event_Comment:formatted_data.*",
-                                    "event_ids": "artifact:*.cef.event_id",
-                                    "integer_status": "",
-                                    "owner": "",
-                                    "status": "in progress",
-                                    "urgency": "",
-                                    "wait_for_confirmation": ""
-                                },
-                                "has_app": true,
-                                "id": 8,
-                                "loaded": false,
-                                "missing": false,
-                                "name": "mysplunkinstance",
-                                "output": [
-                                    {
-                                        "column_name": "Status",
-                                        "column_order": 0,
-                                        "data_path": "action_result.status",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "success",
-                                            "failed"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.comment",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "test comment"
-                                        ]
-                                    },
-                                    {
-                                        "contains": [
-                                            "splunk notable event id"
-                                        ],
-                                        "data_path": "action_result.parameter.event_ids",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "1542751027.136723+0"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.integer_status",
-                                        "data_type": "numeric"
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.owner",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.status",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.urgency",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.wait_for_confirmation",
-                                        "data_type": "boolean"
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.failure_count",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            0
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.message",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "1 event updated successfully"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.success",
-                                        "data_type": "boolean",
-                                        "example_values": [
-                                            false,
-                                            true
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.success_count",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            1
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.summary.updated_event_id",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "2CF264EE-6016-4F6A-BCC3-4B7251E113F7@@notable@@035142b19c09ab645c6bbfb847e866f4"
-                                        ]
-                                    },
-                                    {
-                                        "column_name": "Message",
-                                        "column_order": 1,
-                                        "data_path": "action_result.message",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "Updated event id: 2CF264EE-6016-4F6A-BCC3-4B7251E113F7@@notable@@035142b19c09ab645c6bbfb847e866f4"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "summary.total_objects",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            1
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "summary.total_objects_successful",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            1
-                                        ]
-                                    }
-                                ],
-                                "parameters": {
-                                    "comment": {
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "New comment for the event",
-                                        "key": "comment",
-                                        "order": 5,
-                                        "required": false
-                                    },
-                                    "event_ids": {
-                                        "contains": [
-                                            "splunk notable event id"
-                                        ],
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "Event ID to update",
-                                        "key": "event_ids",
-                                        "order": 0,
-                                        "primary": true,
-                                        "required": true
-                                    },
-                                    "integer_status": {
-                                        "data_type": "numeric",
-                                        "default": null,
-                                        "description": "Integer representing custom status value",
-                                        "key": "integer_status",
-                                        "order": 3,
-                                        "required": false
-                                    },
-                                    "owner": {
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "New owner for the event",
-                                        "key": "owner",
-                                        "order": 1,
-                                        "required": false
-                                    },
-                                    "status": {
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "New status for the event",
-                                        "key": "status",
-                                        "order": 2,
-                                        "required": false,
-                                        "value_list": [
-                                            "unassigned",
-                                            "new",
-                                            "in progress",
-                                            "pending",
-                                            "resolved",
-                                            "closed"
-                                        ]
-                                    },
-                                    "urgency": {
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "New urgency for the event",
-                                        "key": "urgency",
-                                        "order": 4,
-                                        "required": false,
-                                        "value_list": [
-                                            "",
-                                            "informational",
-                                            "low",
-                                            "medium",
-                                            "high",
-                                            "critical"
-                                        ]
-                                    },
-                                    "wait_for_confirmation": {
-                                        "data_type": "boolean",
-                                        "default": false,
-                                        "description": "Validate event_ids",
-                                        "key": "wait_for_confirmation",
-                                        "order": 6,
-                                        "required": false
-                                    }
-                                },
-                                "product_name": "Splunk Enterprise",
-                                "product_vendor": "Splunk Inc.",
-                                "targets": "8",
-                                "type": "siem"
-                            }
-                        ],
-                        "attrs": {
-                            ".action": {
-                                "text": "update event"
-                            },
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#5C6773"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "ref-x": 5,
-                                "ref-y": 105,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out>.port-body": {
-                                "port": {
-                                    "id": "out",
-                                    "type": "out"
-                                }
-                            },
-                            ".title": {
-                                "text": "Generic"
-                            },
-                            "g.approver image": {
-                                "opacity": 1
-                            },
-                            "g.code image": {
-                                "opacity": 1
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 0
-                            },
-                            "g.error image": {
-                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
-                            },
-                            "g.icon image": {
-                                "xlink:href": "/inc/coa/img/block_icon_generic.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            },
-                            "g.notes image": {
-                                "opacity": 1
-                            },
-                            "g.timer image": {
-                                "opacity": 1
-                            }
-                        },
-                        "block_code": "def update_event_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('update_event_1() called')\n\n    # collect data for 'update_event_1' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.event_id', 'artifact:*.id'])\n    formatted_data_1 = phantom.get_format_data(name='Event_Comment__as_list')\n\n    parameters = []\n    \n    # build parameters list for 'update_event_1' call\n    for container_item in container_data:\n        for formatted_part_1 in formatted_data_1:\n            if container_item[0]:\n                parameters.append({\n                    'owner': \"\",\n                    'status': \"in progress\",\n                    'comment': formatted_part_1,\n                    'urgency': \"\",\n                    'event_ids': container_item[0],\n                    'integer_status': \"\",\n                    'wait_for_confirmation': \"\",\n                    # context (artifact id) is added to associate results with the artifact\n                    'context': {'artifact_id': container_item[1]},\n                })\n\n    phantom.act(action=\"update event\", parameters=parameters, assets=['mysplunkinstance'], name=\"update_event_1\")\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 1,
-                        "callsback": true,
-                        "color": "",
-                        "connected_to_start": true,
-                        "connection_name": "",
-                        "connection_type": "",
-                        "custom_callback": "",
-                        "custom_code": "",
-                        "custom_join": "",
-                        "custom_name": "",
-                        "delay": 0,
-                        "description": "",
-                        "has_custom": false,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "627d572c-1388-435f-a0e6-de58bebcfa39",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "join_code": "",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "line_end": 112,
-                        "line_start": 83,
-                        "message": "Configuring now",
-                        "name": "update event",
-                        "notes": "",
-                        "number": 1,
-                        "order": 6,
-                        "outPorts": [
-                            "out"
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": 140,
-                            "y": 400
-                        },
-                        "previous_function": "",
-                        "previous_name": "update_event_1",
-                        "required_params": {
-                            "event_ids": true
-                        },
-                        "reviewer": "",
-                        "show_number": false,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "app_action_assets",
-                        "status": "",
-                        "title": "Generic",
-                        "type": "coa.Action",
-                        "warn": false,
-                        "z": 80
-                    },
-                    {
                         "active": false,
                         "angle": 0,
                         "attrs": {
@@ -2136,178 +1717,6 @@
                         "z": 132
                     },
                     {
-                        "active": false,
-                        "angle": 0,
-                        "attrs": {
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#5C6773"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".format": {
-                                "text": "myquerystring"
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out-1": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out-1>.port-body": {
-                                "port": {
-                                    "id": "out-1",
-                                    "type": "out"
-                                }
-                            },
-                            ".title": {
-                                "text": "format"
-                            },
-                            "g.code image": {
-                                "opacity": 1
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 0
-                            },
-                            "g.error image": {
-                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            },
-                            "g.notes image": {
-                                "opacity": 1
-                            }
-                        },
-                        "block_code": "def myquerystring(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('myquerystring() called')\n    \n    template = \"\"\"myphantomlab4search server={0}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"list_filtered_final:custom_function_result.data.*.item\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"myquerystring\")\n\n    run_savedsearch(container=container)\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 1,
-                        "callsback": false,
-                        "connected_to_start": true,
-                        "connection_name": "list_filtered_final",
-                        "connection_type": "action",
-                        "custom_callback": "",
-                        "custom_code": "",
-                        "custom_join": "",
-                        "custom_name": "myquerystring",
-                        "description": "",
-                        "format": "format",
-                        "has_custom": false,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "6fc9f4e0-fb5d-43c3-9004-b205b0318366",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "join_code": "",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "line_end": 57,
-                        "line_start": 41,
-                        "message": "Configuring now",
-                        "name": "format",
-                        "notes": "",
-                        "number": 1,
-                        "order": 3,
-                        "outPorts": [
-                            "out-1"
-                        ],
-                        "parameters": [
-                            {
-                                "position": 0,
-                                "type": "",
-                                "value": "list_filtered_final:custom_function_result.data.*.item"
-                            }
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": -220,
-                            "y": -20
-                        },
-                        "previous_function": "",
-                        "previous_name": "myquerystring",
-                        "show_number": true,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "format",
-                        "status": "",
-                        "template": "myphantomlab4search server={0}",
-                        "title": "format",
-                        "type": "coa.Format",
-                        "warn": false,
-                        "z": 133
-                    },
-                    {
                         "attrs": {
                             ".connection": {
                                 "stroke": "#818D99",
@@ -2891,10 +2300,7 @@
                         "z": 164
                     },
                     {
-                        ".scmName/text": "mainPhantomPlaybooksAdvanced",
                         "active": false,
-                        "active_keys": {},
-                        "active_values": {},
                         "angle": 0,
                         "attrs": {
                             ".background": {
@@ -2904,8 +2310,419 @@
                             ".color-band": {
                                 "fill": "#3C444D"
                             },
-                            ".customFunction": {
-                                "text": "list_2_containers"
+                            ".format": {
+                                "text": "myquerystring"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out-1": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out-1>.port-body": {
+                                "port": {
+                                    "id": "out-1",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "format"
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1
+                            }
+                        },
+                        "block_code": "def myquerystring(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('myquerystring() called')\n    \n    template = \"\"\"myphantomlab4search server={0}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"list_filtered_final:custom_function_result.data.*.item\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"myquerystring\")\n\n    run_savedsearch(container=container)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "list_filtered_final",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "myquerystring",
+                        "description": "",
+                        "format": "format",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "6fc9f4e0-fb5d-43c3-9004-b205b0318366",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 57,
+                        "line_start": 41,
+                        "message": "Configuring now",
+                        "name": "format",
+                        "notes": "",
+                        "number": 1,
+                        "order": 3,
+                        "outPorts": [
+                            "out-1"
+                        ],
+                        "parameters": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": "list_filtered_final:custom_function_result.data.*.item"
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": -220,
+                            "y": -20
+                        },
+                        "previous_function": "",
+                        "previous_name": "myquerystring",
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "format",
+                        "status": "",
+                        "template": "myphantomlab4search server={0}",
+                        "title": "format",
+                        "type": "coa.Format",
+                        "warn": false,
+                        "z": 169
+                    },
+                    {
+                        "action": "update event",
+                        "action_type": "generic",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {
+                            "comment": "Event_Comment:formatted_data.*",
+                            "event_ids": "artifact:*.cef.event_id",
+                            "integer_status": "",
+                            "owner": "",
+                            "status": "in progress",
+                            "urgency": "",
+                            "wait_for_confirmation": ""
+                        },
+                        "angle": 0,
+                        "app": "Splunk",
+                        "appid": "91883aa8-9c81-470b-97a1-5d8f7995f560",
+                        "approver": "",
+                        "assets": [
+                            {
+                                "action": "update event",
+                                "actions": [
+                                    "post data",
+                                    "update event",
+                                    "run query",
+                                    "on poll",
+                                    "get host events",
+                                    "test connectivity"
+                                ],
+                                "active": true,
+                                "app_name": "Splunk",
+                                "app_version": "2.0.22",
+                                "appid": "91883aa8-9c81-470b-97a1-5d8f7995f560",
+                                "asset_name": "mysplunkinstance",
+                                "config_type": "asset",
+                                "count": 0,
+                                "fields": {
+                                    "comment": "Event_Comment:formatted_data.*",
+                                    "event_ids": "artifact:*.cef.event_id",
+                                    "integer_status": "",
+                                    "owner": "",
+                                    "status": "in progress",
+                                    "urgency": "",
+                                    "wait_for_confirmation": ""
+                                },
+                                "has_app": true,
+                                "id": 8,
+                                "loaded": false,
+                                "missing": false,
+                                "name": "mysplunkinstance",
+                                "output": [
+                                    {
+                                        "column_name": "Status",
+                                        "column_order": 0,
+                                        "data_path": "action_result.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "success",
+                                            "failed"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.comment",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "test comment"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "splunk notable event id"
+                                        ],
+                                        "data_path": "action_result.parameter.event_ids",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "1542751027.136723+0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.integer_status",
+                                        "data_type": "numeric"
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.owner",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.status",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.urgency",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.wait_for_confirmation",
+                                        "data_type": "boolean"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.failure_count",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "1 event updated successfully"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.success",
+                                        "data_type": "boolean",
+                                        "example_values": [
+                                            false,
+                                            true
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.success_count",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.updated_event_id",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2CF264EE-6016-4F6A-BCC3-4B7251E113F7@@notable@@035142b19c09ab645c6bbfb847e866f4"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Message",
+                                        "column_order": 1,
+                                        "data_path": "action_result.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Updated event id: 2CF264EE-6016-4F6A-BCC3-4B7251E113F7@@notable@@035142b19c09ab645c6bbfb847e866f4"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects_successful",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    }
+                                ],
+                                "parameters": {
+                                    "comment": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "New comment for the event",
+                                        "key": "comment",
+                                        "order": 5,
+                                        "required": false
+                                    },
+                                    "event_ids": {
+                                        "contains": [
+                                            "splunk notable event id"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Event ID to update",
+                                        "key": "event_ids",
+                                        "order": 0,
+                                        "primary": true,
+                                        "required": true
+                                    },
+                                    "integer_status": {
+                                        "data_type": "numeric",
+                                        "default": null,
+                                        "description": "Integer representing custom status value",
+                                        "key": "integer_status",
+                                        "order": 3,
+                                        "required": false
+                                    },
+                                    "owner": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "New owner for the event",
+                                        "key": "owner",
+                                        "order": 1,
+                                        "required": false
+                                    },
+                                    "status": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "New status for the event",
+                                        "key": "status",
+                                        "order": 2,
+                                        "required": false,
+                                        "value_list": [
+                                            "unassigned",
+                                            "new",
+                                            "in progress",
+                                            "pending",
+                                            "resolved",
+                                            "closed"
+                                        ]
+                                    },
+                                    "urgency": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "New urgency for the event",
+                                        "key": "urgency",
+                                        "order": 4,
+                                        "required": false,
+                                        "value_list": [
+                                            "",
+                                            "informational",
+                                            "low",
+                                            "medium",
+                                            "high",
+                                            "critical"
+                                        ]
+                                    },
+                                    "wait_for_confirmation": {
+                                        "data_type": "boolean",
+                                        "default": false,
+                                        "description": "Validate event_ids",
+                                        "key": "wait_for_confirmation",
+                                        "order": 6,
+                                        "required": false
+                                    }
+                                },
+                                "product_name": "Splunk Enterprise",
+                                "product_vendor": "Splunk Inc.",
+                                "targets": "8",
+                                "type": "siem"
+                            }
+                        ],
+                        "attrs": {
+                            ".action": {
+                                "text": "update event"
+                            },
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
                             },
                             ".inPorts>.port-in": {
                                 "ref": ".background",
@@ -2933,16 +2750,13 @@
                                     "type": "out"
                                 }
                             },
-                            ".scmName": {
-                                "text": "mainPhantomPlayb..."
-                            },
                             ".title": {
-                                "text": "custom function"
+                                "text": "Generic"
                             },
-                            ".title-info": {
-                                "text": ""
+                            "g.approver image": {
+                                "opacity": 1
                             },
-                            "g.branch image": {
+                            "g.code image": {
                                 "opacity": 1
                             },
                             "g.delete": {
@@ -2954,65 +2768,51 @@
                             "g.error image": {
                                 "xlink:href": "/inc/coa/img/block_icon_warn.svg"
                             },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_generic.svg"
+                            },
                             "g.notes": {
                                 "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1
+                            },
+                            "g.timer image": {
+                                "opacity": 1
                             }
                         },
-                        "block_code": "def cf_mainPhantomPlaybooksAdvanced_list_2_containers_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_mainPhantomPlaybooksAdvanced_list_2_containers_1() called')\n    \n    custom_function_result_0 = phantom.collect2(container=container, datapath=['Buildcontainerlist:custom_function_result.data.*.results_list'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"label\"),\n        ],\n    ]\n\n    parameters = []\n\n    container_property_0_0 = [item[0] for item in container_property_0]\n\n    for item0 in custom_function_result_0:\n        parameters.append({\n            'to_be_containerized': item0[0],\n            'container_label': container_property_0_0,\n        })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/list_2_containers\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/list_2_containers', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_list_2_containers_1')\n\n    return",
+                        "block_code": "def update_event_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('update_event_1() called')\n\n    # collect data for 'update_event_1' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.event_id', 'artifact:*.id'])\n    formatted_data_1 = phantom.get_format_data(name='Event_Comment__as_list')\n\n    parameters = []\n    \n    # build parameters list for 'update_event_1' call\n    for container_item in container_data:\n        for formatted_part_1 in formatted_data_1:\n            if container_item[0]:\n                parameters.append({\n                    'owner': \"\",\n                    'status': \"in progress\",\n                    'comment': formatted_part_1,\n                    'urgency': \"\",\n                    'event_ids': container_item[0],\n                    'integer_status': \"\",\n                    'wait_for_confirmation': \"\",\n                    # context (artifact id) is added to associate results with the artifact\n                    'context': {'artifact_id': container_item[1]},\n                })\n\n    phantom.act(action=\"update event\", parameters=parameters, assets=['mysplunkinstance'], name=\"update_event_1\")\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
-                        "cfDisplayPath": "mainPhantomPlaybooksAdvanced/list_2_containers",
-                        "cfInputs": {
-                            "container_label": {
-                                "collectionType": "container_property",
-                                "dataPath": "container:label",
-                                "paramName": "container_property_0_0",
-                                "type": "list"
-                            },
-                            "to_be_containerized": {
-                                "collectionType": "custom_function_result",
-                                "dataPath": "Buildcontainerlist:custom_function_result.data.*.results_list",
-                                "paramName": "item0[0]",
-                                "type": "item"
-                            }
-                        },
                         "color": "",
                         "connected_to_start": true,
-                        "connection_name": "Buildcontainerlist",
-                        "connection_type": "action",
-                        "currentVersion": true,
-                        "customCodeEndLineOffset": 7,
-                        "customCodeStartLine": 22,
-                        "customFunction": "mainPhantomPlaybooksAdvanced/list_2_containers",
-                        "customFunctionId": null,
+                        "connection_name": "",
+                        "connection_type": "",
                         "custom_callback": "",
                         "custom_code": "",
                         "custom_join": "",
                         "custom_name": "",
                         "delay": 0,
                         "description": "",
-                        "draftMode": false,
-                        "existingCF": true,
-                        "functionBlock": "custom function",
                         "has_custom": false,
                         "has_custom_block": false,
                         "has_custom_callback": false,
                         "has_custom_join": false,
-                        "id": "6142e494-12b2-4003-b073-3467caeb5a18",
+                        "id": "627d572c-1388-435f-a0e6-de58bebcfa39",
                         "inPorts": [
                             "in"
                         ],
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 203,
-                        "line_start": 169,
+                        "line_end": 112,
+                        "line_start": 83,
                         "message": "Configuring now",
-                        "name": "list_2_containers",
+                        "name": "update event",
                         "notes": "",
                         "number": 1,
-                        "order": 9,
+                        "order": 6,
                         "outPorts": [
                             "out"
                         ],
@@ -3069,79 +2869,26 @@
                             }
                         },
                         "position": {
-                            "x": 1440,
-                            "y": 260
+                            "x": 140,
+                            "y": 400
                         },
                         "previous_function": "",
-                        "previous_name": "cf_mainPhantomPlaybooksAdvanced_list_2_containers_1",
-                        "selectedCustomFunction": {
-                            "description": "Creates containers from a list",
-                            "draftMode": false,
-                            "id": 42,
-                            "inputs": [
-                                {
-                                    "_pretty_custom_function": "list_2_containers",
-                                    "contains_type": [
-                                        "*"
-                                    ],
-                                    "custom_function": 42,
-                                    "description": "",
-                                    "id": 138,
-                                    "input_type": "item",
-                                    "name": "to_be_containerized",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "_pretty_custom_function": "list_2_containers",
-                                    "contains_type": [],
-                                    "custom_function": 42,
-                                    "description": "",
-                                    "id": 139,
-                                    "input_type": "list",
-                                    "name": "container_label",
-                                    "placeholder": ""
-                                }
-                            ],
-                            "name": "list_2_containers",
-                            "outputs": [
-                                {
-                                    "_pretty_custom_function": "list_2_containers",
-                                    "contains_type": [],
-                                    "custom_function": 42,
-                                    "data_path": "new_container_ids",
-                                    "description": "",
-                                    "id": 44
-                                }
-                            ],
-                            "playbooks": {
-                                "draft_playbooks": [],
-                                "draft_version_id": null,
-                                "playbooks": [
-                                    {
-                                        "active": false,
-                                        "display_path": "mainPhantomPlaybooksAdvanced/Notable Events Playbook",
-                                        "draft_mode": false,
-                                        "id": 119,
-                                        "name": "Notable Events Playbook",
-                                        "viewable": true
-                                    }
-                                ]
-                            },
-                            "scmId": 7,
-                            "scmName": "mainPhantomPlaybooksAdvanced"
+                        "previous_name": "update_event_1",
+                        "required_params": {
+                            "event_ids": true
                         },
+                        "reviewer": "",
                         "show_number": false,
                         "size": {
                             "height": 100,
                             "width": 180
                         },
-                        "state": "repo",
+                        "state": "app_action_assets",
                         "status": "",
-                        "title": "custom function",
-                        "type": "coa.CustomFunctionBlock",
-                        "userGeneratedCode": "    # Write your custom code here...",
+                        "title": "Generic",
+                        "type": "coa.Action",
                         "warn": false,
-                        "z": 166
+                        "z": 170
                     },
                     {
                         ".scmName/text": "mainPhantomPlaybooksAdvanced",
@@ -3432,7 +3179,260 @@
                         "type": "coa.CustomFunctionBlock",
                         "userGeneratedCode": "    # Write your custom code here...",
                         "warn": false,
-                        "z": 167
+                        "z": 172
+                    },
+                    {
+                        ".scmName/text": "mainPhantomPlaybooksAdvanced",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {},
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#0083FF"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".customFunction": {
+                                "text": "list_2_containers"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".scmName": {
+                                "text": "mainPhantomPlayb..."
+                            },
+                            ".title": {
+                                "text": "custom function"
+                            },
+                            ".title-info": {
+                                "text": ""
+                            },
+                            "g.branch image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def cf_mainPhantomPlaybooksAdvanced_list_2_containers_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_mainPhantomPlaybooksAdvanced_list_2_containers_1() called')\n    \n    custom_function_result_0 = phantom.collect2(container=container, datapath=['Buildcontainerlist:custom_function_result.data.*.results_list'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"label\"),\n        ],\n    ]\n\n    parameters = []\n\n    container_property_0_0 = [item[0] for item in container_property_0]\n\n    for item0 in custom_function_result_0:\n        parameters.append({\n            'to_be_containerized': item0[0],\n            'container_label': container_property_0_0,\n        })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/list_2_containers\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/list_2_containers', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_list_2_containers_1')\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "cfDisplayPath": "mainPhantomPlaybooksAdvanced/list_2_containers",
+                        "cfInputs": {
+                            "container_label": {
+                                "collectionType": "container_property",
+                                "dataPath": "container:label",
+                                "paramName": "container_property_0_0",
+                                "type": "list"
+                            },
+                            "to_be_containerized": {
+                                "collectionType": "custom_function_result",
+                                "dataPath": "Buildcontainerlist:custom_function_result.data.*.results_list",
+                                "paramName": "item0[0]",
+                                "type": "item"
+                            }
+                        },
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "Buildcontainerlist",
+                        "connection_type": "action",
+                        "currentVersion": true,
+                        "customCodeEndLineOffset": 7,
+                        "customCodeStartLine": 22,
+                        "customFunction": "mainPhantomPlaybooksAdvanced/list_2_containers",
+                        "customFunctionId": null,
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "delay": 0,
+                        "description": "",
+                        "draftMode": false,
+                        "existingCF": true,
+                        "functionBlock": "custom function",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "6142e494-12b2-4003-b073-3467caeb5a18",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 203,
+                        "line_start": 169,
+                        "message": "Configuring now",
+                        "name": "list_2_containers",
+                        "notes": "",
+                        "number": 1,
+                        "order": 9,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 1440,
+                            "y": 260
+                        },
+                        "previous_function": "",
+                        "previous_name": "cf_mainPhantomPlaybooksAdvanced_list_2_containers_1",
+                        "selectedCustomFunction": {
+                            "description": "Creates containers from a list",
+                            "draftMode": false,
+                            "id": 42,
+                            "inputs": [
+                                {
+                                    "_pretty_custom_function": "list_2_containers",
+                                    "contains_type": [
+                                        "*"
+                                    ],
+                                    "custom_function": 42,
+                                    "description": "",
+                                    "id": 138,
+                                    "input_type": "item",
+                                    "name": "to_be_containerized",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "list_2_containers",
+                                    "contains_type": [],
+                                    "custom_function": 42,
+                                    "description": "",
+                                    "id": 139,
+                                    "input_type": "list",
+                                    "name": "container_label",
+                                    "placeholder": ""
+                                }
+                            ],
+                            "name": "list_2_containers",
+                            "outputs": [
+                                {
+                                    "_pretty_custom_function": "list_2_containers",
+                                    "contains_type": [],
+                                    "custom_function": 42,
+                                    "data_path": "new_container_ids",
+                                    "description": "",
+                                    "id": 44
+                                }
+                            ],
+                            "playbooks": {
+                                "draft_playbooks": [],
+                                "draft_version_id": null,
+                                "playbooks": [
+                                    {
+                                        "active": false,
+                                        "display_path": "mainPhantomPlaybooksAdvanced/Notable Events Playbook",
+                                        "draft_mode": false,
+                                        "id": 119,
+                                        "name": "Notable Events Playbook",
+                                        "viewable": true
+                                    }
+                                ]
+                            },
+                            "scmId": 7,
+                            "scmName": "mainPhantomPlaybooksAdvanced"
+                        },
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "repo",
+                        "status": "active",
+                        "title": "custom function",
+                        "type": "coa.CustomFunctionBlock",
+                        "userGeneratedCode": "    # Write your custom code here...",
+                        "warn": false,
+                        "z": 173
                     }
                 ]
             },
