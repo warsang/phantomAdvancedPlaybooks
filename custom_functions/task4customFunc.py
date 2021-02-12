@@ -31,14 +31,14 @@ def task4customFunc(current_container=None, peer=None, priority=None, count=None
     data.update({"peer_list":list_name})
     phantom.update(update_container, {'data':data} )
     phantom.remove_list(list_name)
-    
+        
     for i in range(0,len(peer)):
         phantom.add_list(list_name, [peer[i],priority[i],count[i]])
     
     # The actual list is in slot 3 of the tuple returned by phantom.get_list()
     results_list = phantom.get_list(list_name)[2]
     phantom.debug(results_list)
-    outputs = {'results_list': results_list}
+    outputs = {'my_output_custom_list': results_list}
     phantom.debug(outputs)
     # Return a JSON-serializable object
     assert json.dumps(outputs)  # Will raise an exception if the :outputs: object is not JSON-serializable
