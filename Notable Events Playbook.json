@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
-            "hash": "4b280a8099f2348093be0ea5bb9c8204d6f56a51",
+            "hash": "e27648fe97b8a4705300856fd3d70e9ed7d08232",
             "joint": {
                 "cells": [
                     {
@@ -3217,7 +3217,7 @@
                                 "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
                             }
                         },
-                        "block_code": "def Buildcontainerlist(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Buildcontainerlist() called')\n    \n    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*.peer', 'run_savedsearch:action_result.data.*.count', 'run_savedsearch:action_result.data.*.priority', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n\n    parameters = []\n\n    action_results_data_0_0 = [item[0] for item in action_results_data_0]\n    action_results_data_0_1 = [item[1] for item in action_results_data_0]\n    action_results_data_0_2 = [item[2] for item in action_results_data_0]\n    container_property_0_0 = [item[0] for item in container_property_0]\n\n    parameters.append({\n        'peer': action_results_data_0_0,\n        'count': action_results_data_0_1,\n        'priority': action_results_data_0_2,\n        'current_container': container_property_0_0,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/task4customFunc\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/task4customFunc', parameters=parameters, name='Buildcontainerlist', callback=cf_mainPhantomPlaybooksAdvanced_list_2_containers_1)\n\n    return",
+                        "block_code": "def Buildcontainerlist(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Buildcontainerlist() called')\n    \n    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*.peer', 'run_savedsearch:action_result.data.*.priority', 'run_savedsearch:action_result.data.*.count', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n\n    parameters = []\n\n    action_results_data_0_0 = [item[0] for item in action_results_data_0]\n    action_results_data_0_1 = [item[1] for item in action_results_data_0]\n    action_results_data_0_2 = [item[2] for item in action_results_data_0]\n\n    for item0 in container_property_0:\n        parameters.append({\n            'current_container': item0[0],\n            'peer': action_results_data_0_0,\n            'priority': action_results_data_0_1,\n            'count': action_results_data_0_2,\n        })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/task4customFunc\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/task4customFunc', parameters=parameters, name='Buildcontainerlist', callback=cf_mainPhantomPlaybooksAdvanced_list_2_containers_1)\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
@@ -3226,14 +3226,14 @@
                             "count": {
                                 "collectionType": "action_results_data",
                                 "dataPath": "run_savedsearch:action_result.data.*.count",
-                                "paramName": "action_results_data_0_1",
+                                "paramName": "action_results_data_0_2",
                                 "type": "list"
                             },
                             "current_container": {
                                 "collectionType": "container_property",
                                 "dataPath": "container:id",
-                                "paramName": "container_property_0_0",
-                                "type": "list"
+                                "paramName": "item0[0]",
+                                "type": "item"
                             },
                             "peer": {
                                 "collectionType": "action_results_data",
@@ -3244,7 +3244,7 @@
                             "priority": {
                                 "collectionType": "action_results_data",
                                 "dataPath": "run_savedsearch:action_result.data.*.priority",
-                                "paramName": "action_results_data_0_2",
+                                "paramName": "action_results_data_0_1",
                                 "type": "list"
                             }
                         },
@@ -3349,26 +3349,26 @@
                         "selectedCustomFunction": {
                             "description": "mytask4customfunc",
                             "draftMode": false,
-                            "id": 46,
+                            "id": 48,
                             "inputs": [
                                 {
                                     "_pretty_custom_function": "task4customFunc",
                                     "contains_type": [
                                         "phantom container id"
                                     ],
-                                    "custom_function": 46,
+                                    "custom_function": 48,
                                     "description": "",
-                                    "id": 160,
-                                    "input_type": "list",
+                                    "id": 168,
+                                    "input_type": "item",
                                     "name": "current_container",
                                     "placeholder": ""
                                 },
                                 {
                                     "_pretty_custom_function": "task4customFunc",
                                     "contains_type": [],
-                                    "custom_function": 46,
+                                    "custom_function": 48,
                                     "description": "",
-                                    "id": 161,
+                                    "id": 169,
                                     "input_type": "list",
                                     "name": "peer",
                                     "placeholder": ""
@@ -3376,9 +3376,9 @@
                                 {
                                     "_pretty_custom_function": "task4customFunc",
                                     "contains_type": [],
-                                    "custom_function": 46,
+                                    "custom_function": 48,
                                     "description": "",
-                                    "id": 162,
+                                    "id": 170,
                                     "input_type": "list",
                                     "name": "priority",
                                     "placeholder": ""
@@ -3386,9 +3386,9 @@
                                 {
                                     "_pretty_custom_function": "task4customFunc",
                                     "contains_type": [],
-                                    "custom_function": 46,
+                                    "custom_function": 48,
                                     "description": "",
-                                    "id": 163,
+                                    "id": 171,
                                     "input_type": "list",
                                     "name": "count",
                                     "placeholder": ""
@@ -3401,10 +3401,10 @@
                                     "contains_type": [
                                         "*"
                                     ],
-                                    "custom_function": 46,
+                                    "custom_function": 48,
                                     "data_path": "results_list",
                                     "description": "myresults_list",
-                                    "id": 51
+                                    "id": 53
                                 }
                             ],
                             "playbooks": {
@@ -3415,7 +3415,7 @@
                                         "active": false,
                                         "display_path": "mainPhantomPlaybooksAdvanced/Notable Events Playbook",
                                         "draft_mode": false,
-                                        "id": 122,
+                                        "id": 125,
                                         "name": "Notable Events Playbook",
                                         "viewable": true
                                     }
@@ -3445,7 +3445,7 @@
         "schema": 4,
         "version": "4.10.0.40961"
     },
-    "create_time": "2021-02-12T19:13:21.354608+00:00",
+    "create_time": "2021-02-12T19:14:29.574159+00:00",
     "draft_mode": false,
     "labels": [
         "notable"
