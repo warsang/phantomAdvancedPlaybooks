@@ -7,6 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
+            "hash": "c983175a57d8207936714d1676efbd5d4c26c123",
             "joint": {
                 "cells": [
                     {
@@ -72,12 +73,12 @@
                         "join_code": "# read-only block view not available",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 214,
-                        "line_start": 201,
+                        "line_end": 253,
+                        "line_start": 240,
                         "name": "",
                         "notes": "",
                         "number": 0,
-                        "order": 10,
+                        "order": 11,
                         "outPorts": [],
                         "ports": {
                             "groups": {
@@ -188,178 +189,6 @@
                         "z": 11
                     },
                     {
-                        "active": false,
-                        "angle": 0,
-                        "attrs": {
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#5C6773"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".format": {
-                                "text": "myquerystring"
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out-1": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out-1>.port-body": {
-                                "port": {
-                                    "id": "out-1",
-                                    "type": "out"
-                                }
-                            },
-                            ".title": {
-                                "text": "format"
-                            },
-                            "g.code image": {
-                                "opacity": 1
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 0
-                            },
-                            "g.error image": {
-                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            },
-                            "g.notes image": {
-                                "opacity": 1
-                            }
-                        },
-                        "block_code": "def myquerystring(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('myquerystring() called')\n    \n    template = \"\"\"myphantomlab4search server={0}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"artifact:*.cef.hostname\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"myquerystring\")\n\n    run_savedsearch(container=container)\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 1,
-                        "callsback": false,
-                        "connected_to_start": true,
-                        "connection_name": "",
-                        "connection_type": "",
-                        "custom_callback": "",
-                        "custom_code": "",
-                        "custom_join": "",
-                        "custom_name": "myquerystring",
-                        "description": "",
-                        "format": "format",
-                        "has_custom": false,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "6fc9f4e0-fb5d-43c3-9004-b205b0318366",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "join_code": "",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "line_end": 55,
-                        "line_start": 39,
-                        "message": "Configuring now",
-                        "name": "format",
-                        "notes": "",
-                        "number": 1,
-                        "order": 3,
-                        "outPorts": [
-                            "out-1"
-                        ],
-                        "parameters": [
-                            {
-                                "position": 0,
-                                "type": "",
-                                "value": "artifact:*.cef.hostname"
-                            }
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": -220,
-                            "y": -20
-                        },
-                        "previous_function": "",
-                        "previous_name": "myquerystring",
-                        "show_number": true,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "format",
-                        "status": "",
-                        "template": "myphantomlab4search server={0}",
-                        "title": "format",
-                        "type": "coa.Format",
-                        "warn": false,
-                        "z": 17
-                    },
-                    {
                         "attrs": {
                             ".connection": {
                                 "stroke": "#818D99",
@@ -436,150 +265,6 @@
                         },
                         "type": "link",
                         "z": 24
-                    },
-                    {
-                        "0": "S",
-                        "1": "T",
-                        "2": "A",
-                        "3": "R",
-                        "4": "T",
-                        "active": false,
-                        "angle": 0,
-                        "attrs": {
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#5C6773"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".outPorts>.port-out": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out>.port-body": {
-                                "port": {
-                                    "id": "out",
-                                    "type": "out"
-                                }
-                            },
-                            ".title": {
-                                "ref-x": 33,
-                                "ref-y": 8,
-                                "text": "START"
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 0
-                            },
-                            "g.icon image": {
-                                "ref-x": 13,
-                                "xlink:href": "/inc/coa/img/block_icon_start.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            }
-                        },
-                        "block_code": "def on_start(container):\n    phantom.debug('on_start() called')\n    \n    # call 'Event_Comment' block\n    Event_Comment(container=container)\n\n    # call 'myquerystring' block\n    myquerystring(container=container)\n\n    return",
-                        "callback_code": "# read-only block view not available",
-                        "callback_start": 1,
-                        "callsback": false,
-                        "connected_to_start": true,
-                        "connection_name": "",
-                        "connection_type": "",
-                        "custom_callback": "",
-                        "custom_code": "",
-                        "custom_join": "",
-                        "custom_name": "",
-                        "description": "",
-                        "has_custom": false,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "112ee4d5-d40e-48a4-a0cf-ec44d595b69b",
-                        "inPorts": [],
-                        "join_code": "# read-only block view not available",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "line_end": 19,
-                        "line_start": 8,
-                        "name": "",
-                        "notes": "",
-                        "number": 0,
-                        "order": 1,
-                        "outPorts": [
-                            "out"
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": -380,
-                            "y": 100
-                        },
-                        "previous_function": "",
-                        "previous_name": "",
-                        "show_number": true,
-                        "size": {
-                            "height": 54,
-                            "width": 80
-                        },
-                        "status": "",
-                        "title": "START",
-                        "type": "coa.StartEnd",
-                        "warn": false,
-                        "z": 31
                     },
                     {
                         "attrs": {
@@ -701,8 +386,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 126,
-                        "line_start": 110,
+                        "line_end": 129,
+                        "line_start": 113,
                         "message": "Configuring now",
                         "name": "format",
                         "notes": "",
@@ -946,249 +631,60 @@
                         "z": 43
                     },
                     {
-                        "action": "run query",
-                        "action_type": "investigate",
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "69572d21-0c40-4ecb-aea4-b883dd45f918",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "7f2a979f-dd5b-4f66-ae33-35d1b6fa70b3",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "6142e494-12b2-4003-b073-3467caeb5a18",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 65
+                    },
+                    {
+                        ".scmName/text": "mainPhantomPlaybooksAdvanced",
                         "active": false,
                         "active_keys": {},
-                        "active_values": {
-                            "command": "savedsearch",
-                            "display": "",
-                            "parse_only": "",
-                            "query": "myquerystring:formatted_data"
-                        },
+                        "active_values": {},
                         "angle": 0,
-                        "app": "Splunk",
-                        "appid": "91883aa8-9c81-470b-97a1-5d8f7995f560",
-                        "approver": "",
-                        "assets": [
-                            {
-                                "action": "run query",
-                                "actions": [
-                                    "post data",
-                                    "update event",
-                                    "run query",
-                                    "on poll",
-                                    "get host events",
-                                    "test connectivity"
-                                ],
-                                "active": true,
-                                "app_name": "Splunk",
-                                "app_version": "2.0.22",
-                                "appid": "91883aa8-9c81-470b-97a1-5d8f7995f560",
-                                "asset_name": "mysplunkinstance",
-                                "config_type": "asset",
-                                "count": 0,
-                                "fields": {
-                                    "command": "savedsearch",
-                                    "display": "",
-                                    "parse_only": "",
-                                    "query": "myquerystring:formatted_data"
-                                },
-                                "has_app": true,
-                                "id": 8,
-                                "loaded": false,
-                                "missing": false,
-                                "name": "mysplunkinstance",
-                                "output": [
-                                    {
-                                        "data_path": "action_result.status",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "success",
-                                            "failed"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.command",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "savedsearch"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.display",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.parse_only",
-                                        "data_type": "boolean",
-                                        "example_values": [
-                                            true,
-                                            false
-                                        ]
-                                    },
-                                    {
-                                        "contains": [
-                                            "splunk query"
-                                        ],
-                                        "data_path": "action_result.parameter.query",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "\"Send to Phantom\""
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*._bkt",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*._cd",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*._indextime",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "column_name": "Raw",
-                                        "column_order": 2,
-                                        "data_path": "action_result.data.*._raw",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*._serial",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*._si",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*._sourcetype",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "column_name": "Time",
-                                        "column_order": 1,
-                                        "data_path": "action_result.data.*._time",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "column_name": "Host",
-                                        "column_order": 0,
-                                        "contains": [
-                                            "host name"
-                                        ],
-                                        "data_path": "action_result.data.*.host",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "10.1.67.187:8088"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.index",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.linecount",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.source",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.sourcetype",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "contains": [
-                                            "host name"
-                                        ],
-                                        "data_path": "action_result.data.*.splunk_server",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.summary.total_events",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            2
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.message",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "Total events: 2"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "summary.total_objects",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            1
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "summary.total_objects_successful",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            1
-                                        ]
-                                    }
-                                ],
-                                "parameters": {
-                                    "command": {
-                                        "data_type": "string",
-                                        "default": "search",
-                                        "description": "Beginning command (in Splunk Processing Language)",
-                                        "key": "command",
-                                        "order": 0,
-                                        "required": false,
-                                        "value_list": [
-                                            "search",
-                                            "eval",
-                                            "savedsearch",
-                                            "stats",
-                                            "table",
-                                            "tstats"
-                                        ]
-                                    },
-                                    "display": {
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "Display fields (comma-separated)",
-                                        "key": "display",
-                                        "order": 2,
-                                        "required": false
-                                    },
-                                    "parse_only": {
-                                        "data_type": "boolean",
-                                        "default": false,
-                                        "description": "Parse only",
-                                        "key": "parse_only",
-                                        "order": 3,
-                                        "required": false
-                                    },
-                                    "query": {
-                                        "contains": [
-                                            "splunk query"
-                                        ],
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "Query to run (in Splunk Processing Language)",
-                                        "key": "query",
-                                        "order": 1,
-                                        "primary": true,
-                                        "required": true
-                                    }
-                                },
-                                "product_name": "Splunk Enterprise",
-                                "product_vendor": "Splunk Inc.",
-                                "targets": "8",
-                                "type": "siem"
-                            }
-                        ],
                         "attrs": {
-                            ".action": {
-                                "text": "run_savedsearch"
-                            },
                             ".background": {
                                 "fill": "#000000",
                                 "stroke": "#5C6773"
                             },
                             ".color-band": {
                                 "fill": "#3C444D"
+                            },
+                            ".customFunction": {
+                                "text": "list_2_containers"
                             },
                             ".inPorts>.port-in": {
                                 "ref": ".background",
@@ -1216,13 +712,16 @@
                                     "type": "out"
                                 }
                             },
+                            ".scmName": {
+                                "text": "mainPhantomPlayb..."
+                            },
                             ".title": {
-                                "text": "Investigate"
+                                "text": "custom function"
                             },
-                            "g.approver image": {
-                                "opacity": 1
+                            ".title-info": {
+                                "text": ""
                             },
-                            "g.code image": {
+                            "g.branch image": {
                                 "opacity": 1
                             },
                             "g.delete": {
@@ -1231,54 +730,66 @@
                             "g.error": {
                                 "opacity": 0
                             },
-                            "g.error image": {
-                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
-                            },
-                            "g.icon image": {
-                                "xlink:href": "/inc/coa/img/block_icon_investigate.svg"
-                            },
                             "g.notes": {
                                 "display": "block"
-                            },
-                            "g.notes image": {
-                                "opacity": 1
-                            },
-                            "g.timer image": {
-                                "opacity": 1
                             }
                         },
-                        "block_code": "def run_savedsearch(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('run_savedsearch() called')\n\n    # collect data for 'run_savedsearch' call\n    formatted_data_1 = phantom.get_format_data(name='myquerystring')\n\n    parameters = []\n    \n    # build parameters list for 'run_savedsearch' call\n    parameters.append({\n        'query': formatted_data_1,\n        'command': \"savedsearch\",\n        'display': \"\",\n        'parse_only': \"\",\n    })\n\n    phantom.act(action=\"run query\", parameters=parameters, assets=['mysplunkinstance'], callback=Output_formatted, name=\"run_savedsearch\")\n\n    return",
+                        "block_code": "def cf_mainPhantomPlaybooksAdvanced_list_2_containers_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_mainPhantomPlaybooksAdvanced_list_2_containers_1() called')\n    \n    custom_function_result_0 = phantom.collect2(container=container, datapath=['Buildcontainerlist:custom_function_result.data.my_output_custom_list'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"label\"),\n        ],\n    ]\n\n    parameters = []\n\n    container_property_0_0 = [item[0] for item in container_property_0]\n    custom_function_result_0_0 = [item[0] for item in custom_function_result_0]\n\n    parameters.append({\n        'container_label': container_property_0_0,\n        'to_be_containerized': custom_function_result_0_0,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/list_2_containers\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/list_2_containers', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_list_2_containers_1')\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
+                        "cfDisplayPath": "mainPhantomPlaybooksAdvanced/list_2_containers",
+                        "cfInputs": {
+                            "container_label": {
+                                "collectionType": "container_property",
+                                "dataPath": "container:label",
+                                "paramName": "container_property_0_0",
+                                "type": "list"
+                            },
+                            "to_be_containerized": {
+                                "collectionType": "custom_function_result",
+                                "dataPath": "Buildcontainerlist:custom_function_result.data.my_output_custom_list",
+                                "paramName": "custom_function_result_0_0",
+                                "type": "list"
+                            }
+                        },
                         "color": "",
                         "connected_to_start": true,
-                        "connection_name": "",
-                        "connection_type": "",
+                        "connection_name": "Buildcontainerlist",
+                        "connection_type": "action",
+                        "container_label-1": "container:label",
+                        "currentVersion": true,
+                        "customCodeEndLineOffset": 7,
+                        "customCodeStartLine": 22,
+                        "customFunction": "mainPhantomPlaybooksAdvanced/list_2_containers",
+                        "customFunctionId": null,
                         "custom_callback": "",
                         "custom_code": "",
                         "custom_join": "",
-                        "custom_name": "run_savedsearch",
-                        "delay": "0",
+                        "custom_name": "",
+                        "delay": 0,
                         "description": "",
+                        "draftMode": false,
+                        "existingCF": true,
+                        "functionBlock": "custom function",
                         "has_custom": false,
                         "has_custom_block": false,
                         "has_custom_callback": false,
                         "has_custom_join": false,
-                        "id": "ba9aaec3-93c3-4f1e-a094-ca2548bd2d53",
+                        "id": "6142e494-12b2-4003-b073-3467caeb5a18",
                         "inPorts": [
                             "in"
                         ],
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 39,
-                        "line_start": 19,
+                        "line_end": 204,
+                        "line_start": 170,
                         "message": "Configuring now",
-                        "name": "run query",
+                        "name": "list_2_containers",
                         "notes": "",
                         "number": 1,
-                        "order": 2,
+                        "order": 9,
                         "outPorts": [
                             "out"
                         ],
@@ -1335,237 +846,69 @@
                             }
                         },
                         "position": {
-                            "x": 100,
-                            "y": -20
+                            "x": 1200,
+                            "y": 20
                         },
                         "previous_function": "",
-                        "previous_name": "run_savedsearch",
-                        "required_params": {
-                            "query": true
+                        "previous_name": "cf_mainPhantomPlaybooksAdvanced_list_2_containers_1",
+                        "selectedCustomFunction": {
+                            "description": "Creates containers from a list",
+                            "draftMode": false,
+                            "id": 26,
+                            "inputs": [
+                                {
+                                    "_pretty_custom_function": "list_2_containers",
+                                    "contains_type": [],
+                                    "custom_function": 26,
+                                    "description": "",
+                                    "id": 84,
+                                    "input_type": "list",
+                                    "name": "to_be_containerized",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "list_2_containers",
+                                    "contains_type": [],
+                                    "custom_function": 26,
+                                    "description": "",
+                                    "id": 85,
+                                    "input_type": "list",
+                                    "name": "container_label",
+                                    "placeholder": ""
+                                }
+                            ],
+                            "name": "list_2_containers",
+                            "outputs": [
+                                {
+                                    "_pretty_custom_function": "list_2_containers",
+                                    "contains_type": [],
+                                    "custom_function": 26,
+                                    "data_path": "new_container_ids",
+                                    "description": "",
+                                    "id": 35
+                                }
+                            ],
+                            "playbooks": {
+                                "draft_playbooks": [],
+                                "draft_version_id": null,
+                                "playbooks": []
+                            },
+                            "scmId": 7,
+                            "scmName": "mainPhantomPlaybooksAdvanced"
                         },
-                        "reviewer": "",
                         "show_number": false,
                         "size": {
                             "height": 100,
                             "width": 180
                         },
-                        "state": "app_action_assets",
+                        "state": "repo",
                         "status": "",
-                        "title": "Investigate",
-                        "type": "coa.Action",
+                        "title": "custom function",
+                        "to_be_containerized-0": "Buildcontainerlist:custom_function_result.data.my_output_custom_list",
+                        "type": "coa.CustomFunctionBlock",
+                        "userGeneratedCode": "    # Write your custom code here...",
                         "warn": false,
-                        "z": 56
-                    },
-                    {
-                        "active": false,
-                        "angle": 0,
-                        "attrs": {
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#5C6773"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".format": {
-                                "text": "Output_formatted"
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out-1": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out-1>.port-body": {
-                                "port": {
-                                    "id": "out-1",
-                                    "type": "out"
-                                }
-                            },
-                            ".title": {
-                                "text": "format"
-                            },
-                            "g.code image": {
-                                "opacity": 1
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 0
-                            },
-                            "g.error image": {
-                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            },
-                            "g.notes image": {
-                                "opacity": 1
-                            }
-                        },
-                        "block_code": "def Output_formatted(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Output_formatted() called')\n    \n    template = \"\"\"This is the total number of peer servers returned by the search {0}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"run_savedsearch:action_result.summary.total_events\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"Output_formatted\")\n\n    Add_Comment_2_case(container=container)\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 1,
-                        "callsback": false,
-                        "connected_to_start": true,
-                        "connection_name": "run_savedsearch",
-                        "connection_type": "action",
-                        "custom_callback": "",
-                        "custom_code": "",
-                        "custom_join": "",
-                        "custom_name": "Output_formatted",
-                        "description": "",
-                        "format": "format",
-                        "has_custom": false,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "469c5d49-f992-4f5f-9e77-ecf843fe391c",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "join_code": "",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "line_end": 81,
-                        "line_start": 65,
-                        "message": "Configuring now",
-                        "name": "format",
-                        "notes": "",
-                        "number": 2,
-                        "order": 5,
-                        "outPorts": [
-                            "out-1"
-                        ],
-                        "parameters": [
-                            {
-                                "position": 0,
-                                "type": "",
-                                "value": "run_savedsearch:action_result.summary.total_events"
-                            }
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": 360,
-                            "y": -20
-                        },
-                        "previous_function": "",
-                        "previous_name": "Output_formatted",
-                        "show_number": true,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "format",
-                        "status": "",
-                        "template": "This is the total number of peer servers returned by the search {0}",
-                        "title": "format",
-                        "type": "coa.Format",
-                        "warn": false,
-                        "z": 59
-                    },
-                    {
-                        "attrs": {
-                            ".connection": {
-                                "stroke": "#818D99",
-                                "stroke-width": 2
-                            },
-                            ".marker-target": {
-                                "d": "M 10 0 L 0 5 L 10 10 z",
-                                "fill": "#818D99",
-                                "stroke": "#818D99"
-                            }
-                        },
-                        "connector": {
-                            "args": {
-                                "radius": 5
-                            },
-                            "name": "rounded"
-                        },
-                        "endDirections": [
-                            "left"
-                        ],
-                        "id": "69572d21-0c40-4ecb-aea4-b883dd45f918",
-                        "router": {
-                            "name": "metro"
-                        },
-                        "source": {
-                            "id": "7f2a979f-dd5b-4f66-ae33-35d1b6fa70b3",
-                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "startDirections": [
-                            "right"
-                        ],
-                        "target": {
-                            "id": "6142e494-12b2-4003-b073-3467caeb5a18",
-                            "selector": ".port-body[type=\"input\"]"
-                        },
-                        "type": "link",
-                        "z": 65
+                        "z": 73
                     },
                     {
                         "active": false,
@@ -1660,8 +1003,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 65,
-                        "line_start": 55,
+                        "line_end": 68,
+                        "line_start": 58,
                         "message": "Configuring now",
                         "name": "add comment",
                         "notes": "",
@@ -1738,7 +1081,300 @@
                         "title": "API",
                         "type": "coa.API",
                         "warn": false,
-                        "z": 69
+                        "z": 75
+                    },
+                    {
+                        ".scmName/text": "mainPhantomPlaybooksAdvanced",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {},
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".customFunction": {
+                                "text": "Buildcontainerlist"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".scmName": {
+                                "text": "mainPhantomPlayb..."
+                            },
+                            ".title": {
+                                "text": "custom function"
+                            },
+                            ".title-info": {
+                                "text": ""
+                            },
+                            "g.branch image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            }
+                        },
+                        "block_code": "def Buildcontainerlist(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Buildcontainerlist() called')\n    \n    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*.peer', 'run_savedsearch:action_result.data.*.count', 'run_savedsearch:action_result.data.*.priority', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n\n    parameters = []\n\n    action_results_data_0_0 = [item[0] for item in action_results_data_0]\n    action_results_data_0_1 = [item[1] for item in action_results_data_0]\n    action_results_data_0_2 = [item[2] for item in action_results_data_0]\n\n    for item0 in container_property_0:\n        parameters.append({\n            'peer': action_results_data_0_0,\n            'count': action_results_data_0_1,\n            'priority': action_results_data_0_2,\n            'current_container': item0[0],\n        })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/task4customFunc\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/task4customFunc', parameters=parameters, name='Buildcontainerlist', callback=cf_mainPhantomPlaybooksAdvanced_list_2_containers_1)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "cfDisplayPath": "mainPhantomPlaybooksAdvanced/task4customFunc",
+                        "cfInputs": {
+                            "count": {
+                                "collectionType": "action_results_data",
+                                "dataPath": "run_savedsearch:action_result.data.*.count",
+                                "paramName": "action_results_data_0_1",
+                                "type": "list"
+                            },
+                            "current_container": {
+                                "collectionType": "container_property",
+                                "dataPath": "container:id",
+                                "paramName": "item0[0]",
+                                "type": "item"
+                            },
+                            "peer": {
+                                "collectionType": "action_results_data",
+                                "dataPath": "run_savedsearch:action_result.data.*.peer",
+                                "paramName": "action_results_data_0_0",
+                                "type": "list"
+                            },
+                            "priority": {
+                                "collectionType": "action_results_data",
+                                "dataPath": "run_savedsearch:action_result.data.*.priority",
+                                "paramName": "action_results_data_0_2",
+                                "type": "list"
+                            }
+                        },
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "run_savedsearch",
+                        "connection_type": "action",
+                        "count-3": "run_savedsearch:action_result.data.*.count",
+                        "currentVersion": true,
+                        "current_container-0": "container:id",
+                        "customCodeEndLineOffset": 7,
+                        "customCodeStartLine": 26,
+                        "customFunction": "mainPhantomPlaybooksAdvanced/task4customFunc",
+                        "customFunctionId": null,
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "Buildcontainerlist",
+                        "delay": 0,
+                        "description": "MyPhantomcustomfunction",
+                        "draftMode": false,
+                        "existingCF": true,
+                        "functionBlock": "custom function",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "7f2a979f-dd5b-4f66-ae33-35d1b6fa70b3",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 170,
+                        "line_start": 132,
+                        "message": "Configuring now",
+                        "name": "task4customFunc",
+                        "notes": "MyPhantomcustomfunction",
+                        "number": 1,
+                        "order": 8,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "peer-1": "run_savedsearch:action_result.data.*.peer",
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 900,
+                            "y": -20
+                        },
+                        "previous_function": "",
+                        "previous_name": "Buildcontainerlist",
+                        "priority-2": "run_savedsearch:action_result.data.*.priority",
+                        "selectedCustomFunction": {
+                            "description": "mytask4customfunc",
+                            "draftMode": false,
+                            "id": 25,
+                            "inputs": [
+                                {
+                                    "_pretty_custom_function": "task4customFunc",
+                                    "contains_type": [
+                                        "phantom container id"
+                                    ],
+                                    "custom_function": 25,
+                                    "description": "",
+                                    "id": 80,
+                                    "input_type": "item",
+                                    "name": "current_container",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "task4customFunc",
+                                    "contains_type": [],
+                                    "custom_function": 25,
+                                    "description": "",
+                                    "id": 81,
+                                    "input_type": "list",
+                                    "name": "peer",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "task4customFunc",
+                                    "contains_type": [],
+                                    "custom_function": 25,
+                                    "description": "",
+                                    "id": 82,
+                                    "input_type": "list",
+                                    "name": "priority",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "task4customFunc",
+                                    "contains_type": [],
+                                    "custom_function": 25,
+                                    "description": "",
+                                    "id": 83,
+                                    "input_type": "list",
+                                    "name": "count",
+                                    "placeholder": ""
+                                }
+                            ],
+                            "name": "task4customFunc",
+                            "outputs": [
+                                {
+                                    "_pretty_custom_function": "task4customFunc",
+                                    "contains_type": [],
+                                    "custom_function": 25,
+                                    "data_path": "my_output_custom_list",
+                                    "description": "",
+                                    "id": 34
+                                }
+                            ],
+                            "playbooks": {
+                                "draft_playbooks": [],
+                                "draft_version_id": null,
+                                "playbooks": [
+                                    {
+                                        "active": false,
+                                        "display_path": "mainPhantomPlaybooksAdvanced/Notable Events Playbook",
+                                        "draft_mode": false,
+                                        "id": 81,
+                                        "name": "Notable Events Playbook",
+                                        "viewable": true
+                                    }
+                                ]
+                            },
+                            "scmId": 7,
+                            "scmName": "mainPhantomPlaybooksAdvanced"
+                        },
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "repo",
+                        "status": "",
+                        "title": "custom function",
+                        "type": "coa.CustomFunctionBlock",
+                        "userGeneratedCode": "    # Write your custom code here...",
+                        "warn": false,
+                        "z": 79
                     },
                     {
                         "action": "update event",
@@ -2075,8 +1711,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 110,
-                        "line_start": 81,
+                        "line_end": 113,
+                        "line_start": 84,
                         "message": "Configuring now",
                         "name": "update event",
                         "notes": "",
@@ -2157,24 +1793,252 @@
                         "title": "Generic",
                         "type": "coa.Action",
                         "warn": false,
-                        "z": 72
+                        "z": 80
                     },
                     {
-                        ".scmName/text": "mainPhantomPlaybooksAdvanced",
+                        "action": "run query",
+                        "action_type": "investigate",
                         "active": false,
                         "active_keys": {},
-                        "active_values": {},
+                        "active_values": {
+                            "command": "savedsearch",
+                            "display": "",
+                            "parse_only": "",
+                            "query": "myquerystring:formatted_data"
+                        },
                         "angle": 0,
+                        "app": "Splunk",
+                        "appid": "91883aa8-9c81-470b-97a1-5d8f7995f560",
+                        "approver": "",
+                        "assets": [
+                            {
+                                "action": "run query",
+                                "actions": [
+                                    "post data",
+                                    "update event",
+                                    "run query",
+                                    "on poll",
+                                    "get host events",
+                                    "test connectivity"
+                                ],
+                                "active": true,
+                                "app_name": "Splunk",
+                                "app_version": "2.0.22",
+                                "appid": "91883aa8-9c81-470b-97a1-5d8f7995f560",
+                                "asset_name": "mysplunkinstance",
+                                "config_type": "asset",
+                                "count": 0,
+                                "fields": {
+                                    "command": "savedsearch",
+                                    "display": "",
+                                    "parse_only": "",
+                                    "query": "myquerystring:formatted_data"
+                                },
+                                "has_app": true,
+                                "id": 8,
+                                "loaded": false,
+                                "missing": false,
+                                "name": "mysplunkinstance",
+                                "output": [
+                                    {
+                                        "data_path": "action_result.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "success",
+                                            "failed"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.command",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "savedsearch"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.display",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.parse_only",
+                                        "data_type": "boolean",
+                                        "example_values": [
+                                            true,
+                                            false
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "splunk query"
+                                        ],
+                                        "data_path": "action_result.parameter.query",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "\"Send to Phantom\""
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._bkt",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._cd",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._indextime",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "column_name": "Raw",
+                                        "column_order": 2,
+                                        "data_path": "action_result.data.*._raw",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._serial",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._si",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._sourcetype",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "column_name": "Time",
+                                        "column_order": 1,
+                                        "data_path": "action_result.data.*._time",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "column_name": "Host",
+                                        "column_order": 0,
+                                        "contains": [
+                                            "host name"
+                                        ],
+                                        "data_path": "action_result.data.*.host",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "10.1.67.187:8088"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.index",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.linecount",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.source",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.sourcetype",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "contains": [
+                                            "host name"
+                                        ],
+                                        "data_path": "action_result.data.*.splunk_server",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.total_events",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            2
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Total events: 2"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects_successful",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    }
+                                ],
+                                "parameters": {
+                                    "command": {
+                                        "data_type": "string",
+                                        "default": "search",
+                                        "description": "Beginning command (in Splunk Processing Language)",
+                                        "key": "command",
+                                        "order": 0,
+                                        "required": false,
+                                        "value_list": [
+                                            "search",
+                                            "eval",
+                                            "savedsearch",
+                                            "stats",
+                                            "table",
+                                            "tstats"
+                                        ]
+                                    },
+                                    "display": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Display fields (comma-separated)",
+                                        "key": "display",
+                                        "order": 2,
+                                        "required": false
+                                    },
+                                    "parse_only": {
+                                        "data_type": "boolean",
+                                        "default": false,
+                                        "description": "Parse only",
+                                        "key": "parse_only",
+                                        "order": 3,
+                                        "required": false
+                                    },
+                                    "query": {
+                                        "contains": [
+                                            "splunk query"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Query to run (in Splunk Processing Language)",
+                                        "key": "query",
+                                        "order": 1,
+                                        "primary": true,
+                                        "required": true
+                                    }
+                                },
+                                "product_name": "Splunk Enterprise",
+                                "product_vendor": "Splunk Inc.",
+                                "targets": "8",
+                                "type": "siem"
+                            }
+                        ],
                         "attrs": {
+                            ".action": {
+                                "text": "run_savedsearch"
+                            },
                             ".background": {
                                 "fill": "#000000",
                                 "stroke": "#5C6773"
                             },
                             ".color-band": {
                                 "fill": "#3C444D"
-                            },
-                            ".customFunction": {
-                                "text": "list_2_containers"
                             },
                             ".inPorts>.port-in": {
                                 "ref": ".background",
@@ -2202,16 +2066,13 @@
                                     "type": "out"
                                 }
                             },
-                            ".scmName": {
-                                "text": "mainPhantomPlayb..."
-                            },
                             ".title": {
-                                "text": "custom function"
+                                "text": "Investigate"
                             },
-                            ".title-info": {
-                                "text": ""
+                            "g.approver image": {
+                                "opacity": 1
                             },
-                            "g.branch image": {
+                            "g.code image": {
                                 "opacity": 1
                             },
                             "g.delete": {
@@ -2220,66 +2081,54 @@
                             "g.error": {
                                 "opacity": 0
                             },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_investigate.svg"
+                            },
                             "g.notes": {
                                 "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1
+                            },
+                            "g.timer image": {
+                                "opacity": 1
                             }
                         },
-                        "block_code": "def cf_mainPhantomPlaybooksAdvanced_list_2_containers_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_mainPhantomPlaybooksAdvanced_list_2_containers_1() called')\n    \n    custom_function_result_0 = phantom.collect2(container=container, datapath=['Buildcontainerlist:custom_function_result.data.my_output_custom_list'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"label\"),\n        ],\n    ]\n\n    parameters = []\n\n    container_property_0_0 = [item[0] for item in container_property_0]\n    custom_function_result_0_0 = [item[0] for item in custom_function_result_0]\n\n    parameters.append({\n        'container_label': container_property_0_0,\n        'to_be_containerized': custom_function_result_0_0,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/list_2_containers\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/list_2_containers', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_list_2_containers_1')\n\n    return",
+                        "block_code": "def run_savedsearch(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('run_savedsearch() called')\n\n    # collect data for 'run_savedsearch' call\n    formatted_data_1 = phantom.get_format_data(name='myquerystring')\n\n    parameters = []\n    \n    # build parameters list for 'run_savedsearch' call\n    parameters.append({\n        'query': formatted_data_1,\n        'command': \"savedsearch\",\n        'display': \"\",\n        'parse_only': \"\",\n    })\n\n    phantom.act(action=\"run query\", parameters=parameters, assets=['mysplunkinstance'], callback=Output_formatted, name=\"run_savedsearch\")\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
-                        "cfDisplayPath": "mainPhantomPlaybooksAdvanced/list_2_containers",
-                        "cfInputs": {
-                            "container_label": {
-                                "collectionType": "container_property",
-                                "dataPath": "container:label",
-                                "paramName": "container_property_0_0",
-                                "type": "list"
-                            },
-                            "to_be_containerized": {
-                                "collectionType": "custom_function_result",
-                                "dataPath": "Buildcontainerlist:custom_function_result.data.my_output_custom_list",
-                                "paramName": "custom_function_result_0_0",
-                                "type": "list"
-                            }
-                        },
                         "color": "",
                         "connected_to_start": true,
-                        "connection_name": "Buildcontainerlist",
-                        "connection_type": "action",
-                        "container_label-1": "container:label",
-                        "currentVersion": true,
-                        "customCodeEndLineOffset": 7,
-                        "customCodeStartLine": 22,
-                        "customFunction": "mainPhantomPlaybooksAdvanced/list_2_containers",
-                        "customFunctionId": null,
+                        "connection_name": "",
+                        "connection_type": "",
                         "custom_callback": "",
                         "custom_code": "",
                         "custom_join": "",
-                        "custom_name": "",
-                        "delay": 0,
+                        "custom_name": "run_savedsearch",
+                        "delay": "0",
                         "description": "",
-                        "draftMode": false,
-                        "existingCF": true,
-                        "functionBlock": "custom function",
                         "has_custom": false,
                         "has_custom_block": false,
                         "has_custom_callback": false,
                         "has_custom_join": false,
-                        "id": "6142e494-12b2-4003-b073-3467caeb5a18",
+                        "id": "ba9aaec3-93c3-4f1e-a094-ca2548bd2d53",
                         "inPorts": [
                             "in"
                         ],
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 201,
-                        "line_start": 167,
+                        "line_end": 42,
+                        "line_start": 22,
                         "message": "Configuring now",
-                        "name": "list_2_containers",
+                        "name": "run query",
                         "notes": "",
                         "number": 1,
-                        "order": 9,
+                        "order": 2,
                         "outPorts": [
                             "out"
                         ],
@@ -2336,69 +2185,553 @@
                             }
                         },
                         "position": {
-                            "x": 1200,
-                            "y": 20
+                            "x": 100,
+                            "y": -20
                         },
                         "previous_function": "",
-                        "previous_name": "cf_mainPhantomPlaybooksAdvanced_list_2_containers_1",
-                        "selectedCustomFunction": {
-                            "description": "Creates containers from a list",
-                            "draftMode": false,
-                            "id": 26,
-                            "inputs": [
-                                {
-                                    "_pretty_custom_function": "list_2_containers",
-                                    "contains_type": [],
-                                    "custom_function": 26,
-                                    "description": "",
-                                    "id": 84,
-                                    "input_type": "list",
-                                    "name": "to_be_containerized",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "_pretty_custom_function": "list_2_containers",
-                                    "contains_type": [],
-                                    "custom_function": 26,
-                                    "description": "",
-                                    "id": 85,
-                                    "input_type": "list",
-                                    "name": "container_label",
-                                    "placeholder": ""
-                                }
-                            ],
-                            "name": "list_2_containers",
-                            "outputs": [
-                                {
-                                    "_pretty_custom_function": "list_2_containers",
-                                    "contains_type": [],
-                                    "custom_function": 26,
-                                    "data_path": "new_container_ids",
-                                    "description": "",
-                                    "id": 35
-                                }
-                            ],
-                            "playbooks": {
-                                "draft_playbooks": [],
-                                "draft_version_id": null,
-                                "playbooks": []
-                            },
-                            "scmId": 7,
-                            "scmName": "mainPhantomPlaybooksAdvanced"
+                        "previous_name": "run_savedsearch",
+                        "required_params": {
+                            "query": true
                         },
+                        "reviewer": "",
                         "show_number": false,
                         "size": {
                             "height": 100,
                             "width": 180
                         },
-                        "state": "repo",
+                        "state": "app_action_assets",
                         "status": "",
-                        "title": "custom function",
-                        "to_be_containerized-0": "Buildcontainerlist:custom_function_result.data.my_output_custom_list",
-                        "type": "coa.CustomFunctionBlock",
-                        "userGeneratedCode": "    # Write your custom code here...",
+                        "title": "Investigate",
+                        "type": "coa.Action",
                         "warn": false,
-                        "z": 73
+                        "z": 81
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".format": {
+                                "text": "Output_formatted"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out-1": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out-1>.port-body": {
+                                "port": {
+                                    "id": "out-1",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "format"
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1
+                            }
+                        },
+                        "block_code": "def Output_formatted(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Output_formatted() called')\n    \n    template = \"\"\"This is the total number of peer servers returned by the search {0}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"run_savedsearch:action_result.summary.total_events\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"Output_formatted\")\n\n    Add_Comment_2_case(container=container)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "run_savedsearch",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "Output_formatted",
+                        "description": "",
+                        "format": "format",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "469c5d49-f992-4f5f-9e77-ecf843fe391c",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 84,
+                        "line_start": 68,
+                        "message": "Configuring now",
+                        "name": "format",
+                        "notes": "",
+                        "number": 2,
+                        "order": 5,
+                        "outPorts": [
+                            "out-1"
+                        ],
+                        "parameters": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": "run_savedsearch:action_result.summary.total_events"
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 360,
+                            "y": -20
+                        },
+                        "previous_function": "",
+                        "previous_name": "Output_formatted",
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "format",
+                        "status": "",
+                        "template": "This is the total number of peer servers returned by the search {0}",
+                        "title": "format",
+                        "type": "coa.Format",
+                        "warn": false,
+                        "z": 82
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".format": {
+                                "text": "myquerystring"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out-1": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out-1>.port-body": {
+                                "port": {
+                                    "id": "out-1",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "format"
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1
+                            }
+                        },
+                        "block_code": "def myquerystring(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('myquerystring() called')\n    \n    template = \"\"\"myphantomlab4search server={0}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"artifact:*.cef.hostname\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"myquerystring\")\n\n    run_savedsearch(container=container)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "myquerystring",
+                        "description": "",
+                        "format": "format",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "6fc9f4e0-fb5d-43c3-9004-b205b0318366",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 58,
+                        "line_start": 42,
+                        "message": "Configuring now",
+                        "name": "format",
+                        "notes": "",
+                        "number": 1,
+                        "order": 3,
+                        "outPorts": [
+                            "out-1"
+                        ],
+                        "parameters": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": "artifact:*.cef.hostname"
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": -220,
+                            "y": -20
+                        },
+                        "previous_function": "",
+                        "previous_name": "myquerystring",
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "format",
+                        "status": "",
+                        "template": "myphantomlab4search server={0}",
+                        "title": "format",
+                        "type": "coa.Format",
+                        "warn": false,
+                        "z": 83
+                    },
+                    {
+                        "0": "S",
+                        "1": "T",
+                        "2": "A",
+                        "3": "R",
+                        "4": "T",
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "ref-x": 33,
+                                "ref-y": 8,
+                                "text": "START"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.icon image": {
+                                "ref-x": 13,
+                                "xlink:href": "/inc/coa/img/block_icon_start.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def on_start(container):\n    phantom.debug('on_start() called')\n    \n    # call 'Event_Comment' block\n    Event_Comment(container=container)\n\n    # call 'myquerystring' block\n    myquerystring(container=container)\n\n    # call 'cf_mainPhantomPlaybooksAdvanced_Merge_fields_1' block\n    cf_mainPhantomPlaybooksAdvanced_Merge_fields_1(container=container)\n\n    return",
+                        "callback_code": "# read-only block view not available",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": false,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "112ee4d5-d40e-48a4-a0cf-ec44d595b69b",
+                        "inPorts": [],
+                        "join_code": "# read-only block view not available",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 22,
+                        "line_start": 8,
+                        "name": "",
+                        "notes": "",
+                        "number": 0,
+                        "order": 1,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": -940,
+                            "y": 80
+                        },
+                        "previous_function": "",
+                        "previous_name": "",
+                        "show_number": true,
+                        "size": {
+                            "height": 54,
+                            "width": 80
+                        },
+                        "status": "",
+                        "title": "START",
+                        "type": "coa.StartEnd",
+                        "warn": false,
+                        "z": 84
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "bac53b78-6df5-4bb9-90c2-9a1abf160b35",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "112ee4d5-d40e-48a4-a0cf-ec44d595b69b",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "6107775e-dd2d-4418-a4fc-71c65b4ecc48",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 85
                     },
                     {
                         ".scmName/text": "mainPhantomPlaybooksAdvanced",
@@ -2409,13 +2742,13 @@
                         "attrs": {
                             ".background": {
                                 "fill": "#000000",
-                                "stroke": "#0083FF"
+                                "stroke": "#5C6773"
                             },
                             ".color-band": {
                                 "fill": "#3C444D"
                             },
                             ".customFunction": {
-                                "text": "Buildcontainerlist"
+                                "text": "Merge_fields"
                             },
                             ".inPorts>.port-in": {
                                 "ref": ".background",
@@ -2466,60 +2799,49 @@
                             },
                             "g.notes": {
                                 "display": "block"
-                            },
-                            "g.notes image": {
-                                "opacity": 1,
-                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
                             }
                         },
-                        "block_code": "def Buildcontainerlist(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Buildcontainerlist() called')\n    \n    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*.peer', 'run_savedsearch:action_result.data.*.count', 'run_savedsearch:action_result.data.*.priority', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n\n    parameters = []\n\n    action_results_data_0_0 = [item[0] for item in action_results_data_0]\n    action_results_data_0_1 = [item[1] for item in action_results_data_0]\n    action_results_data_0_2 = [item[2] for item in action_results_data_0]\n\n    for item0 in container_property_0:\n        parameters.append({\n            'peer': action_results_data_0_0,\n            'count': action_results_data_0_1,\n            'priority': action_results_data_0_2,\n            'current_container': item0[0],\n        })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/task4customFunc\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/task4customFunc', parameters=parameters, name='Buildcontainerlist', callback=cf_mainPhantomPlaybooksAdvanced_list_2_containers_1)\n\n    return",
+                        "block_code": "def cf_mainPhantomPlaybooksAdvanced_Merge_fields_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_mainPhantomPlaybooksAdvanced_Merge_fields_1() called')\n    \n    container_data_0 = phantom.collect2(container=container, datapath=['artifact:*.cef.hostname', 'artifact:*.cef.destinationAddress', 'artifact:*.id'])\n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n\n    parameters = []\n\n    container_data_0_0 = [item[0] for item in container_data_0]\n    container_data_0_1 = [item[1] for item in container_data_0]\n    container_property_0_0 = [item[0] for item in container_property_0]\n\n    parameters.append({\n        'hostname': container_data_0_0,\n        'my_dest_src_param': container_data_0_1,\n        'current_container': container_property_0_0,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/Merge_fields\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/Merge_fields', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_Merge_fields_1')\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
-                        "cfDisplayPath": "mainPhantomPlaybooksAdvanced/task4customFunc",
+                        "cfDisplayPath": "mainPhantomPlaybooksAdvanced/Merge_fields",
                         "cfInputs": {
-                            "count": {
-                                "collectionType": "action_results_data",
-                                "dataPath": "run_savedsearch:action_result.data.*.count",
-                                "paramName": "action_results_data_0_1",
-                                "type": "list"
-                            },
                             "current_container": {
                                 "collectionType": "container_property",
                                 "dataPath": "container:id",
-                                "paramName": "item0[0]",
-                                "type": "item"
-                            },
-                            "peer": {
-                                "collectionType": "action_results_data",
-                                "dataPath": "run_savedsearch:action_result.data.*.peer",
-                                "paramName": "action_results_data_0_0",
+                                "paramName": "container_property_0_0",
                                 "type": "list"
                             },
-                            "priority": {
-                                "collectionType": "action_results_data",
-                                "dataPath": "run_savedsearch:action_result.data.*.priority",
-                                "paramName": "action_results_data_0_2",
+                            "hostname": {
+                                "collectionType": "container_data",
+                                "dataPath": "artifact:*.cef.hostname",
+                                "paramName": "container_data_0_0",
+                                "type": "list"
+                            },
+                            "my_dest_src_param": {
+                                "collectionType": "container_data",
+                                "dataPath": "artifact:*.cef.destinationAddress",
+                                "paramName": "container_data_0_1",
                                 "type": "list"
                             }
                         },
                         "color": "",
                         "connected_to_start": true,
-                        "connection_name": "run_savedsearch",
-                        "connection_type": "action",
-                        "count-3": "run_savedsearch:action_result.data.*.count",
+                        "connection_name": "",
+                        "connection_type": "",
                         "currentVersion": true,
-                        "current_container-0": "container:id",
+                        "current_container-2": "container:id",
                         "customCodeEndLineOffset": 7,
-                        "customCodeStartLine": 26,
-                        "customFunction": "mainPhantomPlaybooksAdvanced/task4customFunc",
+                        "customCodeStartLine": 24,
+                        "customFunction": "mainPhantomPlaybooksAdvanced/Merge_fields",
                         "customFunctionId": null,
                         "custom_callback": "",
                         "custom_code": "",
                         "custom_join": "",
-                        "custom_name": "Buildcontainerlist",
+                        "custom_name": "",
                         "delay": 0,
-                        "description": "MyPhantomcustomfunction",
+                        "description": "",
                         "draftMode": false,
                         "existingCF": true,
                         "functionBlock": "custom function",
@@ -2527,24 +2849,25 @@
                         "has_custom_block": false,
                         "has_custom_callback": false,
                         "has_custom_join": false,
-                        "id": "7f2a979f-dd5b-4f66-ae33-35d1b6fa70b3",
+                        "hostname-0": "artifact:*.cef.hostname",
+                        "id": "6107775e-dd2d-4418-a4fc-71c65b4ecc48",
                         "inPorts": [
                             "in"
                         ],
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 167,
-                        "line_start": 129,
+                        "line_end": 240,
+                        "line_start": 204,
                         "message": "Configuring now",
-                        "name": "task4customFunc",
-                        "notes": "MyPhantomcustomfunction",
+                        "my_dest_src_param-1": "artifact:*.cef.destinationAddress",
+                        "name": "Merge_fields",
+                        "notes": "",
                         "number": 1,
-                        "order": 8,
+                        "order": 10,
                         "outPorts": [
                             "out"
                         ],
-                        "peer-1": "run_savedsearch:action_result.data.*.peer",
                         "ports": {
                             "groups": {
                                 "in": {
@@ -2598,84 +2921,55 @@
                             }
                         },
                         "position": {
-                            "x": 900,
-                            "y": -20
+                            "x": -780,
+                            "y": 60
                         },
                         "previous_function": "",
-                        "previous_name": "Buildcontainerlist",
-                        "priority-2": "run_savedsearch:action_result.data.*.priority",
+                        "previous_name": "cf_mainPhantomPlaybooksAdvanced_Merge_fields_1",
                         "selectedCustomFunction": {
-                            "description": "mytask4customfunc",
+                            "description": "I used this to normalize cef fields from different formated entries into one",
                             "draftMode": false,
-                            "id": 25,
+                            "id": 29,
                             "inputs": [
                                 {
-                                    "_pretty_custom_function": "task4customFunc",
+                                    "_pretty_custom_function": "Merge_fields",
+                                    "contains_type": [],
+                                    "custom_function": 29,
+                                    "description": "my_hostname",
+                                    "id": 93,
+                                    "input_type": "list",
+                                    "name": "hostname",
+                                    "placeholder": "my_hostname"
+                                },
+                                {
+                                    "_pretty_custom_function": "Merge_fields",
+                                    "contains_type": [],
+                                    "custom_function": 29,
+                                    "description": "my_dest_src_param",
+                                    "id": 94,
+                                    "input_type": "list",
+                                    "name": "my_dest_src_param",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "Merge_fields",
                                     "contains_type": [
                                         "phantom container id"
                                     ],
-                                    "custom_function": 25,
-                                    "description": "",
-                                    "id": 80,
-                                    "input_type": "item",
+                                    "custom_function": 29,
+                                    "description": "current_container=None",
+                                    "id": 95,
+                                    "input_type": "list",
                                     "name": "current_container",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "_pretty_custom_function": "task4customFunc",
-                                    "contains_type": [],
-                                    "custom_function": 25,
-                                    "description": "",
-                                    "id": 81,
-                                    "input_type": "list",
-                                    "name": "peer",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "_pretty_custom_function": "task4customFunc",
-                                    "contains_type": [],
-                                    "custom_function": 25,
-                                    "description": "",
-                                    "id": 82,
-                                    "input_type": "list",
-                                    "name": "priority",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "_pretty_custom_function": "task4customFunc",
-                                    "contains_type": [],
-                                    "custom_function": 25,
-                                    "description": "",
-                                    "id": 83,
-                                    "input_type": "list",
-                                    "name": "count",
-                                    "placeholder": ""
+                                    "placeholder": "current_container"
                                 }
                             ],
-                            "name": "task4customFunc",
-                            "outputs": [
-                                {
-                                    "_pretty_custom_function": "task4customFunc",
-                                    "contains_type": [],
-                                    "custom_function": 25,
-                                    "data_path": "my_output_custom_list",
-                                    "description": "",
-                                    "id": 34
-                                }
-                            ],
+                            "name": "Merge_fields",
+                            "outputs": [],
                             "playbooks": {
                                 "draft_playbooks": [],
                                 "draft_version_id": null,
-                                "playbooks": [
-                                    {
-                                        "active": false,
-                                        "display_path": "mainPhantomPlaybooksAdvanced/Notable Events Playbook",
-                                        "draft_mode": false,
-                                        "id": 81,
-                                        "name": "Notable Events Playbook",
-                                        "viewable": true
-                                    }
-                                ]
+                                "playbooks": []
                             },
                             "scmId": 7,
                             "scmName": "mainPhantomPlaybooksAdvanced"
@@ -2686,12 +2980,12 @@
                             "width": 180
                         },
                         "state": "repo",
-                        "status": "active",
+                        "status": "",
                         "title": "custom function",
                         "type": "coa.CustomFunctionBlock",
                         "userGeneratedCode": "    # Write your custom code here...",
                         "warn": false,
-                        "z": 74
+                        "z": 86
                     }
                 ]
             },
@@ -2701,7 +2995,7 @@
         "schema": 4,
         "version": "4.10.0.40961"
     },
-    "create_time": "2021-02-12T15:12:28.892051+00:00",
+    "create_time": "2021-02-12T15:55:03.600256+00:00",
     "draft_mode": false,
     "labels": [
         "notable"

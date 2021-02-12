@@ -14,6 +14,9 @@ def on_start(container):
     # call 'myquerystring' block
     myquerystring(container=container)
 
+    # call 'cf_mainPhantomPlaybooksAdvanced_Merge_fields_1' block
+    cf_mainPhantomPlaybooksAdvanced_Merge_fields_1(container=container)
+
     return
 
 def run_savedsearch(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
@@ -195,6 +198,42 @@ def cf_mainPhantomPlaybooksAdvanced_list_2_containers_1(action=None, success=Non
 
     # call custom function "mainPhantomPlaybooksAdvanced/list_2_containers", returns the custom_function_run_id
     phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/list_2_containers', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_list_2_containers_1')
+
+    return
+
+def cf_mainPhantomPlaybooksAdvanced_Merge_fields_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('cf_mainPhantomPlaybooksAdvanced_Merge_fields_1() called')
+    
+    container_data_0 = phantom.collect2(container=container, datapath=['artifact:*.cef.hostname', 'artifact:*.cef.destinationAddress', 'artifact:*.id'])
+    container_property_0 = [
+        [
+            container.get("id"),
+        ],
+    ]
+
+    parameters = []
+
+    container_data_0_0 = [item[0] for item in container_data_0]
+    container_data_0_1 = [item[1] for item in container_data_0]
+    container_property_0_0 = [item[0] for item in container_property_0]
+
+    parameters.append({
+        'hostname': container_data_0_0,
+        'my_dest_src_param': container_data_0_1,
+        'current_container': container_property_0_0,
+    })
+    ################################################################################
+    ## Custom Code Start
+    ################################################################################
+
+    # Write your custom code here...
+
+    ################################################################################
+    ## Custom Code End
+    ################################################################################    
+
+    # call custom function "mainPhantomPlaybooksAdvanced/Merge_fields", returns the custom_function_run_id
+    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/Merge_fields', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_Merge_fields_1')
 
     return
 
