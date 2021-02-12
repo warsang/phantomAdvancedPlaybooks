@@ -20,17 +20,16 @@ def get_data_1(action=None, success=None, container=None, results=None, handle=N
     phantom.debug('get_data_1() called')
 
     # collect data for 'get_data_1' call
-    formatted_data_1 = phantom.get_format_data(name='myurl__as_list')
+    formatted_data_1 = phantom.get_format_data(name='myurl')
 
     parameters = []
     
     # build parameters list for 'get_data_1' call
-    for formatted_part_1 in formatted_data_1:
-        parameters.append({
-            'location': formatted_part_1,
-            'verify_certificate': False,
-            'headers': "",
-        })
+    parameters.append({
+        'location': formatted_data_1,
+        'verify_certificate': False,
+        'headers': "",
+    })
 
     phantom.act(action="get data", parameters=parameters, assets=['something'], callback=format_1, reviewer="admin", name="get_data_1")
 
