@@ -20,6 +20,7 @@ def list_2_containers(to_be_containerized=None, container_label=None, **kwargs):
     # Write your custom code here...
     new_container_ids = []
     temp_peer_track = []
+    phantom.debug("hello")
     phantom.debug(to_be_containerized)
     for item in to_be_containerized:
         phantom.debug(item)
