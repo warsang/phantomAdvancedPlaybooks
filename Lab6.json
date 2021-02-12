@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "",
-            "hash": "f2510315f11b90fa67f8ce9507bfffabd75bca75",
+            "hash": "9a1d53bf92e6ddff59bb3f0078a7c9e51001a957",
             "joint": {
                 "cells": [
                     {
@@ -502,7 +502,7 @@
                         "active_keys": {},
                         "active_values": {
                             "headers": "",
-                            "location": "rest/playbook_run/1481/log?filter_message_contains=%22temp_%22",
+                            "location": "/rest/container",
                             "verify_certificate": "False"
                         },
                         "angle": 0,
@@ -531,7 +531,7 @@
                                 "count": 0,
                                 "fields": {
                                     "headers": "",
-                                    "location": "rest/playbook_run/1481/log?filter_message_contains=%22temp_%22",
+                                    "location": "/rest/container",
                                     "verify_certificate": "False"
                                 },
                                 "has_app": true,
@@ -724,7 +724,7 @@
                                 "display": "block"
                             }
                         },
-                        "block_code": "def httpsphabb09classsplunkcomrestpl(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('httpsphabb09classsplunkcomrestpl() called')\n\n    # collect data for 'httpsphabb09classsplunkcomrestpl' call\n\n    parameters = []\n    \n    # build parameters list for 'httpsphabb09classsplunkcomrestpl' call\n    parameters.append({\n        'location': \"rest/playbook_run/1481/log?filter_message_contains=%22temp_%22\",\n        'verify_certificate': False,\n        'headers': \"\",\n    })\n\n    phantom.act(action=\"get data\", parameters=parameters, assets=['something'], name=\"httpsphabb09classsplunkcomrestpl\")\n\n    return",
+                        "block_code": "def httpsphabb09classsplunkcomrestpl(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('httpsphabb09classsplunkcomrestpl() called')\n\n    # collect data for 'httpsphabb09classsplunkcomrestpl' call\n\n    parameters = []\n    \n    # build parameters list for 'httpsphabb09classsplunkcomrestpl' call\n    parameters.append({\n        'location': \"/rest/container\",\n        'verify_certificate': False,\n        'headers': \"\",\n    })\n\n    phantom.act(action=\"get data\", parameters=parameters, assets=['something'], name=\"httpsphabb09classsplunkcomrestpl\")\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
@@ -842,7 +842,7 @@
         "schema": 4,
         "version": "4.10.0.40961"
     },
-    "create_time": "2021-02-12T16:52:51.148211+00:00",
+    "create_time": "2021-02-12T19:57:50.911563+00:00",
     "draft_mode": false,
     "labels": [
         "system"

@@ -30,7 +30,7 @@ def httpsphabb09classsplunkcomrestpl(action=None, success=None, container=None, 
     
     # build parameters list for 'httpsphabb09classsplunkcomrestpl' call
     parameters.append({
-        'location': "rest/playbook_run/1481/log?filter_message_contains=%22temp_%22",
+        'location': "/rest/container",
         'verify_certificate': False,
         'headers': "",
     })
