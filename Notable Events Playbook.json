@@ -3272,7 +3272,7 @@
                         "connected_to_start": true,
                         "connection_name": "Buildcontainerlist",
                         "connection_type": "action",
-                        "currentVersion": true,
+                        "currentVersion": false,
                         "customCodeEndLineOffset": 7,
                         "customCodeStartLine": 22,
                         "customFunction": "mainPhantomPlaybooksAdvanced/list_2_containers",
