@@ -129,7 +129,7 @@ MyPhantomcustomfunction
 def Buildcontainerlist(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
     phantom.debug('Buildcontainerlist() called')
     
-    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*.peer', 'run_savedsearch:action_result.data.*.priority', 'run_savedsearch:action_result.data.*.count', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )
+    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*.peer', 'run_savedsearch:action_result.data.*.count', 'run_savedsearch:action_result.data.*.priority', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )
     container_property_0 = [
         [
             container.get("id"),
@@ -144,10 +144,10 @@ def Buildcontainerlist(action=None, success=None, container=None, results=None, 
 
     for item0 in container_property_0:
         parameters.append({
-            'current_container': item0[0],
             'peer': action_results_data_0_0,
-            'priority': action_results_data_0_1,
-            'count': action_results_data_0_2,
+            'count': action_results_data_0_1,
+            'priority': action_results_data_0_2,
+            'current_container': item0[0],
         })
     ################################################################################
     ## Custom Code Start
@@ -176,12 +176,12 @@ def cf_mainPhantomPlaybooksAdvanced_list_2_containers_1(action=None, success=Non
 
     parameters = []
 
-    custom_function_result_0_0 = [item[0] for item in custom_function_result_0]
     container_property_0_0 = [item[0] for item in container_property_0]
+    custom_function_result_0_0 = [item[0] for item in custom_function_result_0]
 
     parameters.append({
-        'to_be_containerized': custom_function_result_0_0,
         'container_label': container_property_0_0,
+        'to_be_containerized': custom_function_result_0_0,
     })
     ################################################################################
     ## Custom Code Start
