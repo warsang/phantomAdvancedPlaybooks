@@ -16,6 +16,8 @@ def Merge_fields(hostname=None, my_dest_src_param=None, current_container=None, 
     
     outputs = {}
     update_container = phantom.get_container(current_container)
+    phantom.debug(hostname)
+    phantom.debug(my_dest_src_param)
     if hostname:
         phantom.update(update_container, {'hostname':hostname})
     else:
