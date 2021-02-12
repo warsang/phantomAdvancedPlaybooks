@@ -21,7 +21,7 @@ def list_2_containers(to_be_containerized=None, container_label=None, **kwargs):
     new_container_ids = []
     temp_peer_track = []
     phantom.debug("hello")
-    phantom.debug(to_be_containerized)
+    phantom.debug(container_label)
     for item in to_be_containerized:
         phantom.debug(item)
         (peer, priority, count) = item
