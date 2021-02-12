@@ -106,12 +106,15 @@ def cf_community_debug_1(action=None, success=None, container=None, results=None
     ################################################################################    
 
     # call custom function "community/debug", returns the custom_function_run_id
-    phantom.custom_function(custom_function='community/debug', parameters=parameters, name='cf_community_debug_1', callback=cf_mainPhantomPlaybooksAdvanced_get_playbook_run_ids_1)
+    phantom.custom_function(custom_function='community/debug', parameters=parameters, name='cf_community_debug_1', callback=my_custom_func22)
 
     return
 
-def cf_mainPhantomPlaybooksAdvanced_get_playbook_run_ids_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
-    phantom.debug('cf_mainPhantomPlaybooksAdvanced_get_playbook_run_ids_1() called')
+"""
+my_custom_func22
+"""
+def my_custom_func22(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('my_custom_func22() called')
     
     formatted_data_as_list_0 = phantom.get_format_data(name="format_1__as_list")
 
@@ -133,7 +136,7 @@ def cf_mainPhantomPlaybooksAdvanced_get_playbook_run_ids_1(action=None, success=
     ################################################################################    
 
     # call custom function "mainPhantomPlaybooksAdvanced/get_playbook_run_ids", returns the custom_function_run_id
-    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/get_playbook_run_ids', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_get_playbook_run_ids_1')
+    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/get_playbook_run_ids', parameters=parameters, name='my_custom_func22')
 
     return
 
