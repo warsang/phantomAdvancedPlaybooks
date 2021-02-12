@@ -7,8 +7,8 @@ from datetime import datetime, timedelta
 def on_start(container):
     phantom.debug('on_start() called')
     
-    # call 'undefined_0' block
-    undefined_0(container=container)
+    # call 'format_2' block
+    format_2(container=container)
 
     return
 
@@ -27,15 +27,17 @@ httpsphabb09classsplunkcomrestpl
 def httpsphabb09classsplunkcomrestpl(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
     phantom.debug('httpsphabb09classsplunkcomrestpl() called')
 
+    id_value = container.get('id', None)
+
     # collect data for 'httpsphabb09classsplunkcomrestpl' call
 
     parameters = []
     
     # build parameters list for 'httpsphabb09classsplunkcomrestpl' call
     parameters.append({
-        'headers': "",
+        'headers': id_value,
         'location': "rest/container",
-        'verify_certificate': True,
+        'verify_certificate': False,
     })
 
     phantom.act(action="get data", parameters=parameters, assets=['something'], callback=format_1, reviewer="admin", name="httpsphabb09classsplunkcomrestpl")
@@ -75,6 +77,22 @@ def custom_function_0(action=None, success=None, container=None, results=None, h
 
     # call custom function "", returns the custom_function_run_id
     phantom.custom_function(custom_function='', parameters=parameters, name='custom_function_0')
+
+    return
+
+def format_2(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('format_2() called')
+    
+    template = """{0}"""
+
+    # parameter list for template variable replacement
+    parameters = [
+        "container:id",
+    ]
+
+    phantom.format(container=container, template=template, parameters=parameters, name="format_2")
+
+    undefined_0(container=container)
 
     return
 
