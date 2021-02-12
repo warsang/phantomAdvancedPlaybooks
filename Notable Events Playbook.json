@@ -7,7 +7,6 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
-            "hash": "7b0dd20c9316f1e58104357008964a607f216a18",
             "joint": {
                 "cells": [
                     {
@@ -3361,8 +3360,8 @@
                             }
                         },
                         "position": {
-                            "x": 1200,
-                            "y": 20
+                            "x": 1440,
+                            "y": 260
                         },
                         "previous_function": "",
                         "previous_name": "cf_mainPhantomPlaybooksAdvanced_list_2_containers_1",
