@@ -7,7 +7,6 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
-            "hash": "248f791dd0e36b5ee14baab5a7af5fcf1bef30cd",
             "joint": {
                 "cells": [
                     {
@@ -3189,7 +3188,7 @@
                         "attrs": {
                             ".background": {
                                 "fill": "#000000",
-                                "stroke": "#5C6773"
+                                "stroke": "#0083FF"
                             },
                             ".color-band": {
                                 "fill": "#3C444D"
@@ -3416,7 +3415,7 @@
                             "width": 180
                         },
                         "state": "repo",
-                        "status": "",
+                        "status": "active",
                         "title": "custom function",
                         "to_be_containerized-0": "Buildcontainerlist:custom_function_result.data.*.results_list",
                         "type": "coa.CustomFunctionBlock",
