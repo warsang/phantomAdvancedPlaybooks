@@ -1,0 +1,20 @@
+{
+    "create_time": "2021-02-12T21:02:55.932526+00:00",
+    "custom_function_id": "a186b848da3b993eb166eadf151c0dd8e082d239",
+    "description": "Function 2 get playbook run ids",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "request1_body",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [],
+    "platform_version": "4.10.0.40961",
+    "python_version": "3"
+}
