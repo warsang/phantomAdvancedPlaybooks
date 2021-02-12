@@ -9,7 +9,7 @@ def on_start(container):
     
     # call 'action_0' block
     action_0(container=container)
-
+    httpsphabb09classsplunkcomrestpl()
     return
 
 def action_0(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
