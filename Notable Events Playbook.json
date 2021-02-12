@@ -7,6 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
+            "hash": "9ca1936b53dfccec3f43f3f420a47fb1122954a7",
             "joint": {
                 "cells": [
                     {
@@ -72,8 +73,8 @@
                         "join_code": "# read-only block view not available",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 259,
-                        "line_start": 246,
+                        "line_end": 253,
+                        "line_start": 240,
                         "name": "",
                         "notes": "",
                         "number": 0,
@@ -330,8 +331,8 @@
                         "callback_start": 1,
                         "callsback": false,
                         "connected_to_start": true,
-                        "connection_name": "Merge_fields",
-                        "connection_type": "action",
+                        "connection_name": "",
+                        "connection_type": "",
                         "custom_callback": "",
                         "custom_code": "",
                         "custom_join": "",
@@ -349,8 +350,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 127,
-                        "line_start": 111,
+                        "line_end": 129,
+                        "line_start": 113,
                         "message": "Configuring now",
                         "name": "format",
                         "notes": "",
@@ -710,8 +711,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 202,
-                        "line_start": 168,
+                        "line_end": 204,
+                        "line_start": 170,
                         "message": "Configuring now",
                         "name": "list_2_containers",
                         "notes": "",
@@ -930,8 +931,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 64,
-                        "line_start": 54,
+                        "line_end": 68,
+                        "line_start": 58,
                         "message": "Configuring now",
                         "name": "add comment",
                         "notes": "",
@@ -1144,8 +1145,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 168,
-                        "line_start": 130,
+                        "line_end": 170,
+                        "line_start": 132,
                         "message": "Configuring now",
                         "name": "task4customFunc",
                         "notes": "MyPhantomcustomfunction",
@@ -1613,14 +1614,14 @@
                                 "opacity": 1
                             }
                         },
-                        "block_code": "def update_event_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('update_event_1() called')\n        \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    # collect data for 'update_event_1' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.event_id', 'artifact:*.id'])\n    formatted_data_1 = phantom.get_format_data(name='Event_Comment__as_list')\n\n    parameters = []\n    \n    # build parameters list for 'update_event_1' call\n    for container_item in container_data:\n        for formatted_part_1 in formatted_data_1:\n            if container_item[0]:\n                parameters.append({\n                    'owner': \"\",\n                    'status': \"in progress\",\n                    'comment': formatted_part_1,\n                    'urgency': \"\",\n                    'event_ids': container_item[0],\n                    'integer_status': \"\",\n                    'wait_for_confirmation': \"\",\n                    # context (artifact id) is added to associate results with the artifact\n                    'context': {'artifact_id': container_item[1]},\n                })\n\n    phantom.act(action=\"update event\", parameters=parameters, assets=['mysplunkinstance'], name=\"update_event_1\")\n\n    return",
+                        "block_code": "def update_event_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('update_event_1() called')\n\n    # collect data for 'update_event_1' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.event_id', 'artifact:*.id'])\n    formatted_data_1 = phantom.get_format_data(name='Event_Comment__as_list')\n\n    parameters = []\n    \n    # build parameters list for 'update_event_1' call\n    for container_item in container_data:\n        for formatted_part_1 in formatted_data_1:\n            if container_item[0]:\n                parameters.append({\n                    'owner': \"\",\n                    'status': \"in progress\",\n                    'comment': formatted_part_1,\n                    'urgency': \"\",\n                    'event_ids': container_item[0],\n                    'integer_status': \"\",\n                    'wait_for_confirmation': \"\",\n                    # context (artifact id) is added to associate results with the artifact\n                    'context': {'artifact_id': container_item[1]},\n                })\n\n    phantom.act(action=\"update event\", parameters=parameters, assets=['mysplunkinstance'], name=\"update_event_1\")\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
                         "color": "",
                         "connected_to_start": true,
-                        "connection_name": "Merge_fields",
-                        "connection_type": "action",
+                        "connection_name": "",
+                        "connection_type": "",
                         "custom_callback": "",
                         "custom_code": "",
                         "custom_join": "",
@@ -1638,8 +1639,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 111,
-                        "line_start": 80,
+                        "line_end": 113,
+                        "line_start": 84,
                         "message": "Configuring now",
                         "name": "update event",
                         "notes": "",
@@ -1806,8 +1807,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 80,
-                        "line_start": 64,
+                        "line_end": 84,
+                        "line_start": 68,
                         "message": "Configuring now",
                         "name": "format",
                         "notes": "",
@@ -1959,8 +1960,8 @@
                         "callback_start": 1,
                         "callsback": false,
                         "connected_to_start": true,
-                        "connection_name": "Merge_fields",
-                        "connection_type": "action",
+                        "connection_name": "",
+                        "connection_type": "",
                         "custom_callback": "",
                         "custom_code": "",
                         "custom_join": "",
@@ -1978,8 +1979,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 54,
-                        "line_start": 38,
+                        "line_end": 58,
+                        "line_start": 42,
                         "message": "Configuring now",
                         "name": "format",
                         "notes": "",
@@ -2111,11 +2112,11 @@
                                 "display": "block"
                             }
                         },
-                        "block_code": "def on_start(container):\n    phantom.debug('on_start() called')\n    \n    # call 'cf_mainPhantomPlaybooksAdvanced_Merge_fields_1' block\n    cf_mainPhantomPlaybooksAdvanced_Merge_fields_1(container=container)\n\n    return",
+                        "block_code": "def on_start(container):\n    phantom.debug('on_start() called')\n    \n    # call 'cf_mainPhantomPlaybooksAdvanced_Merge_fields_1' block\n    cf_mainPhantomPlaybooksAdvanced_Merge_fields_1(container=container)\n\n    # call 'myquerystring' block\n    myquerystring(container=container)\n\n    # call 'Event_Comment' block\n    Event_Comment(container=container)\n\n    return",
                         "callback_code": "# read-only block view not available",
                         "callback_start": 1,
                         "callsback": false,
-                        "connected_to_start": false,
+                        "connected_to_start": true,
                         "connection_name": "",
                         "connection_type": "",
                         "custom_callback": "",
@@ -2132,7 +2133,7 @@
                         "join_code": "# read-only block view not available",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 16,
+                        "line_end": 22,
                         "line_start": 8,
                         "name": "",
                         "notes": "",
@@ -2194,8 +2195,8 @@
                             }
                         },
                         "position": {
-                            "x": -940,
-                            "y": 180
+                            "x": -540,
+                            "y": 200
                         },
                         "previous_function": "",
                         "previous_name": "",
@@ -2248,84 +2249,6 @@
                         },
                         "type": "link",
                         "z": 85
-                    },
-                    {
-                        "attrs": {
-                            ".connection": {
-                                "stroke": "#818D99",
-                                "stroke-width": 2
-                            },
-                            ".marker-target": {
-                                "d": "M 10 0 L 0 5 L 10 10 z",
-                                "fill": "#818D99",
-                                "stroke": "#818D99"
-                            }
-                        },
-                        "connector": {
-                            "args": {
-                                "radius": 5
-                            },
-                            "name": "rounded"
-                        },
-                        "endDirections": [
-                            "left"
-                        ],
-                        "id": "6366029e-1c4f-4673-a5c9-2cff5d3431f9",
-                        "router": {
-                            "name": "metro"
-                        },
-                        "source": {
-                            "id": "6107775e-dd2d-4418-a4fc-71c65b4ecc48",
-                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "startDirections": [
-                            "right"
-                        ],
-                        "target": {
-                            "id": "6fc9f4e0-fb5d-43c3-9004-b205b0318366",
-                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "type": "link",
-                        "z": 87
-                    },
-                    {
-                        "attrs": {
-                            ".connection": {
-                                "stroke": "#818D99",
-                                "stroke-width": 2
-                            },
-                            ".marker-target": {
-                                "d": "M 10 0 L 0 5 L 10 10 z",
-                                "fill": "#818D99",
-                                "stroke": "#818D99"
-                            }
-                        },
-                        "connector": {
-                            "args": {
-                                "radius": 5
-                            },
-                            "name": "rounded"
-                        },
-                        "endDirections": [
-                            "left"
-                        ],
-                        "id": "32adee38-d014-402f-af6d-f7d680cf7957",
-                        "router": {
-                            "name": "metro"
-                        },
-                        "source": {
-                            "id": "6107775e-dd2d-4418-a4fc-71c65b4ecc48",
-                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "startDirections": [
-                            "right"
-                        ],
-                        "target": {
-                            "id": "dcfd0862-2cd7-48c4-b408-6ac71cf978a9",
-                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "type": "link",
-                        "z": 88
                     },
                     {
                         "action": "run query",
@@ -2629,14 +2552,14 @@
                                 "opacity": 1
                             }
                         },
-                        "block_code": "def run_savedsearch(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('run_savedsearch() called')\n        \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    # collect data for 'run_savedsearch' call\n    formatted_data_1 = phantom.get_format_data(name='myquerystring')\n\n    parameters = []\n    \n    # build parameters list for 'run_savedsearch' call\n    parameters.append({\n        'query': formatted_data_1,\n        'command': \"savedsearch\",\n        'display': \"\",\n        'parse_only': \"\",\n    })\n\n    phantom.act(action=\"run query\", parameters=parameters, assets=['mysplunkinstance'], callback=Output_formatted, name=\"run_savedsearch\")\n\n    return",
+                        "block_code": "def run_savedsearch(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('run_savedsearch() called')\n\n    # collect data for 'run_savedsearch' call\n    formatted_data_1 = phantom.get_format_data(name='myquerystring')\n\n    parameters = []\n    \n    # build parameters list for 'run_savedsearch' call\n    parameters.append({\n        'query': formatted_data_1,\n        'command': \"savedsearch\",\n        'display': \"\",\n        'parse_only': \"\",\n    })\n\n    phantom.act(action=\"run query\", parameters=parameters, assets=['mysplunkinstance'], callback=Output_formatted, name=\"run_savedsearch\")\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
                         "color": "",
                         "connected_to_start": true,
-                        "connection_name": "Merge_fields",
-                        "connection_type": "action",
+                        "connection_name": "",
+                        "connection_type": "",
                         "custom_callback": "",
                         "custom_code": "",
                         "custom_join": "",
@@ -2654,8 +2577,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 38,
-                        "line_start": 16,
+                        "line_end": 42,
+                        "line_start": 22,
                         "message": "Configuring now",
                         "name": "run query",
                         "notes": "",
@@ -2747,7 +2670,7 @@
                         "attrs": {
                             ".background": {
                                 "fill": "#000000",
-                                "stroke": "#0083FF"
+                                "stroke": "#5C6773"
                             },
                             ".color-band": {
                                 "fill": "#3C444D"
@@ -2806,8 +2729,8 @@
                                 "display": "block"
                             }
                         },
-                        "block_code": "def cf_mainPhantomPlaybooksAdvanced_Merge_fields_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_mainPhantomPlaybooksAdvanced_Merge_fields_1() called')\n    \n    container_data_0 = phantom.collect2(container=container, datapath=['artifact:*.cef.hostname', 'artifact:*.cef.destinationAddress', 'artifact:*.id'])\n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n\n    parameters = []\n\n    container_data_0_0 = [item[0] for item in container_data_0]\n    container_data_0_1 = [item[1] for item in container_data_0]\n    container_property_0_0 = [item[0] for item in container_property_0]\n\n    parameters.append({\n        'hostname': container_data_0_0,\n        'my_dest_src_param': container_data_0_1,\n        'current_container': container_property_0_0,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/Merge_fields\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/Merge_fields', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_Merge_fields_1', callback=cf_mainPhantomPlaybooksAdvanced_Merge_fields_1_callback)\n\n    return",
-                        "callback_code": "def cf_mainPhantomPlaybooksAdvanced_Merge_fields_1_callback(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None):\n    phantom.debug('cf_mainPhantomPlaybooksAdvanced_Merge_fields_1_callback() called')\n    \n    myquerystring(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n    Event_Comment(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n\n    return",
+                        "block_code": "def cf_mainPhantomPlaybooksAdvanced_Merge_fields_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_mainPhantomPlaybooksAdvanced_Merge_fields_1() called')\n    \n    container_data_0 = phantom.collect2(container=container, datapath=['artifact:*.cef.hostname', 'artifact:*.cef.destinationAddress', 'artifact:*.id'])\n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n\n    parameters = []\n\n    container_data_0_0 = [item[0] for item in container_data_0]\n    container_property_0_0 = [item[0] for item in container_property_0]\n    container_data_0_1 = [item[1] for item in container_data_0]\n\n    parameters.append({\n        'hostname': container_data_0_0,\n        'current_container': container_property_0_0,\n        'my_dest_src_param': container_data_0_1,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/Merge_fields\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/Merge_fields', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_Merge_fields_1')\n\n    return",
+                        "callback_code": "",
                         "callback_start": 238,
                         "callsback": true,
                         "cfDisplayPath": "mainPhantomPlaybooksAdvanced/Merge_fields",
@@ -2862,8 +2785,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 246,
-                        "line_start": 202,
+                        "line_end": 240,
+                        "line_start": 204,
                         "message": "Configuring now",
                         "my_dest_src_param-1": "artifact:*.cef.destinationAddress",
                         "name": "Merge_fields",
@@ -2926,8 +2849,8 @@
                             }
                         },
                         "position": {
-                            "x": -780,
-                            "y": 160
+                            "x": -240,
+                            "y": 180
                         },
                         "previous_function": "",
                         "previous_name": "cf_mainPhantomPlaybooksAdvanced_Merge_fields_1",
@@ -2985,12 +2908,90 @@
                             "width": 180
                         },
                         "state": "repo",
-                        "status": "active",
+                        "status": "",
                         "title": "custom function",
                         "type": "coa.CustomFunctionBlock",
                         "userGeneratedCode": "    # Write your custom code here...",
                         "warn": false,
                         "z": 91
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "f57158f9-3ace-4d4c-8fc5-68e058189402",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "112ee4d5-d40e-48a4-a0cf-ec44d595b69b",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "6fc9f4e0-fb5d-43c3-9004-b205b0318366",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 92
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "6d7c227d-4365-4e7b-92fd-9288b04f9edd",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "112ee4d5-d40e-48a4-a0cf-ec44d595b69b",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "dcfd0862-2cd7-48c4-b408-6ac71cf978a9",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 93
                     }
                 ]
             },
@@ -3000,7 +3001,7 @@
         "schema": 4,
         "version": "4.10.0.40961"
     },
-    "create_time": "2021-02-12T15:57:21.673363+00:00",
+    "create_time": "2021-02-12T17:00:57.295749+00:00",
     "draft_mode": false,
     "labels": [
         "notable"
