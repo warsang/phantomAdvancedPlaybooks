@@ -7,6 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "abcd123",
+            "hash": "d36371063ebefe199fb7691d7925f7a2cfca99e0",
             "joint": {
                 "cells": [
                     {
@@ -1198,7 +1199,7 @@
                                 "display": "block"
                             }
                         },
-                        "block_code": "def cf_community_debug_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_community_debug_1() called')\n    \n    formatted_data_0 = [\n        [\n            phantom.get_format_data(name=\"format_1\"),\n        ],\n    ]\n\n    parameters = []\n\n    formatted_data_0_0 = [item[0] for item in formatted_data_0]\n\n    parameters.append({\n        'input_1': formatted_data_0_0,\n        'input_2': None,\n        'input_3': None,\n        'input_4': None,\n        'input_5': None,\n        'input_6': None,\n        'input_7': None,\n        'input_8': None,\n        'input_9': None,\n        'input_10': None,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"community/debug\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='community/debug', parameters=parameters, name='cf_community_debug_1', callback=cf_local_get_playbook_run_ids_1)\n\n    return",
+                        "block_code": "def cf_community_debug_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_community_debug_1() called')\n    \n    formatted_data_0 = [\n        [\n            phantom.get_format_data(name=\"format_1\"),\n        ],\n    ]\n\n    parameters = []\n\n    formatted_data_0_0 = [item[0] for item in formatted_data_0]\n\n    parameters.append({\n        'input_1': formatted_data_0_0,\n        'input_2': None,\n        'input_3': None,\n        'input_4': None,\n        'input_5': None,\n        'input_6': None,\n        'input_7': None,\n        'input_8': None,\n        'input_9': None,\n        'input_10': None,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"community/debug\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='community/debug', parameters=parameters, name='cf_community_debug_1', callback=cf_mainPhantomPlaybooksAdvanced_get_playbook_run_ids_1)\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
@@ -1602,7 +1603,7 @@
                         "z": 82
                     },
                     {
-                        ".scmName/text": "local",
+                        ".scmName/text": "mainPhantomPlaybooksAdvanced",
                         "active": false,
                         "active_keys": {},
                         "active_values": {},
@@ -1610,7 +1611,7 @@
                         "attrs": {
                             ".background": {
                                 "fill": "#000000",
-                                "stroke": "#0083FF"
+                                "stroke": "#5C6773"
                             },
                             ".color-band": {
                                 "fill": "#3C444D"
@@ -1645,7 +1646,7 @@
                                 }
                             },
                             ".scmName": {
-                                "text": "local"
+                                "text": "mainPhantomPlayb..."
                             },
                             ".title": {
                                 "text": "custom function"
@@ -1669,11 +1670,11 @@
                                 "display": "block"
                             }
                         },
-                        "block_code": "def cf_local_get_playbook_run_ids_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_local_get_playbook_run_ids_1() called')\n    \n    formatted_data_as_list_0 = phantom.get_format_data(name=\"format_1__as_list\")\n\n    parameters = []\n\n    formatted_data_as_list_0_0 = [item[0] for item in formatted_data_as_list_0]\n\n    parameters.append({\n        'request1_body': formatted_data_as_list_0_0,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"local/get_playbook_run_ids\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='local/get_playbook_run_ids', parameters=parameters, name='cf_local_get_playbook_run_ids_1')\n\n    return",
+                        "block_code": "def cf_mainPhantomPlaybooksAdvanced_get_playbook_run_ids_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_mainPhantomPlaybooksAdvanced_get_playbook_run_ids_1() called')\n    \n    formatted_data_as_list_0 = phantom.get_format_data(name=\"format_1__as_list\")\n\n    parameters = []\n\n    formatted_data_as_list_0_0 = [item[0] for item in formatted_data_as_list_0]\n\n    parameters.append({\n        'request1_body': formatted_data_as_list_0_0,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/get_playbook_run_ids\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/get_playbook_run_ids', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_get_playbook_run_ids_1')\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
-                        "cfDisplayPath": "local/get_playbook_run_ids",
+                        "cfDisplayPath": "mainPhantomPlaybooksAdvanced/get_playbook_run_ids",
                         "cfInputs": {
                             "request1_body": {
                                 "collectionType": "formatted_data_as_list",
@@ -1689,7 +1690,7 @@
                         "currentVersion": true,
                         "customCodeEndLineOffset": 7,
                         "customCodeStartLine": 15,
-                        "customFunction": "local/get_playbook_run_ids",
+                        "customFunction": "mainPhantomPlaybooksAdvanced/get_playbook_run_ids",
                         "customFunctionId": null,
                         "custom_callback": "",
                         "custom_code": "",
@@ -1778,35 +1779,46 @@
                             "y": 260
                         },
                         "previous_function": "",
-                        "previous_name": "cf_local_get_playbook_run_ids_1",
+                        "previous_name": "cf_mainPhantomPlaybooksAdvanced_get_playbook_run_ids_1",
                         "request1_body-0": "format_1:formatted_data.*",
                         "selectedCustomFunction": {
                             "description": "Function 2 get playbook run ids",
                             "draftMode": false,
-                            "id": 51,
+                            "id": 53,
                             "inputs": [
                                 {
                                     "_pretty_custom_function": "get_playbook_run_ids",
                                     "contains_type": [
                                         "*"
                                     ],
-                                    "custom_function": 51,
+                                    "custom_function": 53,
                                     "description": "",
-                                    "id": 182,
+                                    "id": 184,
                                     "input_type": "list",
                                     "name": "request1_body",
                                     "placeholder": ""
                                 }
                             ],
                             "name": "get_playbook_run_ids",
-                            "outputs": [],
+                            "outputs": [
+                                {
+                                    "_pretty_custom_function": "get_playbook_run_ids",
+                                    "contains_type": [
+                                        "*"
+                                    ],
+                                    "custom_function": 53,
+                                    "data_path": "my_output",
+                                    "description": "hello",
+                                    "id": 58
+                                }
+                            ],
                             "playbooks": {
                                 "draft_playbooks": [],
                                 "draft_version_id": null,
                                 "playbooks": []
                             },
-                            "scmId": 2,
-                            "scmName": "local"
+                            "scmId": 7,
+                            "scmName": "mainPhantomPlaybooksAdvanced"
                         },
                         "show_number": false,
                         "size": {
@@ -1814,7 +1826,7 @@
                             "width": 180
                         },
                         "state": "repo",
-                        "status": "active",
+                        "status": "",
                         "title": "custom function",
                         "type": "coa.CustomFunctionBlock",
                         "userGeneratedCode": "    # Write your custom code here...",
@@ -1829,7 +1841,7 @@
         "schema": 4,
         "version": "4.10.0.40961"
     },
-    "create_time": "2021-02-12T21:01:23.028115+00:00",
+    "create_time": "2021-02-12T21:04:18.095309+00:00",
     "draft_mode": false,
     "labels": [
         "system",
