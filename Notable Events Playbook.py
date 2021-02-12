@@ -140,17 +140,17 @@ def Buildcontainerlist(action=None, success=None, container=None, results=None, 
 
     parameters = []
 
+    container_property_0_0 = [item[0] for item in container_property_0]
     action_results_data_0_0 = [item[0] for item in action_results_data_0]
     action_results_data_0_1 = [item[1] for item in action_results_data_0]
     action_results_data_0_2 = [item[2] for item in action_results_data_0]
 
-    for item0 in container_property_0:
-        parameters.append({
-            'current_container': item0[0],
-            'peer': action_results_data_0_0,
-            'priority': action_results_data_0_1,
-            'count': action_results_data_0_2,
-        })
+    parameters.append({
+        'current_container': container_property_0_0,
+        'peer': action_results_data_0_0,
+        'priority': action_results_data_0_1,
+        'count': action_results_data_0_2,
+    })
     ################################################################################
     ## Custom Code Start
     ################################################################################
