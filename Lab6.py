@@ -25,22 +25,23 @@ def undefined_0(action=None, success=None, container=None, results=None, handle=
 """
 httpsphabb09classsplunkcomrestpl
 """
-def httpsphabb09classsplunkcomrestpl(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
-    phantom.debug('httpsphabb09classsplunkcomrestpl() called')
+def get_data_temp(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('get_data_temp() called')
 
-    # collect data for 'httpsphabb09classsplunkcomrestpl' call
-    formatted_data_1 = phantom.get_format_data(name='format_2')
+    # collect data for 'get_data_temp' call
+    formatted_data_1 = phantom.get_format_data(name='myurl__as_list')
 
     parameters = []
     
-    # build parameters list for 'httpsphabb09classsplunkcomrestpl' call
-    parameters.append({
-        'headers': "",
-        'location': formatted_data_1,
-        'verify_certificate': False,
-    })
+    # build parameters list for 'get_data_temp' call
+    for formatted_part_1 in formatted_data_1:
+        parameters.append({
+            'location': formatted_part_1,
+            'verify_certificate': "",
+            'headers': "",
+        })
 
-    phantom.act(action="get data", parameters=parameters, assets=['something'], callback=format_1, reviewer="admin", name="httpsphabb09classsplunkcomrestpl")
+    phantom.act(action="get data", parameters=parameters, app={ "name": 'HTTP' }, callback=format_1, reviewer="admin", name="get_data_temp")
 
     return
 
@@ -51,7 +52,7 @@ def format_1(action=None, success=None, container=None, results=None, handle=Non
 
     # parameter list for template variable replacement
     parameters = [
-        "httpsphabb09classsplunkcomrestpl:action_result.data.*.parsed_response_body",
+        "get_data_temp:action_result.data.*.parsed_response_body",
     ]
 
     phantom.format(container=container, template=template, parameters=parameters, name="format_1")
