@@ -7,6 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
+            "hash": "0bed5ebcaec5fb21e9a14723b6ba18df3e8b748e",
             "joint": {
                 "cells": [
                     {
@@ -453,178 +454,6 @@
                         },
                         "type": "link",
                         "z": 65
-                    },
-                    {
-                        "active": false,
-                        "angle": 0,
-                        "attrs": {
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#5C6773"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".format": {
-                                "text": "Output_formatted"
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out-1": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out-1>.port-body": {
-                                "port": {
-                                    "id": "out-1",
-                                    "type": "out"
-                                }
-                            },
-                            ".title": {
-                                "text": "format"
-                            },
-                            "g.code image": {
-                                "opacity": 1
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 0
-                            },
-                            "g.error image": {
-                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            },
-                            "g.notes image": {
-                                "opacity": 1
-                            }
-                        },
-                        "block_code": "def Output_formatted(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Output_formatted() called')\n    \n    template = \"\"\"This is the total number of peer servers returned by the search {0}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"run_savedsearch:action_result.summary.total_events\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"Output_formatted\")\n\n    Add_Comment_2_case(container=container)\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 1,
-                        "callsback": false,
-                        "connected_to_start": true,
-                        "connection_name": "run_savedsearch",
-                        "connection_type": "action",
-                        "custom_callback": "",
-                        "custom_code": "",
-                        "custom_join": "",
-                        "custom_name": "Output_formatted",
-                        "description": "",
-                        "format": "format",
-                        "has_custom": false,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "469c5d49-f992-4f5f-9e77-ecf843fe391c",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "join_code": "",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "line_end": 83,
-                        "line_start": 67,
-                        "message": "Configuring now",
-                        "name": "format",
-                        "notes": "",
-                        "number": 2,
-                        "order": 5,
-                        "outPorts": [
-                            "out-1"
-                        ],
-                        "parameters": [
-                            {
-                                "position": 0,
-                                "type": "",
-                                "value": "run_savedsearch:action_result.summary.total_events"
-                            }
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": 360,
-                            "y": -20
-                        },
-                        "previous_function": "",
-                        "previous_name": "Output_formatted",
-                        "show_number": true,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "format",
-                        "status": "",
-                        "template": "This is the total number of peer servers returned by the search {0}",
-                        "title": "format",
-                        "type": "coa.Format",
-                        "warn": false,
-                        "z": 82
                     },
                     {
                         "action": "run query",
@@ -3145,6 +2974,178 @@
                         "z": 193
                     },
                     {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".format": {
+                                "text": "Output_formatted"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out-1": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out-1>.port-body": {
+                                "port": {
+                                    "id": "out-1",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "format"
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1
+                            }
+                        },
+                        "block_code": "def Output_formatted(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Output_formatted() called')\n    \n    template = \"\"\"This is the total number of peer servers returned by the search {0}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"run_savedsearch:action_result.summary.total_events\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"Output_formatted\")\n\n    Add_Comment_2_case(container=container)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "run_savedsearch",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "Output_formatted",
+                        "description": "",
+                        "format": "format",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "469c5d49-f992-4f5f-9e77-ecf843fe391c",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 83,
+                        "line_start": 67,
+                        "message": "Configuring now",
+                        "name": "format",
+                        "notes": "",
+                        "number": 2,
+                        "order": 5,
+                        "outPorts": [
+                            "out-1"
+                        ],
+                        "parameters": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": "run_savedsearch:action_result.summary.total_events"
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 360,
+                            "y": -20
+                        },
+                        "previous_function": "",
+                        "previous_name": "Output_formatted",
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "format",
+                        "status": "",
+                        "template": "This is the total number of peer servers returned by the search {0}",
+                        "title": "format",
+                        "type": "coa.Format",
+                        "warn": false,
+                        "z": 195
+                    },
+                    {
                         ".scmName/text": "mainPhantomPlaybooksAdvanced",
                         "active": false,
                         "active_keys": {},
@@ -3153,7 +3154,7 @@
                         "attrs": {
                             ".background": {
                                 "fill": "#000000",
-                                "stroke": "#0083FF"
+                                "stroke": "#5C6773"
                             },
                             ".color-band": {
                                 "fill": "#3C444D"
@@ -3216,7 +3217,7 @@
                                 "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
                             }
                         },
-                        "block_code": "def Buildcontainerlist(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Buildcontainerlist() called')\n    \n    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*.peer', 'run_savedsearch:action_result.data.*.count', 'run_savedsearch:action_result.data.*.priority', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n\n    parameters = []\n\n    action_results_data_0_0 = [item[0] for item in action_results_data_0]\n    action_results_data_0_1 = [item[1] for item in action_results_data_0]\n    action_results_data_0_2 = [item[2] for item in action_results_data_0]\n    container_property_0_0 = [item[0] for item in container_property_0]\n\n    parameters.append({\n        'peer': action_results_data_0_0,\n        'count': action_results_data_0_1,\n        'priority': action_results_data_0_2,\n        'current_container': container_property_0_0,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/task4customFunc\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/task4customFunc', parameters=parameters, name='Buildcontainerlist', callback=cf_mainPhantomPlaybooksAdvanced_list_2_containers_1)\n\n    return",
+                        "block_code": "def Buildcontainerlist(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Buildcontainerlist() called')\n    \n    action_results_data_0 = phantom.collect2(container=container, datapath=['run_savedsearch:action_result.data.*.peer', 'run_savedsearch:action_result.data.*.count', 'run_savedsearch:action_result.data.*.priority', 'run_savedsearch:action_result.parameter.context.artifact_id'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"id.*\"),\n        ],\n    ]\n\n    parameters = []\n\n    action_results_data_0_0 = [item[0] for item in action_results_data_0]\n    action_results_data_0_1 = [item[1] for item in action_results_data_0]\n    action_results_data_0_2 = [item[2] for item in action_results_data_0]\n    container_property_0_0 = [item[0] for item in container_property_0]\n\n    parameters.append({\n        'peer': action_results_data_0_0,\n        'count': action_results_data_0_1,\n        'priority': action_results_data_0_2,\n        'current_container': container_property_0_0,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/task4customFunc\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/task4customFunc', parameters=parameters, name='Buildcontainerlist', callback=cf_mainPhantomPlaybooksAdvanced_list_2_containers_1)\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
@@ -3230,7 +3231,7 @@
                             },
                             "current_container": {
                                 "collectionType": "container_property",
-                                "dataPath": "container:id",
+                                "dataPath": "container:id.*",
                                 "paramName": "container_property_0_0",
                                 "type": "list"
                             },
@@ -3252,6 +3253,7 @@
                         "connection_name": "run_savedsearch",
                         "connection_type": "action",
                         "currentVersion": true,
+                        "current_container-0": "container:id.*",
                         "customCodeEndLineOffset": 7,
                         "customCodeStartLine": 26,
                         "customFunction": "mainPhantomPlaybooksAdvanced/task4customFunc",
@@ -3428,12 +3430,12 @@
                             "width": 180
                         },
                         "state": "repo",
-                        "status": "active",
+                        "status": "",
                         "title": "custom function",
                         "type": "coa.CustomFunctionBlock",
                         "userGeneratedCode": "    # Write your custom code here...",
                         "warn": false,
-                        "z": 194
+                        "z": 196
                     }
                 ]
             },
@@ -3443,7 +3445,7 @@
         "schema": 4,
         "version": "4.10.0.40961"
     },
-    "create_time": "2021-02-12T19:00:02.981595+00:00",
+    "create_time": "2021-02-12T19:11:51.535214+00:00",
     "draft_mode": false,
     "labels": [
         "notable"
