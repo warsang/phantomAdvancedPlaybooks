@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
-            "hash": "85f1e06ac3a19a19c36c37e8fb188a172ad0ab21",
+            "hash": "9475606637a8cd4fd1a35fb63e6cd0f7f8c3e737",
             "joint": {
                 "cells": [
                     {
@@ -1239,8 +1239,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 237,
-                        "line_start": 200,
+                        "line_end": 243,
+                        "line_start": 206,
                         "message": "Configuring now",
                         "name": "list_merge",
                         "notes": "List to merge the inputs",
@@ -1696,8 +1696,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 267,
-                        "line_start": 240,
+                        "line_end": 273,
+                        "line_start": 246,
                         "message": "Configuring now",
                         "name": "list_drop_none",
                         "notes": "list_filtered_final",
@@ -2470,8 +2470,8 @@
                         "join_code": "# read-only block view not available",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 280,
-                        "line_start": 267,
+                        "line_end": 286,
+                        "line_start": 273,
                         "name": "",
                         "notes": "",
                         "number": 0,
@@ -3251,14 +3251,16 @@
                                 "display": "block"
                             }
                         },
-                        "block_code": "def cf_mainPhantomPlaybooksAdvanced_list_2_containers_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_mainPhantomPlaybooksAdvanced_list_2_containers_1() called')\n    \n    custom_function_result_0 = phantom.collect2(container=container, datapath=['Buildcontainerlist:custom_function_result.data.results_list'], action_results=results )\n\n    parameters = []\n\n    custom_function_result_0_0 = [item[0] for item in custom_function_result_0]\n\n    parameters.append({\n        'to_be_containerized': custom_function_result_0_0,\n        'container_label': None,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/list_2_containers\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/list_2_containers', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_list_2_containers_1')\n\n    return",
+                        "block_code": "def cf_mainPhantomPlaybooksAdvanced_list_2_containers_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_mainPhantomPlaybooksAdvanced_list_2_containers_1() called')\n    \n    custom_function_result_0 = phantom.collect2(container=container, datapath=['Buildcontainerlist:custom_function_result.data.results_list'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"label\"),\n        ],\n    ]\n\n    parameters = []\n\n    custom_function_result_0_0 = [item[0] for item in custom_function_result_0]\n\n    for item0 in container_property_0:\n        parameters.append({\n            'to_be_containerized': custom_function_result_0_0,\n            'container_label': item0[0],\n        })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/list_2_containers\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/list_2_containers', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_list_2_containers_1')\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
                         "cfDisplayPath": "mainPhantomPlaybooksAdvanced/list_2_containers",
                         "cfInputs": {
                             "container_label": {
-                                "dataPath": "",
+                                "collectionType": "container_property",
+                                "dataPath": "container:label",
+                                "paramName": "item0[0]",
                                 "type": "item"
                             },
                             "to_be_containerized": {
@@ -3272,9 +3274,10 @@
                         "connected_to_start": true,
                         "connection_name": "Buildcontainerlist",
                         "connection_type": "action",
+                        "container_label-1": "container:label",
                         "currentVersion": true,
                         "customCodeEndLineOffset": 7,
-                        "customCodeStartLine": 16,
+                        "customCodeStartLine": 22,
                         "customFunction": "mainPhantomPlaybooksAdvanced/list_2_containers",
                         "customFunctionId": null,
                         "custom_callback": "",
@@ -3297,7 +3300,7 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 197,
+                        "line_end": 203,
                         "line_start": 169,
                         "message": "Configuring now",
                         "name": "list_2_containers",
@@ -3442,7 +3445,7 @@
         "schema": 4,
         "version": "4.10.0.40961"
     },
-    "create_time": "2021-02-12T19:18:01.370614+00:00",
+    "create_time": "2021-02-12T19:19:08.796731+00:00",
     "draft_mode": false,
     "labels": [
         "notable"
