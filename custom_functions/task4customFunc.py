@@ -39,7 +39,7 @@ def task4customFunc(current_container=None, peer=None, priority=None, count=None
     results_list = phantom.get_list(list_name)[2]
     phantom.debug(results_list)
     outputs = {'results_list': results_list}
-    
+    phantom.debug(outputs)
     # Return a JSON-serializable object
     assert json.dumps(outputs)  # Will raise an exception if the :outputs: object is not JSON-serializable
     return outputs
