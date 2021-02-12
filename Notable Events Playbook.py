@@ -8,12 +8,6 @@ from datetime import datetime, timedelta
 def on_start(container):
     phantom.debug('on_start() called')
     
-    # call 'Event_Comment' block
-    Event_Comment(container=container)
-
-    # call 'myquerystring' block
-    myquerystring(container=container)
-
     # call 'cf_mainPhantomPlaybooksAdvanced_Merge_fields_1' block
     cf_mainPhantomPlaybooksAdvanced_Merge_fields_1(container=container)
 
@@ -21,7 +15,9 @@ def on_start(container):
 
 def run_savedsearch(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
     phantom.debug('run_savedsearch() called')
-
+        
+    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))
+    
     # collect data for 'run_savedsearch' call
     formatted_data_1 = phantom.get_format_data(name='myquerystring')
 
@@ -83,7 +79,9 @@ def Output_formatted(action=None, success=None, container=None, results=None, ha
 
 def update_event_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
     phantom.debug('update_event_1() called')
-
+        
+    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))
+    
     # collect data for 'update_event_1' call
     container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.event_id', 'artifact:*.id'])
     formatted_data_1 = phantom.get_format_data(name='Event_Comment__as_list')
@@ -233,7 +231,15 @@ def cf_mainPhantomPlaybooksAdvanced_Merge_fields_1(action=None, success=None, co
     ################################################################################    
 
     # call custom function "mainPhantomPlaybooksAdvanced/Merge_fields", returns the custom_function_run_id
-    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/Merge_fields', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_Merge_fields_1')
+    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/Merge_fields', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_Merge_fields_1', callback=cf_mainPhantomPlaybooksAdvanced_Merge_fields_1_callback)
+
+    return
+
+def cf_mainPhantomPlaybooksAdvanced_Merge_fields_1_callback(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None):
+    phantom.debug('cf_mainPhantomPlaybooksAdvanced_Merge_fields_1_callback() called')
+    
+    myquerystring(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
+    Event_Comment(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
 
     return
 
