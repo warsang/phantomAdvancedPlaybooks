@@ -7,7 +7,6 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
-            "hash": "bd3af2a21c4d150747fb60eb287d3741b5f2a521",
             "joint": {
                 "cells": [
                     {
@@ -2900,7 +2899,7 @@
                         "attrs": {
                             ".background": {
                                 "fill": "#000000",
-                                "stroke": "#5C6773"
+                                "stroke": "#E6984E"
                             },
                             ".color-band": {
                                 "fill": "#3C444D"
@@ -2950,7 +2949,7 @@
                                 "display": "none"
                             },
                             "g.error": {
-                                "opacity": 0
+                                "opacity": 1
                             },
                             "g.error image": {
                                 "xlink:href": "/inc/coa/img/block_icon_warn.svg"
@@ -2998,7 +2997,7 @@
                         "connected_to_start": true,
                         "connection_name": "run_savedsearch",
                         "connection_type": "action",
-                        "currentVersion": true,
+                        "currentVersion": false,
                         "customCodeEndLineOffset": 7,
                         "customCodeStartLine": 26,
                         "customFunction": "mainPhantomPlaybooksAdvanced/task4customFunc",
@@ -3175,7 +3174,7 @@
                             "width": 180
                         },
                         "state": "repo",
-                        "status": "",
+                        "status": "warn",
                         "title": "custom function",
                         "type": "coa.CustomFunctionBlock",
                         "userGeneratedCode": "    # Write your custom code here...",
