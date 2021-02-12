@@ -2747,7 +2747,7 @@
                         "attrs": {
                             ".background": {
                                 "fill": "#000000",
-                                "stroke": "#5C6773"
+                                "stroke": "#0083FF"
                             },
                             ".color-band": {
                                 "fill": "#3C444D"
@@ -2985,7 +2985,7 @@
                             "width": 180
                         },
                         "state": "repo",
-                        "status": "",
+                        "status": "active",
                         "title": "custom function",
                         "type": "coa.CustomFunctionBlock",
                         "userGeneratedCode": "    # Write your custom code here...",
