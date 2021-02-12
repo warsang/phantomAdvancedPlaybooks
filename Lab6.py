@@ -13,28 +13,6 @@ def on_start(container):
 
     return
 
-"""
-httpsphabb09classsplunkcomrestpl
-"""
-def get_data_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
-    phantom.debug('get_data_1() called')
-
-    # collect data for 'get_data_1' call
-    formatted_data_1 = phantom.get_format_data(name='myurl')
-
-    parameters = []
-    
-    # build parameters list for 'get_data_1' call
-    parameters.append({
-        'location': formatted_data_1,
-        'verify_certificate': False,
-        'headers': "",
-    })
-
-    phantom.act(action="get data", parameters=parameters, assets=['something'], callback=format_1, reviewer="admin", name="get_data_1")
-
-    return
-
 def format_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
     phantom.debug('format_1() called')
     
@@ -42,7 +20,7 @@ def format_1(action=None, success=None, container=None, results=None, handle=Non
 
     # parameter list for template variable replacement
     parameters = [
-        "get_data_1:action_result.data.*.parsed_response_body",
+        "test:action_result.data.*.parsed_response_body",
     ]
 
     phantom.format(container=container, template=template, parameters=parameters, name="format_1")
@@ -64,7 +42,29 @@ def myurl(action=None, success=None, container=None, results=None, handle=None, 
 
     phantom.format(container=container, template=template, parameters=parameters, name="myurl")
 
-    get_data_1(container=container)
+    test(container=container)
+
+    return
+
+"""
+test
+"""
+def test(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('test() called')
+
+    # collect data for 'test' call
+    formatted_data_1 = phantom.get_format_data(name='myurl')
+
+    parameters = []
+    
+    # build parameters list for 'test' call
+    parameters.append({
+        'location': formatted_data_1,
+        'verify_certificate': False,
+        'headers': "",
+    })
+
+    phantom.act(action="get data", parameters=parameters, assets=['something'], callback=format_1, name="test")
 
     return
 
