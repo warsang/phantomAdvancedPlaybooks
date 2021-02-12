@@ -7,7 +7,6 @@
             "clean": true,
             "code_block": "",
             "description": "abcd123",
-            "hash": "c6c0aac8c568193ba6cc6d46a439cf04938af9ed",
             "joint": {
                 "cells": [
                     {
@@ -448,396 +447,6 @@
                         },
                         "type": "link",
                         "z": 65
-                    },
-                    {
-                        ".scmName/text": "community",
-                        "active": false,
-                        "active_keys": {},
-                        "active_values": {},
-                        "angle": 0,
-                        "attrs": {
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#5C6773"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".customFunction": {
-                                "text": "debug"
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "ref-x": 5,
-                                "ref-y": 105,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out>.port-body": {
-                                "port": {
-                                    "id": "out",
-                                    "type": "out"
-                                }
-                            },
-                            ".scmName": {
-                                "text": "community"
-                            },
-                            ".title": {
-                                "text": "custom function"
-                            },
-                            ".title-info": {
-                                "text": ""
-                            },
-                            "g.branch image": {
-                                "opacity": 1
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 0
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            }
-                        },
-                        "block_code": "def cf_community_debug_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_community_debug_1() called')\n    \n    formatted_data_0 = [\n        [\n            phantom.get_format_data(name=\"format_1\"),\n        ],\n    ]\n\n    parameters = []\n\n    formatted_data_0_0 = [item[0] for item in formatted_data_0]\n\n    parameters.append({\n        'input_1': formatted_data_0_0,\n        'input_2': None,\n        'input_3': None,\n        'input_4': None,\n        'input_5': None,\n        'input_6': None,\n        'input_7': None,\n        'input_8': None,\n        'input_9': None,\n        'input_10': None,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"community/debug\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='community/debug', parameters=parameters, name='cf_community_debug_1')\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 1,
-                        "callsback": true,
-                        "cfDisplayPath": "community/debug",
-                        "cfInputs": {
-                            "input_1": {
-                                "collectionType": "formatted_data",
-                                "dataPath": "format_1:formatted_data",
-                                "paramName": "formatted_data_0_0",
-                                "type": "list"
-                            },
-                            "input_10": {
-                                "dataPath": "",
-                                "type": "list"
-                            },
-                            "input_2": {
-                                "dataPath": "",
-                                "type": "list"
-                            },
-                            "input_3": {
-                                "dataPath": "",
-                                "type": "list"
-                            },
-                            "input_4": {
-                                "dataPath": "",
-                                "type": "list"
-                            },
-                            "input_5": {
-                                "dataPath": "",
-                                "type": "list"
-                            },
-                            "input_6": {
-                                "dataPath": "",
-                                "type": "list"
-                            },
-                            "input_7": {
-                                "dataPath": "",
-                                "type": "list"
-                            },
-                            "input_8": {
-                                "dataPath": "",
-                                "type": "list"
-                            },
-                            "input_9": {
-                                "dataPath": "",
-                                "type": "list"
-                            }
-                        },
-                        "color": "",
-                        "connected_to_start": true,
-                        "connection_name": "test",
-                        "connection_type": "action",
-                        "currentVersion": true,
-                        "customCodeEndLineOffset": 7,
-                        "customCodeStartLine": 28,
-                        "customFunction": "community/debug",
-                        "customFunctionId": null,
-                        "custom_callback": "",
-                        "custom_code": "",
-                        "custom_join": "",
-                        "custom_name": "",
-                        "delay": 0,
-                        "description": "",
-                        "draftMode": false,
-                        "existingCF": true,
-                        "functionBlock": "custom function",
-                        "has_custom": false,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "a72f2758-2cc7-45b0-b3ff-ad286870dc2e",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "input_1-0": "format_1:formatted_data",
-                        "join_code": "",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "line_end": 113,
-                        "line_start": 73,
-                        "message": "Configuring now",
-                        "name": "debug",
-                        "notes": "",
-                        "number": 1,
-                        "order": 5,
-                        "outPorts": [
-                            "out"
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": 1080,
-                            "y": 180
-                        },
-                        "previous_function": "",
-                        "previous_name": "cf_community_debug_1",
-                        "selectedCustomFunction": {
-                            "description": "Print debug messages with the type and value of 0-10 different inputs. This is useful for checking the values of input data or the outputs of other playbook blocks.",
-                            "draftMode": false,
-                            "id": 2,
-                            "inputs": [
-                                {
-                                    "_pretty_custom_function": "debug",
-                                    "contains_type": [
-                                        "*"
-                                    ],
-                                    "custom_function": 2,
-                                    "description": "",
-                                    "id": 6,
-                                    "input_type": "list",
-                                    "name": "input_1",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "_pretty_custom_function": "debug",
-                                    "contains_type": [
-                                        "*"
-                                    ],
-                                    "custom_function": 2,
-                                    "description": "",
-                                    "id": 7,
-                                    "input_type": "list",
-                                    "name": "input_2",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "_pretty_custom_function": "debug",
-                                    "contains_type": [
-                                        "*"
-                                    ],
-                                    "custom_function": 2,
-                                    "description": "",
-                                    "id": 8,
-                                    "input_type": "list",
-                                    "name": "input_3",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "_pretty_custom_function": "debug",
-                                    "contains_type": [
-                                        "*"
-                                    ],
-                                    "custom_function": 2,
-                                    "description": "",
-                                    "id": 9,
-                                    "input_type": "list",
-                                    "name": "input_4",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "_pretty_custom_function": "debug",
-                                    "contains_type": [
-                                        "*"
-                                    ],
-                                    "custom_function": 2,
-                                    "description": "",
-                                    "id": 10,
-                                    "input_type": "list",
-                                    "name": "input_5",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "_pretty_custom_function": "debug",
-                                    "contains_type": [
-                                        "*"
-                                    ],
-                                    "custom_function": 2,
-                                    "description": "",
-                                    "id": 11,
-                                    "input_type": "list",
-                                    "name": "input_6",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "_pretty_custom_function": "debug",
-                                    "contains_type": [
-                                        "*"
-                                    ],
-                                    "custom_function": 2,
-                                    "description": "",
-                                    "id": 12,
-                                    "input_type": "list",
-                                    "name": "input_7",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "_pretty_custom_function": "debug",
-                                    "contains_type": [
-                                        "*"
-                                    ],
-                                    "custom_function": 2,
-                                    "description": "",
-                                    "id": 13,
-                                    "input_type": "list",
-                                    "name": "input_8",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "_pretty_custom_function": "debug",
-                                    "contains_type": [
-                                        "*"
-                                    ],
-                                    "custom_function": 2,
-                                    "description": "",
-                                    "id": 14,
-                                    "input_type": "list",
-                                    "name": "input_9",
-                                    "placeholder": ""
-                                },
-                                {
-                                    "_pretty_custom_function": "debug",
-                                    "contains_type": [
-                                        "*"
-                                    ],
-                                    "custom_function": 2,
-                                    "description": "",
-                                    "id": 15,
-                                    "input_type": "list",
-                                    "name": "input_10",
-                                    "placeholder": ""
-                                }
-                            ],
-                            "name": "debug",
-                            "outputs": [
-                                {
-                                    "_pretty_custom_function": "debug",
-                                    "contains_type": [],
-                                    "custom_function": 2,
-                                    "data_path": "*.input_name",
-                                    "description": "The variable name used for this input, such as input_1 or input_7",
-                                    "id": 4
-                                },
-                                {
-                                    "_pretty_custom_function": "debug",
-                                    "contains_type": [
-                                        "*"
-                                    ],
-                                    "custom_function": 2,
-                                    "data_path": "*.value",
-                                    "description": "The string representation of the value of this input",
-                                    "id": 5
-                                },
-                                {
-                                    "_pretty_custom_function": "debug",
-                                    "contains_type": [
-                                        ""
-                                    ],
-                                    "custom_function": 2,
-                                    "data_path": "*.types",
-                                    "description": "The string representation of the type of this input, such as \"<type 'list'>\"",
-                                    "id": 6
-                                }
-                            ],
-                            "playbooks": {
-                                "draft_playbooks": [],
-                                "draft_version_id": null,
-                                "playbooks": []
-                            },
-                            "scmId": 1,
-                            "scmName": "community"
-                        },
-                        "show_number": false,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "repo",
-                        "status": "",
-                        "title": "custom function",
-                        "type": "coa.CustomFunctionBlock",
-                        "userGeneratedCode": "    # Write your custom code here...",
-                        "warn": false,
-                        "z": 66
                     },
                     {
                         "active": false,
@@ -1506,8 +1115,8 @@
                             }
                         },
                         "position": {
-                            "x": 760,
-                            "y": 120
+                            "x": 780,
+                            "y": 60
                         },
                         "previous_function": "",
                         "previous_name": "format_1",
@@ -1522,7 +1131,397 @@
                         "title": "format",
                         "type": "coa.Format",
                         "warn": false,
-                        "z": 72
+                        "z": 78
+                    },
+                    {
+                        ".scmName/text": "community",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {},
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".customFunction": {
+                                "text": "debug"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".scmName": {
+                                "text": "community"
+                            },
+                            ".title": {
+                                "text": "custom function"
+                            },
+                            ".title-info": {
+                                "text": ""
+                            },
+                            "g.branch image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def cf_community_debug_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_community_debug_1() called')\n    \n    formatted_data_0 = [\n        [\n            phantom.get_format_data(name=\"format_1\"),\n        ],\n    ]\n\n    parameters = []\n\n    formatted_data_0_0 = [item[0] for item in formatted_data_0]\n\n    parameters.append({\n        'input_1': formatted_data_0_0,\n        'input_2': None,\n        'input_3': None,\n        'input_4': None,\n        'input_5': None,\n        'input_6': None,\n        'input_7': None,\n        'input_8': None,\n        'input_9': None,\n        'input_10': None,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"community/debug\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='community/debug', parameters=parameters, name='cf_community_debug_1')\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "cfDisplayPath": "community/debug",
+                        "cfInputs": {
+                            "input_1": {
+                                "collectionType": "formatted_data",
+                                "dataPath": "format_1:formatted_data.data.*",
+                                "paramName": "formatted_data_0_0",
+                                "type": "list"
+                            },
+                            "input_10": {
+                                "dataPath": "",
+                                "type": "list"
+                            },
+                            "input_2": {
+                                "dataPath": "",
+                                "type": "list"
+                            },
+                            "input_3": {
+                                "dataPath": "",
+                                "type": "list"
+                            },
+                            "input_4": {
+                                "dataPath": "",
+                                "type": "list"
+                            },
+                            "input_5": {
+                                "dataPath": "",
+                                "type": "list"
+                            },
+                            "input_6": {
+                                "dataPath": "",
+                                "type": "list"
+                            },
+                            "input_7": {
+                                "dataPath": "",
+                                "type": "list"
+                            },
+                            "input_8": {
+                                "dataPath": "",
+                                "type": "list"
+                            },
+                            "input_9": {
+                                "dataPath": "",
+                                "type": "list"
+                            }
+                        },
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "test",
+                        "connection_type": "action",
+                        "currentVersion": true,
+                        "customCodeEndLineOffset": 7,
+                        "customCodeStartLine": 28,
+                        "customFunction": "community/debug",
+                        "customFunctionId": null,
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "delay": 0,
+                        "description": "",
+                        "draftMode": false,
+                        "existingCF": true,
+                        "functionBlock": "custom function",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "a72f2758-2cc7-45b0-b3ff-ad286870dc2e",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "input_1-0": "format_1:formatted_data.data.*",
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 113,
+                        "line_start": 73,
+                        "message": "Configuring now",
+                        "name": "debug",
+                        "notes": "",
+                        "number": 1,
+                        "order": 5,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 1080,
+                            "y": 180
+                        },
+                        "previous_function": "",
+                        "previous_name": "cf_community_debug_1",
+                        "selectedCustomFunction": {
+                            "description": "Print debug messages with the type and value of 0-10 different inputs. This is useful for checking the values of input data or the outputs of other playbook blocks.",
+                            "draftMode": false,
+                            "id": 2,
+                            "inputs": [
+                                {
+                                    "_pretty_custom_function": "debug",
+                                    "contains_type": [
+                                        "*"
+                                    ],
+                                    "custom_function": 2,
+                                    "description": "",
+                                    "id": 6,
+                                    "input_type": "list",
+                                    "name": "input_1",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "debug",
+                                    "contains_type": [
+                                        "*"
+                                    ],
+                                    "custom_function": 2,
+                                    "description": "",
+                                    "id": 7,
+                                    "input_type": "list",
+                                    "name": "input_2",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "debug",
+                                    "contains_type": [
+                                        "*"
+                                    ],
+                                    "custom_function": 2,
+                                    "description": "",
+                                    "id": 8,
+                                    "input_type": "list",
+                                    "name": "input_3",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "debug",
+                                    "contains_type": [
+                                        "*"
+                                    ],
+                                    "custom_function": 2,
+                                    "description": "",
+                                    "id": 9,
+                                    "input_type": "list",
+                                    "name": "input_4",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "debug",
+                                    "contains_type": [
+                                        "*"
+                                    ],
+                                    "custom_function": 2,
+                                    "description": "",
+                                    "id": 10,
+                                    "input_type": "list",
+                                    "name": "input_5",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "debug",
+                                    "contains_type": [
+                                        "*"
+                                    ],
+                                    "custom_function": 2,
+                                    "description": "",
+                                    "id": 11,
+                                    "input_type": "list",
+                                    "name": "input_6",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "debug",
+                                    "contains_type": [
+                                        "*"
+                                    ],
+                                    "custom_function": 2,
+                                    "description": "",
+                                    "id": 12,
+                                    "input_type": "list",
+                                    "name": "input_7",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "debug",
+                                    "contains_type": [
+                                        "*"
+                                    ],
+                                    "custom_function": 2,
+                                    "description": "",
+                                    "id": 13,
+                                    "input_type": "list",
+                                    "name": "input_8",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "debug",
+                                    "contains_type": [
+                                        "*"
+                                    ],
+                                    "custom_function": 2,
+                                    "description": "",
+                                    "id": 14,
+                                    "input_type": "list",
+                                    "name": "input_9",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "_pretty_custom_function": "debug",
+                                    "contains_type": [
+                                        "*"
+                                    ],
+                                    "custom_function": 2,
+                                    "description": "",
+                                    "id": 15,
+                                    "input_type": "list",
+                                    "name": "input_10",
+                                    "placeholder": ""
+                                }
+                            ],
+                            "name": "debug",
+                            "outputs": [
+                                {
+                                    "_pretty_custom_function": "debug",
+                                    "contains_type": [],
+                                    "custom_function": 2,
+                                    "data_path": "*.input_name",
+                                    "description": "The variable name used for this input, such as input_1 or input_7",
+                                    "id": 4
+                                },
+                                {
+                                    "_pretty_custom_function": "debug",
+                                    "contains_type": [
+                                        "*"
+                                    ],
+                                    "custom_function": 2,
+                                    "data_path": "*.value",
+                                    "description": "The string representation of the value of this input",
+                                    "id": 5
+                                },
+                                {
+                                    "_pretty_custom_function": "debug",
+                                    "contains_type": [
+                                        ""
+                                    ],
+                                    "custom_function": 2,
+                                    "data_path": "*.types",
+                                    "description": "The string representation of the type of this input, such as \"<type 'list'>\"",
+                                    "id": 6
+                                }
+                            ],
+                            "playbooks": {
+                                "draft_playbooks": [],
+                                "draft_version_id": null,
+                                "playbooks": []
+                            },
+                            "scmId": 1,
+                            "scmName": "community"
+                        },
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "repo",
+                        "status": "",
+                        "title": "custom function",
+                        "type": "coa.CustomFunctionBlock",
+                        "userGeneratedCode": "    # Write your custom code here...",
+                        "warn": false,
+                        "z": 79
                     }
                 ]
             },
