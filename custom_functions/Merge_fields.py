@@ -17,7 +17,7 @@ def Merge_fields(hostname=None, my_dest_src_param=None, current_container=None, 
     outputs = {}
     update_container = phantom.get_container(current_container[0])
     
-    my_artifacts = phantom.collect(update_container)
+    my_artifacts = phantom.collect2(update_container,"artifact:*")
     phantom.debug(my_artifacts)
     
     phantom.debug(hostname)
