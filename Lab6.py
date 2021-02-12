@@ -8,8 +8,8 @@ from datetime import datetime, timedelta
 def on_start(container):
     phantom.debug('on_start() called')
     
-    # call 'format_2' block
-    format_2(container=container)
+    # call 'myurl' block
+    myurl(container=container)
 
     return
 
@@ -28,16 +28,15 @@ httpsphabb09classsplunkcomrestpl
 def httpsphabb09classsplunkcomrestpl(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
     phantom.debug('httpsphabb09classsplunkcomrestpl() called')
 
-    id_value = container.get('id', None)
-
     # collect data for 'httpsphabb09classsplunkcomrestpl' call
+    formatted_data_1 = phantom.get_format_data(name='format_2')
 
     parameters = []
     
     # build parameters list for 'httpsphabb09classsplunkcomrestpl' call
     parameters.append({
-        'headers': id_value,
-        'location': "rest/container",
+        'headers': "",
+        'location': formatted_data_1,
         'verify_certificate': False,
     })
 
@@ -81,17 +80,20 @@ def custom_function_0(action=None, success=None, container=None, results=None, h
 
     return
 
-def format_2(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
-    phantom.debug('format_2() called')
+"""
+myurl
+"""
+def myurl(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('myurl() called')
     
-    template = """{0}"""
+    template = """/rest/container/{0}"""
 
     # parameter list for template variable replacement
     parameters = [
         "container:id",
     ]
 
-    phantom.format(container=container, template=template, parameters=parameters, name="format_2")
+    phantom.format(container=container, template=template, parameters=parameters, name="myurl")
 
     undefined_0(container=container)
 
