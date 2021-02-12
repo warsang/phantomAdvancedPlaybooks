@@ -15,7 +15,9 @@ def Merge_fields(hostname=None, my_dest_src_param=None, current_container=None, 
     import phantom.rules as phantom
     
     outputs = {}
-    update_container = phantom.get_container(current_container)
+    update_container = phantom.get_container(current_container[0])
+    phantom.debug(update_container)
+    
     phantom.debug(hostname)
     phantom.debug(my_dest_src_param)
     if hostname:
