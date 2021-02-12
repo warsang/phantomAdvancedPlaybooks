@@ -120,11 +120,10 @@ def my_custom_func22(action=None, success=None, container=None, results=None, ha
 
     parameters = []
 
-    formatted_data_as_list_0_0 = [item[0] for item in formatted_data_as_list_0]
-
-    parameters.append({
-        'request1_body': formatted_data_as_list_0_0,
-    })
+    for item0 in formatted_data_as_list_0:
+        parameters.append({
+            'request1_body': item0[0],
+        })
     ################################################################################
     ## Custom Code Start
     ################################################################################
