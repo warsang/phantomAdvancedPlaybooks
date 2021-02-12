@@ -21,6 +21,9 @@ def action_0(action=None, success=None, container=None, results=None, handle=Non
 
     return
 
+"""
+httpsphabb09classsplunkcomrestpl
+"""
 def httpsphabb09classsplunkcomrestpl(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
     phantom.debug('httpsphabb09classsplunkcomrestpl() called')
 

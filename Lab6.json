@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "",
-            "hash": "9a1d53bf92e6ddff59bb3f0078a7c9e51001a957",
+            "hash": "22d638fb456232a75e412ef1cbeadda078b0e49f",
             "joint": {
                 "cells": [
                     {
@@ -154,45 +154,6 @@
                         "type": "coa.StartEnd",
                         "warn": false,
                         "z": 1
-                    },
-                    {
-                        "attrs": {
-                            ".connection": {
-                                "stroke": "#818D99",
-                                "stroke-width": 2
-                            },
-                            ".marker-target": {
-                                "d": "M 10 0 L 0 5 L 10 10 z",
-                                "fill": "#818D99",
-                                "stroke": "#818D99"
-                            }
-                        },
-                        "connector": {
-                            "args": {
-                                "radius": 5
-                            },
-                            "name": "rounded"
-                        },
-                        "endDirections": [
-                            "left"
-                        ],
-                        "id": "ed102dd9-a361-4000-8162-dae6d6d10299",
-                        "router": {
-                            "name": "metro"
-                        },
-                        "source": {
-                            "id": "08f66b2e-325e-45df-926b-8b686ed27850",
-                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "startDirections": [
-                            "right"
-                        ],
-                        "target": {
-                            "id": "06ad7af0-b29d-4547-a471-fdd2fc84bf15",
-                            "selector": ".port-body[type=\"input\"]"
-                        },
-                        "type": "link",
-                        "z": 3
                     },
                     {
                         "active": false,
@@ -400,8 +361,8 @@
                         "callback_start": 1,
                         "callsback": false,
                         "connected_to_start": false,
-                        "connection_name": "",
-                        "connection_type": "",
+                        "connection_name": "httpsphabb09classsplunkcomrestpl",
+                        "connection_type": "action",
                         "custom_callback": "",
                         "custom_code": "",
                         "custom_join": "",
@@ -418,8 +379,8 @@
                         "join_code": "# read-only block view not available",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 55,
-                        "line_start": 42,
+                        "line_end": 58,
+                        "line_start": 45,
                         "name": "",
                         "notes": "",
                         "number": 0,
@@ -494,6 +455,84 @@
                         "type": "coa.StartEnd",
                         "warn": false,
                         "z": 7
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "f6c883b7-273f-4352-b166-1fe3d1a864b2",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "d8c9e4ac-975f-4205-a01f-e9f3bc0f238b",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "c6208af4-447f-418d-b257-135c1a74ed18",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 9
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "e1ff67ab-7c36-4362-96bf-a552a68cfc23",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "08f66b2e-325e-45df-926b-8b686ed27850",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "06ad7af0-b29d-4547-a471-fdd2fc84bf15",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 10
                     },
                     {
                         "action": "get data",
@@ -722,6 +761,13 @@
                             },
                             "g.notes": {
                                 "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            },
+                            "g.timer image": {
+                                "opacity": 1
                             }
                         },
                         "block_code": "def httpsphabb09classsplunkcomrestpl(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('httpsphabb09classsplunkcomrestpl() called')\n\n    # collect data for 'httpsphabb09classsplunkcomrestpl' call\n\n    parameters = []\n    \n    # build parameters list for 'httpsphabb09classsplunkcomrestpl' call\n    parameters.append({\n        'location': \"/rest/container\",\n        'verify_certificate': False,\n        'headers': \"\",\n    })\n\n    phantom.act(action=\"get data\", parameters=parameters, assets=['something'], name=\"httpsphabb09classsplunkcomrestpl\")\n\n    return",
@@ -736,8 +782,8 @@
                         "custom_code": "",
                         "custom_join": "",
                         "custom_name": "httpsphabb09classsplunkcomrestpl",
-                        "delay": 0,
-                        "description": "",
+                        "delay": "0",
+                        "description": "httpsphabb09classsplunkcomrestpl",
                         "has_custom": false,
                         "has_custom_block": false,
                         "has_custom_callback": false,
@@ -749,11 +795,11 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 42,
-                        "line_start": 24,
+                        "line_end": 45,
+                        "line_start": 27,
                         "message": "Configuring now",
                         "name": "get data",
-                        "notes": "",
+                        "notes": "httpsphabb09classsplunkcomrestpl",
                         "number": 1,
                         "order": 3,
                         "outPorts": [
@@ -832,7 +878,7 @@
                         "title": "Generic",
                         "type": "coa.Action",
                         "warn": "",
-                        "z": 8
+                        "z": 11
                     }
                 ]
             },
@@ -842,7 +888,7 @@
         "schema": 4,
         "version": "4.10.0.40961"
     },
-    "create_time": "2021-02-12T19:57:50.911563+00:00",
+    "create_time": "2021-02-12T19:58:51.688709+00:00",
     "draft_mode": false,
     "labels": [
         "system"
