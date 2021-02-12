@@ -106,7 +106,34 @@ def cf_community_debug_1(action=None, success=None, container=None, results=None
     ################################################################################    
 
     # call custom function "community/debug", returns the custom_function_run_id
-    phantom.custom_function(custom_function='community/debug', parameters=parameters, name='cf_community_debug_1')
+    phantom.custom_function(custom_function='community/debug', parameters=parameters, name='cf_community_debug_1', callback=cf_local_get_playbook_run_ids_1)
+
+    return
+
+def cf_local_get_playbook_run_ids_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('cf_local_get_playbook_run_ids_1() called')
+    
+    formatted_data_as_list_0 = phantom.get_format_data(name="format_1__as_list")
+
+    parameters = []
+
+    formatted_data_as_list_0_0 = [item[0] for item in formatted_data_as_list_0]
+
+    parameters.append({
+        'request1_body': formatted_data_as_list_0_0,
+    })
+    ################################################################################
+    ## Custom Code Start
+    ################################################################################
+
+    # Write your custom code here...
+
+    ################################################################################
+    ## Custom Code End
+    ################################################################################    
+
+    # call custom function "local/get_playbook_run_ids", returns the custom_function_run_id
+    phantom.custom_function(custom_function='local/get_playbook_run_ids', parameters=parameters, name='cf_local_get_playbook_run_ids_1')
 
     return
 
