@@ -1,0 +1,26 @@
+{
+    "create_time": "2021-02-12T17:21:02.580300+00:00",
+    "custom_function_id": "b95ad0e7eacba5c77324df9ca3e93dc879ce3d79",
+    "description": "Filter out all values from a list where the value evaluates to False in Python (such as None, \"\", or [])",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "a list of items to filter",
+            "input_type": "list",
+            "name": "input_list",
+            "placeholder": "myList"
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "data_path": "*.item",
+            "description": "a return item for each value that did not evaluate to False"
+        }
+    ],
+    "platform_version": "4.10.0.40961",
+    "python_version": "2.7"
+}
