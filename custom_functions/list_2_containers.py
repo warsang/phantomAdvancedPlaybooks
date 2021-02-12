@@ -3,7 +3,7 @@ def list_2_containers(to_be_containerized=None, container_label=None, **kwargs):
     Creates containers from a list
     
     Args:
-        to_be_containerized
+        to_be_containerized (CEF type: *)
         container_label
     
     Returns a JSON-serializable object that implements the configured data paths:
