@@ -25,7 +25,7 @@ def task4customFunc(current_container=None, peer=None, priority=None, count=None
     
     # You need the container object in order to update it.
     if type(current_container) is list:
-        update_container = phantom.get_container(current_container[0])
+        update_container = phantom.get_container(current_container)
     else:
         update_container = phantom.get_container(current_container)
 
