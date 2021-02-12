@@ -13,35 +13,26 @@ def on_start(container):
 
     return
 
-def undefined_0(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
-    phantom.debug('undefined_0() called')
-
-    parameters = []
-
-    phantom.act(action="<undefined>", parameters=parameters, name="undefined_0")
-
-    return
-
 """
 httpsphabb09classsplunkcomrestpl
 """
-def get_data_temp(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
-    phantom.debug('get_data_temp() called')
+def get_data_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('get_data_1() called')
 
-    # collect data for 'get_data_temp' call
+    # collect data for 'get_data_1' call
     formatted_data_1 = phantom.get_format_data(name='myurl__as_list')
 
     parameters = []
     
-    # build parameters list for 'get_data_temp' call
+    # build parameters list for 'get_data_1' call
     for formatted_part_1 in formatted_data_1:
         parameters.append({
             'location': formatted_part_1,
-            'verify_certificate': "",
+            'verify_certificate': False,
             'headers': "",
         })
 
-    phantom.act(action="get data", parameters=parameters, app={ "name": 'HTTP' }, callback=format_1, reviewer="admin", name="get_data_temp")
+    phantom.act(action="get data", parameters=parameters, assets=['something'], callback=format_1, reviewer="admin", name="get_data_1")
 
     return
 
@@ -52,32 +43,10 @@ def format_1(action=None, success=None, container=None, results=None, handle=Non
 
     # parameter list for template variable replacement
     parameters = [
-        "get_data_temp:action_result.data.*.parsed_response_body",
+        "get_data_1:action_result.data.*.parsed_response_body",
     ]
 
     phantom.format(container=container, template=template, parameters=parameters, name="format_1")
-
-    custom_function_0(container=container)
-
-    return
-
-def custom_function_0(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
-    phantom.debug('custom_function_0() called')
-    
-    parameters = [{}]
-
-    ################################################################################
-    ## Custom Code Start
-    ################################################################################
-
-    # Write your custom code here...
-
-    ################################################################################
-    ## Custom Code End
-    ################################################################################    
-
-    # call custom function "", returns the custom_function_run_id
-    phantom.custom_function(custom_function='', parameters=parameters, name='custom_function_0')
 
     return
 
@@ -96,7 +65,7 @@ def myurl(action=None, success=None, container=None, results=None, handle=None, 
 
     phantom.format(container=container, template=template, parameters=parameters, name="myurl")
 
-    undefined_0(container=container)
+    get_data_1(container=container)
 
     return
 
