@@ -20,14 +20,10 @@ def task4customFunc(current_container=None, peer=None, priority=None, count=None
     
     # Write your custom code here...
     phantom.debug(current_container)
-    phantom.debug(type(current_container))
     list_name = "temp_peer_list_%s" % current_container
     
     # You need the container object in order to update it.
-    if type(current_container) is list:
-        update_container = phantom.get_container(current_container)
-    else:
-        update_container = phantom.get_container(current_container)
+    update_container = phantom.get_container(current_container)
 
     # Get the data node of the container
     data = phantom.get_container(current_container)['data']
