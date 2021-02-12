@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
-            "hash": "ca551347c95fd9abb51a5536a06f5897bba76895",
+            "hash": "248f791dd0e36b5ee14baab5a7af5fcf1bef30cd",
             "joint": {
                 "cells": [
                     {
@@ -3094,16 +3094,16 @@
                         "selectedCustomFunction": {
                             "description": "mytask4customfunc",
                             "draftMode": false,
-                            "id": 39,
+                            "id": 40,
                             "inputs": [
                                 {
                                     "_pretty_custom_function": "task4customFunc",
                                     "contains_type": [
                                         "phantom container id"
                                     ],
-                                    "custom_function": 39,
+                                    "custom_function": 40,
                                     "description": "",
-                                    "id": 124,
+                                    "id": 128,
                                     "input_type": "item",
                                     "name": "current_container",
                                     "placeholder": ""
@@ -3111,9 +3111,9 @@
                                 {
                                     "_pretty_custom_function": "task4customFunc",
                                     "contains_type": [],
-                                    "custom_function": 39,
+                                    "custom_function": 40,
                                     "description": "",
-                                    "id": 125,
+                                    "id": 129,
                                     "input_type": "list",
                                     "name": "peer",
                                     "placeholder": ""
@@ -3121,9 +3121,9 @@
                                 {
                                     "_pretty_custom_function": "task4customFunc",
                                     "contains_type": [],
-                                    "custom_function": 39,
+                                    "custom_function": 40,
                                     "description": "",
-                                    "id": 126,
+                                    "id": 130,
                                     "input_type": "list",
                                     "name": "priority",
                                     "placeholder": ""
@@ -3131,9 +3131,9 @@
                                 {
                                     "_pretty_custom_function": "task4customFunc",
                                     "contains_type": [],
-                                    "custom_function": 39,
+                                    "custom_function": 40,
                                     "description": "",
-                                    "id": 127,
+                                    "id": 131,
                                     "input_type": "list",
                                     "name": "count",
                                     "placeholder": ""
@@ -3144,10 +3144,10 @@
                                 {
                                     "_pretty_custom_function": "task4customFunc",
                                     "contains_type": [],
-                                    "custom_function": 39,
-                                    "data_path": "*.my_output_custom_list",
+                                    "custom_function": 40,
+                                    "data_path": "*.results_list",
                                     "description": "",
-                                    "id": 40
+                                    "id": 41
                                 }
                             ],
                             "playbooks": {
@@ -3158,7 +3158,7 @@
                                         "active": false,
                                         "display_path": "mainPhantomPlaybooksAdvanced/Notable Events Playbook",
                                         "draft_mode": false,
-                                        "id": 116,
+                                        "id": 117,
                                         "name": "Notable Events Playbook",
                                         "viewable": true
                                     }
@@ -3178,7 +3178,7 @@
                         "type": "coa.CustomFunctionBlock",
                         "userGeneratedCode": "    # Write your custom code here...",
                         "warn": false,
-                        "z": 144
+                        "z": 148
                     },
                     {
                         ".scmName/text": "mainPhantomPlaybooksAdvanced",
@@ -3248,7 +3248,7 @@
                                 "display": "block"
                             }
                         },
-                        "block_code": "def cf_mainPhantomPlaybooksAdvanced_list_2_containers_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_mainPhantomPlaybooksAdvanced_list_2_containers_1() called')\n    \n    custom_function_result_0 = phantom.collect2(container=container, datapath=['Buildcontainerlist:custom_function_result.data.*.my_output_custom_list'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"label\"),\n        ],\n    ]\n\n    parameters = []\n\n    container_property_0_0 = [item[0] for item in container_property_0]\n    custom_function_result_0_0 = [item[0] for item in custom_function_result_0]\n\n    parameters.append({\n        'container_label': container_property_0_0,\n        'to_be_containerized': custom_function_result_0_0,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/list_2_containers\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/list_2_containers', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_list_2_containers_1')\n\n    return",
+                        "block_code": "def cf_mainPhantomPlaybooksAdvanced_list_2_containers_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_mainPhantomPlaybooksAdvanced_list_2_containers_1() called')\n    \n    custom_function_result_0 = phantom.collect2(container=container, datapath=['Buildcontainerlist:custom_function_result.data.*.results_list'], action_results=results )\n    container_property_0 = [\n        [\n            container.get(\"label\"),\n        ],\n    ]\n\n    parameters = []\n\n    container_property_0_0 = [item[0] for item in container_property_0]\n    custom_function_result_0_0 = [item[0] for item in custom_function_result_0]\n\n    parameters.append({\n        'container_label': container_property_0_0,\n        'to_be_containerized': custom_function_result_0_0,\n    })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"mainPhantomPlaybooksAdvanced/list_2_containers\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='mainPhantomPlaybooksAdvanced/list_2_containers', parameters=parameters, name='cf_mainPhantomPlaybooksAdvanced_list_2_containers_1')\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
@@ -3262,7 +3262,7 @@
                             },
                             "to_be_containerized": {
                                 "collectionType": "custom_function_result",
-                                "dataPath": "Buildcontainerlist:custom_function_result.data.*.my_output_custom_list",
+                                "dataPath": "Buildcontainerlist:custom_function_result.data.*.results_list",
                                 "paramName": "custom_function_result_0_0",
                                 "type": "list"
                             }
@@ -3418,11 +3418,11 @@
                         "state": "repo",
                         "status": "",
                         "title": "custom function",
-                        "to_be_containerized-0": "Buildcontainerlist:custom_function_result.data.*.my_output_custom_list",
+                        "to_be_containerized-0": "Buildcontainerlist:custom_function_result.data.*.results_list",
                         "type": "coa.CustomFunctionBlock",
                         "userGeneratedCode": "    # Write your custom code here...",
                         "warn": false,
-                        "z": 145
+                        "z": 149
                     }
                 ]
             },
@@ -3432,7 +3432,7 @@
         "schema": 4,
         "version": "4.10.0.40961"
     },
-    "create_time": "2021-02-12T18:11:00.736942+00:00",
+    "create_time": "2021-02-12T18:17:05.918577+00:00",
     "draft_mode": false,
     "labels": [
         "notable"

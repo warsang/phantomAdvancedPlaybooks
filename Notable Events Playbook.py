@@ -169,7 +169,7 @@ def Buildcontainerlist(action=None, success=None, container=None, results=None, 
 def cf_mainPhantomPlaybooksAdvanced_list_2_containers_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
     phantom.debug('cf_mainPhantomPlaybooksAdvanced_list_2_containers_1() called')
     
-    custom_function_result_0 = phantom.collect2(container=container, datapath=['Buildcontainerlist:custom_function_result.data.*.my_output_custom_list'], action_results=results )
+    custom_function_result_0 = phantom.collect2(container=container, datapath=['Buildcontainerlist:custom_function_result.data.*.results_list'], action_results=results )
     container_property_0 = [
         [
             container.get("label"),
