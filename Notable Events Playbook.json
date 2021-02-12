@@ -2899,7 +2899,7 @@
                         "attrs": {
                             ".background": {
                                 "fill": "#000000",
-                                "stroke": "#5C6773"
+                                "stroke": "#0083FF"
                             },
                             ".color-band": {
                                 "fill": "#3C444D"
@@ -3172,12 +3172,12 @@
                             "width": 180
                         },
                         "state": "repo",
-                        "status": "",
+                        "status": "active",
                         "title": "custom function",
                         "type": "coa.CustomFunctionBlock",
                         "userGeneratedCode": "    # Write your custom code here...",
                         "warn": false,
-                        "z": 148
+                        "z": 150
                     },
                     {
                         ".scmName/text": "mainPhantomPlaybooksAdvanced",
@@ -3188,7 +3188,7 @@
                         "attrs": {
                             ".background": {
                                 "fill": "#000000",
-                                "stroke": "#0083FF"
+                                "stroke": "#E6984E"
                             },
                             ".color-band": {
                                 "fill": "#3C444D"
@@ -3238,7 +3238,7 @@
                                 "display": "none"
                             },
                             "g.error": {
-                                "opacity": 0
+                                "opacity": 1
                             },
                             "g.error image": {
                                 "xlink:href": "/inc/coa/img/block_icon_warn.svg"
@@ -3271,7 +3271,7 @@
                         "connection_name": "Buildcontainerlist",
                         "connection_type": "action",
                         "container_label-1": "container:label",
-                        "currentVersion": true,
+                        "currentVersion": false,
                         "customCodeEndLineOffset": 7,
                         "customCodeStartLine": 22,
                         "customFunction": "mainPhantomPlaybooksAdvanced/list_2_containers",
@@ -3415,13 +3415,13 @@
                             "width": 180
                         },
                         "state": "repo",
-                        "status": "active",
+                        "status": "warn",
                         "title": "custom function",
                         "to_be_containerized-0": "Buildcontainerlist:custom_function_result.data.*.results_list",
                         "type": "coa.CustomFunctionBlock",
                         "userGeneratedCode": "    # Write your custom code here...",
                         "warn": false,
-                        "z": 149
+                        "z": 151
                     }
                 ]
             },
