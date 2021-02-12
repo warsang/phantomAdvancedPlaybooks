@@ -7,17 +7,17 @@ from datetime import datetime, timedelta
 def on_start(container):
     phantom.debug('on_start() called')
     
-    # call 'action_0' block
-    action_0(container=container)
-    httpsphabb09classsplunkcomrestpl()
+    # call 'undefined_0' block
+    undefined_0(container=container)
+
     return
 
-def action_0(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
-    phantom.debug('action_0() called')
+def undefined_0(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('undefined_0() called')
 
     parameters = []
 
-    phantom.act(action="<undefined>", parameters=parameters, name="action_0")
+    phantom.act(action="<undefined>", parameters=parameters, name="undefined_0")
 
     return
 
@@ -33,9 +33,9 @@ def httpsphabb09classsplunkcomrestpl(action=None, success=None, container=None, 
     
     # build parameters list for 'httpsphabb09classsplunkcomrestpl' call
     parameters.append({
+        'headers': "",
         'location': "rest/container",
         'verify_certificate': False,
-        'headers': "",
     })
 
     phantom.act(action="get data", parameters=parameters, assets=['something'], callback=format_1, reviewer="admin", name="httpsphabb09classsplunkcomrestpl")
