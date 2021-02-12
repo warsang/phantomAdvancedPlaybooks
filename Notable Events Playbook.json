@@ -7,7 +7,6 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
-            "hash": "ad46ad82ef5a7745da54ca7ffe0f952d3b80e62c",
             "joint": {
                 "cells": [
                     {
@@ -3191,7 +3190,7 @@
                         "attrs": {
                             ".background": {
                                 "fill": "#000000",
-                                "stroke": "#5C6773"
+                                "stroke": "#0083FF"
                             },
                             ".color-band": {
                                 "fill": "#3C444D"
@@ -3426,7 +3425,7 @@
                             "width": 180
                         },
                         "state": "repo",
-                        "status": "",
+                        "status": "active",
                         "title": "custom function",
                         "type": "coa.CustomFunctionBlock",
                         "userGeneratedCode": "    # Write your custom code here...",
