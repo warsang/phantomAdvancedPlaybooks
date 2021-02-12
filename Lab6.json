@@ -7,7 +7,6 @@
             "clean": true,
             "code_block": "",
             "description": "abcd123",
-            "hash": "aac60439c3c00f3f1b9231927c7b3556aa61f33c",
             "joint": {
                 "cells": [
                     {
@@ -1611,7 +1610,7 @@
                         "attrs": {
                             ".background": {
                                 "fill": "#000000",
-                                "stroke": "#5C6773"
+                                "stroke": "#0083FF"
                             },
                             ".color-band": {
                                 "fill": "#3C444D"
@@ -1830,7 +1829,7 @@
                             "width": 180
                         },
                         "state": "repo",
-                        "status": "",
+                        "status": "active",
                         "title": "custom function",
                         "type": "coa.CustomFunctionBlock",
                         "userGeneratedCode": "    # Write your custom code here...",
