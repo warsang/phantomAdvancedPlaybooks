@@ -7,7 +7,6 @@
             "clean": true,
             "code_block": "",
             "description": "Notable Events Playbook",
-            "hash": "c3260cf23ed275b4ac46fbb3b965d9104b94e60a",
             "joint": {
                 "cells": [
                     {
@@ -3143,7 +3142,7 @@
                         "type": "coa.CustomFunctionBlock",
                         "userGeneratedCode": "    # Write your custom code here...",
                         "warn": false,
-                        "z": 189
+                        "z": 191
                     },
                     {
                         ".scmName/text": "mainPhantomPlaybooksAdvanced",
@@ -3253,7 +3252,6 @@
                         "connection_name": "run_savedsearch",
                         "connection_type": "action",
                         "currentVersion": true,
-                        "current_container-0": "container:id",
                         "customCodeEndLineOffset": 7,
                         "customCodeStartLine": 26,
                         "customFunction": "mainPhantomPlaybooksAdvanced/task4customFunc",
@@ -3349,16 +3347,16 @@
                         "selectedCustomFunction": {
                             "description": "mytask4customfunc",
                             "draftMode": false,
-                            "id": 45,
+                            "id": 46,
                             "inputs": [
                                 {
                                     "_pretty_custom_function": "task4customFunc",
                                     "contains_type": [
                                         "phantom container id"
                                     ],
-                                    "custom_function": 45,
+                                    "custom_function": 46,
                                     "description": "",
-                                    "id": 156,
+                                    "id": 160,
                                     "input_type": "list",
                                     "name": "current_container",
                                     "placeholder": ""
@@ -3366,9 +3364,9 @@
                                 {
                                     "_pretty_custom_function": "task4customFunc",
                                     "contains_type": [],
-                                    "custom_function": 45,
+                                    "custom_function": 46,
                                     "description": "",
-                                    "id": 157,
+                                    "id": 161,
                                     "input_type": "list",
                                     "name": "peer",
                                     "placeholder": ""
@@ -3376,9 +3374,9 @@
                                 {
                                     "_pretty_custom_function": "task4customFunc",
                                     "contains_type": [],
-                                    "custom_function": 45,
+                                    "custom_function": 46,
                                     "description": "",
-                                    "id": 158,
+                                    "id": 162,
                                     "input_type": "list",
                                     "name": "priority",
                                     "placeholder": ""
@@ -3386,9 +3384,9 @@
                                 {
                                     "_pretty_custom_function": "task4customFunc",
                                     "contains_type": [],
-                                    "custom_function": 45,
+                                    "custom_function": 46,
                                     "description": "",
-                                    "id": 159,
+                                    "id": 163,
                                     "input_type": "list",
                                     "name": "count",
                                     "placeholder": ""
@@ -3401,10 +3399,10 @@
                                     "contains_type": [
                                         "*"
                                     ],
-                                    "custom_function": 45,
+                                    "custom_function": 46,
                                     "data_path": "results_list",
                                     "description": "myresults_list",
-                                    "id": 50
+                                    "id": 51
                                 }
                             ],
                             "playbooks": {
@@ -3415,7 +3413,7 @@
                                         "active": false,
                                         "display_path": "mainPhantomPlaybooksAdvanced/Notable Events Playbook",
                                         "draft_mode": false,
-                                        "id": 121,
+                                        "id": 122,
                                         "name": "Notable Events Playbook",
                                         "viewable": true
                                     }
@@ -3435,7 +3433,7 @@
                         "type": "coa.CustomFunctionBlock",
                         "userGeneratedCode": "    # Write your custom code here...",
                         "warn": false,
-                        "z": 190
+                        "z": 192
                     }
                 ]
             },
