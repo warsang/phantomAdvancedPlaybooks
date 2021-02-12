@@ -38,7 +38,43 @@ def httpsphabb09classsplunkcomrestpl(action=None, success=None, container=None, 
         'headers': "",
     })
 
-    phantom.act(action="get data", parameters=parameters, assets=['something'], name="httpsphabb09classsplunkcomrestpl")
+    phantom.act(action="get data", parameters=parameters, assets=['something'], callback=format_1, reviewer="admin", name="httpsphabb09classsplunkcomrestpl")
+
+    return
+
+def format_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('format_1() called')
+    
+    template = """{0}"""
+
+    # parameter list for template variable replacement
+    parameters = [
+        "httpsphabb09classsplunkcomrestpl:action_result.data.*.parsed_response_body",
+    ]
+
+    phantom.format(container=container, template=template, parameters=parameters, name="format_1")
+
+    custom_function_0(container=container)
+
+    return
+
+def custom_function_0(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('custom_function_0() called')
+    
+    parameters = [{}]
+
+    ################################################################################
+    ## Custom Code Start
+    ################################################################################
+
+    # Write your custom code here...
+
+    ################################################################################
+    ## Custom Code End
+    ################################################################################    
+
+    # call custom function "", returns the custom_function_run_id
+    phantom.custom_function(custom_function='', parameters=parameters, name='custom_function_0')
 
     return
 
