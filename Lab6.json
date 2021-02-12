@@ -7,7 +7,6 @@
             "clean": true,
             "code_block": "",
             "description": "abcd123",
-            "hash": "e6f4322463b307a32200e42f86995e74f889b37b",
             "joint": {
                 "cells": [
                     {
@@ -55,8 +54,8 @@
                         "callback_start": 1,
                         "callsback": false,
                         "connected_to_start": true,
-                        "connection_name": "",
-                        "connection_type": "",
+                        "connection_name": "get_playbook_run_ids",
+                        "connection_type": "action",
                         "custom_callback": "",
                         "custom_code": "",
                         "custom_join": "",
@@ -1564,6 +1563,45 @@
                         "z": 80
                     },
                     {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "00369880-7a18-4bda-a0fc-9778525982fd",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "c7ecbc78-0309-4b5c-be66-6a25b843c94c",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "c6208af4-447f-418d-b257-135c1a74ed18",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 82
+                    },
+                    {
                         ".scmName/text": "local",
                         "active": false,
                         "active_keys": {},
@@ -1572,7 +1610,7 @@
                         "attrs": {
                             ".background": {
                                 "fill": "#000000",
-                                "stroke": "#5C6773"
+                                "stroke": "#0083FF"
                             },
                             ".color-band": {
                                 "fill": "#3C444D"
@@ -1776,12 +1814,12 @@
                             "width": 180
                         },
                         "state": "repo",
-                        "status": "",
+                        "status": "active",
                         "title": "custom function",
                         "type": "coa.CustomFunctionBlock",
                         "userGeneratedCode": "    # Write your custom code here...",
                         "warn": false,
-                        "z": 81
+                        "z": 83
                     }
                 ]
             },
