@@ -9,7 +9,7 @@ def task4customFunc(current_container=None, peer=None, priority=None, count=None
         count
     
     Returns a JSON-serializable object that implements the configured data paths:
-        *.results_list
+        *.results_list (CEF type: *)
     """
     ############################ Custom Code Goes Below This Line #################################
     import json

@@ -1,5 +1,5 @@
 {
-    "create_time": "2021-02-12T18:16:24.124732+00:00",
+    "create_time": "2021-02-12T18:25:09.679556+00:00",
     "custom_function_id": "a46ee83f116d0ee9887914ca6ae963eb2b52c14b",
     "description": "mytask4customfunc",
     "draft_mode": false,
@@ -37,7 +37,9 @@
     ],
     "outputs": [
         {
-            "contains_type": [],
+            "contains_type": [
+                "*"
+            ],
             "data_path": "*.results_list",
             "description": ""
         }
