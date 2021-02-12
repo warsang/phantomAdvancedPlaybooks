@@ -1,0 +1,34 @@
+{
+    "create_time": "2021-02-12T15:52:05.555998+00:00",
+    "custom_function_id": "65a98a8f81e590472b11c43044726c9bb7c08523",
+    "description": "I used this to normalize cef fields from different formated entries into one",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "my_hostname",
+            "input_type": "list",
+            "name": "hostname",
+            "placeholder": "my_hostname"
+        },
+        {
+            "contains_type": [],
+            "description": "my_dest_src_param",
+            "input_type": "list",
+            "name": "my_dest_src_param",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "phantom container id"
+            ],
+            "description": "current_container=None",
+            "input_type": "list",
+            "name": "current_container",
+            "placeholder": "current_container"
+        }
+    ],
+    "outputs": [],
+    "platform_version": "4.10.0.40961",
+    "python_version": "3"
+}
